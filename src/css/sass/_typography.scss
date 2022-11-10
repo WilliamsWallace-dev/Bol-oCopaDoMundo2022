@@ -1,0 +1,67 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $white-light;
+  font-family: 'Readex Pro', sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600 ;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.65rem
+}
+
+// h4 {
+//   font-size: 24px;
+//   font-weight: 300;
+// }
+
+// h5 {
+//   font-size: 18px;
+//   text-transform: uppercase;
+//   letter-spacing: 1px;
+//   color: $blue-light;
+//   font-weight: 300;
+// }
+
+// h6 {
+//   font-size: 16px;
+//   font-weight: 300;
+// }
+p{
+  font-family: 'Readex Pro', sans-serif;
+}
+
+.p1 {
+  font-size: 24px;
+  font-weight: 300;
+}
+.p2-medium {
+  font-size: 18px;
+  font-weight: 500;
+}
+.p2-light {
+  font-size: 18px;
+  font-weight: 400;
+}
+.p3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.p4 {
+  font-size: 14px;
+  font-weight: 300;
+}

@@ -1,0 +1,39 @@
+// Brand-colors
+$primary-normal: #8B0930;
+$primary-dark: #5B011C;
+$primary-light: #AD4766;
+
+// Neutral-colors
+$black-normal: #362F31;
+$black-dark: #261F21;
+$black-light: #454041;
+
+$white-normal: #F4EEEF;
+$white-dark: #E5D3D6;
+$white-light: #FCF6F8;
+
+// Gray Scale
+$gray-1: #3e3f40;
+$gray-2: #4e4e50;
+$gray-3: #5d5e60;
+$gray-4: #6d6e70;
+$gray-5: #7c7d80;
+$gray-6: #8d8e90;
+$gray-7: #a5a6a8;
+
+//Gradients
+$gradient-hero : linear-gradient(123.43deg, #A20D35 3.55%, #A20D35 41.67%, #9A0C32 63.33%);;
+$gradient-main : linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);;
+$gradient-button :linear-gradient(105.18deg, #A20D35 0%, rgba(30, 0, 9, 0.72) 80.14%); ;
+$gradient-link :linear-gradient(0deg, #8B0930 -30.11%, #FCF6F8 72.03%); ;
+$gradient-input :linear-gradient(90deg, #F4EEEF 0%, rgba(244, 238, 239, 0.16) 100%); ;
+$gradient-tc :linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%); ;
+
+//
+.link{
+  background: $gradient-link;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+ 
+}

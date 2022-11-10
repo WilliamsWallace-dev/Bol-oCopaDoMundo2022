@@ -1,0 +1,22 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@import "./sass/colors";
+@import "./sass/typography";
+@import "./sass/spacing";
+
+body{
+    background: $gradient-hero;
+
+    width: 100%;
+    height: 100vh;
+}
+img{
+    max-width: 100%;
+}
+
+@import "./sass/elements";
+@import "./sass/layout";
