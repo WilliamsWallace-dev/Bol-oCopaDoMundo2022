@@ -3,21 +3,32 @@
 
 import Header from "../Header";
 import Form from "../Form";
-import BackgroudMain from "../BackgroudMain";
+import Background from "../Background";
+import Resources from "../Resources"
 
 
 const Main = () =>{
     const formulario = "login";
+    const type = 2;
     return(
-        <>
-            <section className="container main">
-                <Header></Header>
-                <BackgroudMain></BackgroudMain>
-                
-                <Form form = {formulario}></Form>
 
+        // <>
+        //     <section className="container main">
+        //         <Background type = {type}></Background>
+        //         <Header></Header>
+        //         <Form form = {formulario}></Form>
                 
-            </section>
+        //     </section>
+
+        // </>
+
+        <>
+        <section className="container main">
+            <Background type = {type}></Background>
+            <Header></Header>
+            <Resources></Resources>
+            
+        </section>
 
         </>
     )

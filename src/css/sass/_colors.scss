@@ -30,10 +30,3 @@ $gradient-input :linear-gradient(90deg, #F4EEEF 0%, rgba(244, 238, 239, 0.16) 10
 $gradient-tc :linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%); ;
 
 //
-.link{
-  background: $gradient-link;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
- 
-}

@@ -1,6 +1,178 @@
+//Elementos Header
 
+.username{
+  &>a{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  background: $gradient-link;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  transition: 1.5s ease;
+
+  &::before{
+    content:"";
+    display: inline-block;
+    background: url("../svg/iconeNotificação.svg") center center no-repeat;
+    background-size: cover;
+    width: .875rem;
+    height: 1rem ;
+    margin-right: 1rem;
+
+    cursor: pointer;
+    }
+  &::after{
+    content:"";
+    display: inline-block;
+    background: url("../svg/iconeSeta.svg") center center no-repeat;
+    background-size: cover;
+    width: 1rem;
+    height: .5rem ;
+    margin-left: .5rem;
+
+    cursor: pointer;
+    }
+  }
+  }
+  .menu-usuário{
+    position: absolute;
+    top:3.7rem;
+    padding: .5rem 1rem;
+
+    border:1px solid white;
+
+    
+    border: 1px solid $white-dark;
+    border-radius: 10px;
+
+    
+  }
+  .menu-items{
+    display: inline-block;
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    
+    color:$white-dark;
+
+    padding: .1rem 0;
+    cursor: pointer;
+
+    &::after{
+      content:"";
+      display: block;
+      margin-top: .1rem;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(102.01deg, rgba(162, 13, 53, 0.64) 8.77%, #FCF6F8 95.09%);
+      transition: 1.2s ease;
+    }
+    &:hover{
+      transform: scale(1.03);
+      &::after{
+        width: 100%;
+      }
+    }
+  }
+
+  //Resources
+  .resources{
+    label:first-of-type{
+      &::before{
+        content:"";
+        display: inline-block;
+        background: url("../svg/iconeSeta2.svg") center center no-repeat;
+        background-size: cover;
+        width: 1rem;
+        height: .5rem ;
+
+        transform: translate(-28px);
+    
+        cursor: pointer;
+        pointer-events: none;
+        }
+    }
+    select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    padding: .875rem ;
+    width: 7rem;
+    border: none;
+    background: $gradient-link;
+    border-radius: 2rem;
+    font-size: 15px;
+    }
+
+    .partidas{
+      width: 100%;
+      color:$white-normal;
+      .card{
+        position: relative;
+        padding: 1.5rem;
+        
+        max-width: 690px;
+  
+        .card-background{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: -1;
+          background: $gradient-main;
+          pointer-events: none;
+          
+          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.24);
+          backdrop-filter: blur(4px);
+          border-radius: 32.0978px 21.3985px;
+          transform: matrix(0.96, 0, -0.29, 1, 0, 0);
+          border: 1px solid $white-normal;
+        }
+        .jogo{
+          width: 100%;
+          padding: 0 1rem;
+          .times{
+
+            width: 80%;
+            margin: 0 1rem;
+            &>div{ 
+              width: 100%;
+            }
+            input{
+              max-width: 2rem ;
+              background: transparent;
+              border:1px solid $white-dark;
+              border-radius: .25rem;
+              color: $white-light;
+
+              
+            }
+          }
+          .informações{
+            border-left: 1px solid $white-dark;
+            padding-left: 1rem;
+          }
+        }
+        
+      }
+      
+    }
+   
+    
+  }
+
+//Botões
 .primary-button{
     font-family: 'Readex Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
 
     padding: .5rem 3.5rem;
     margin: 1.5rem .5rem ;
@@ -15,40 +187,52 @@
     transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-15%);
 
     cursor: pointer;
-    transition: .7s ease-out;
+    transition: .5s ease-out;
     &:hover{
       // background: linear-gradient(105.18deg, #8B0930 0%, #1E0009 80.14%);
-      transform:  scale(1.05) matrix(0.96, 0, -0.29, 1, 0, 0) ;
+      transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
       box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
     }
   }
 
   .secundary-button{
     font-family: 'Readex Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 
     padding: .5rem 2rem;
-    margin: 1.5rem .5rem ;
+    margin: 1.5rem .1rem ;
 
 
     
     color: $white-light;
     background: transparent;
-    border:none;
+    border: 1px solid $white-dark;
     border-radius: 9px 6px;
     
     transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-15%);
 
     cursor: pointer;
-    transition: .7s ease-out;
+    transition: .5s ease-out;
+
     &:hover{  
-      background-color: $primary-dark;
-      transform:  scale(1.05) matrix(0.96, 0, -0.29, 1, 0, 0) ;
-      box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+      color: $primary-dark;
+      background: $gradient-input;
+      transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
+      // box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+      border: transparent;
     }
+
+    // &:hover{  
+    //   background-color: $primary-dark;
+    //   transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
+    //   // box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+    //   border: transparent;
+    // }
   }
 
+  //Fomulários e Inputs
   .form{
-    perspective: 4000px;
     max-width: 55%;
     min-width: 500px;
 
@@ -75,14 +259,16 @@
         box-shadow: 0px 9px 14px rgba(38, 31, 33, 0.23), 0px 3.28515px 5.11023px rgba(38, 31, 33, 0.158696), 0px 1.59488px 2.48092px rgba(38, 31, 33, 0.127947), 0px 0.781839px 1.21619px rgba(38, 31, 33, 0.102053), 0px 0.30914px 0.480885px rgba(38, 31, 33, 0.0713042);        
         outline: 0;
         color: $black-normal;
-        transform: translateY(-3px);
+        transform: translateY(-5%);
       }
     }
   }
   
-
+//Links
   .link{
   font-family: 'Readex Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
 
   background: $gradient-link;
   -webkit-background-clip: text;
@@ -108,7 +294,7 @@
     }
   }
   }
-  
+//Subtitulos
   .subtitle{
     color: $white-dark;
     margin: 1rem 0;
@@ -128,8 +314,8 @@
   }
   .circulo2{
     position: absolute;
-    left:26%;
-    top:31%;
+    left:48.5%;
+    top:40%;
   }
   .circulo3{
     position: absolute;
@@ -144,13 +330,63 @@
 
   .estrela1{
     position: absolute;
-    left:20%;
-    top:27.6%;
+    left:46.5%;
+    top:49.7%;
   }
   .estrela2{
     position: absolute;
-    left:23.4%;
-    top:35%;
+    left:42%;
+    top:46%;
   }
+  .torcedor1{
+    position: absolute;
+    left:-1.16%;
+    bottom:-3.35%;
+  }
+  .torcedor2{
+    position: absolute;
+    right:-1.1%;
+    bottom:-2.5%;
+  }
+  .campoDeFutebol1{
+    position: absolute;
+    right:-1.1%;
+    top:-2.5%;
+  }
+  .campoDeFutebol2{
+    position: absolute;
+    right:-1.1%;
+    bottom:-2.5%;
+  }
+  .bola1{
+    position: absolute;
+    right:-1.1%;
+    bottom:-2.5%;
+  }
+  .chute1{
+    position: absolute;
+    right:-1.1%;
+    bottom:-2.5%;
+  }
+  .redes{
+    position:absolute;
+    top:40%;
+    left:6%;
+    gap:2.5rem;
+    padding: .5rem;
+    // background-color: white;
+    & img{
+      // background-color: #050607;
+      width:1.5vw;
+      cursor: pointer;
+      transition: .5s ease;
+      &:hover{
+        transform: translateY(-7%);
+      }
+    }
+    
+  }
+
+  
 
   

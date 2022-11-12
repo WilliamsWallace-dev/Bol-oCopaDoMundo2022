@@ -1,14 +1,9 @@
+@charset "UTF-8";
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-}
-
-.link {
-  background: linear-gradient(0deg, #8B0930 -30.11%, #FCF6F8 72.03%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  overflow: hidden;
 }
 
 h1,
@@ -35,35 +30,43 @@ h3 {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.65rem;
-}
-
-p {
-  font-family: "Readex Pro", sans-serif;
+  margin: 1.5rem 0;
 }
 
 .p1 {
+  font-family: "Readex Pro", sans-serif;
   font-size: 24px;
   font-weight: 300;
 }
 
 .p2-medium {
+  font-family: "Readex Pro", sans-serif;
   font-size: 18px;
   font-weight: 500;
 }
 
-.p2-light {
+.p2-regular {
+  font-family: "Readex Pro", sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
 
+.p2-light {
+  font-family: "Readex Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
 .p3 {
+  font-family: "Readex Pro", sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
 
 .p4 {
+  font-family: "Readex Pro", sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .s-0 {
@@ -684,6 +687,12 @@ p {
   align-items: center;
 }
 
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 body {
   background: linear-gradient(123.43deg, #A20D35 3.55%, #A20D35 41.67%, #9A0C32 63.33%);
   width: 100%;
@@ -694,8 +703,146 @@ img {
   max-width: 100%;
 }
 
+.username > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  background: linear-gradient(0deg, #8B0930 -30.11%, #FCF6F8 72.03%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: 1.5s ease;
+}
+.username > a::before {
+  content: "";
+  display: inline-block;
+  background: url("../svg/iconeNotificação.svg") center center no-repeat;
+  background-size: cover;
+  width: 0.875rem;
+  height: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.username > a::after {
+  content: "";
+  display: inline-block;
+  background: url("../svg/iconeSeta.svg") center center no-repeat;
+  background-size: cover;
+  width: 1rem;
+  height: 0.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.menu-usuário {
+  position: absolute;
+  top: 3.7rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  border: 1px solid #E5D3D6;
+  border-radius: 10px;
+}
+
+.menu-items {
+  display: inline-block;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #E5D3D6;
+  padding: 0.1rem 0;
+  cursor: pointer;
+}
+.menu-items::after {
+  content: "";
+  display: block;
+  margin-top: 0.1rem;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(102.01deg, rgba(162, 13, 53, 0.64) 8.77%, #FCF6F8 95.09%);
+  transition: 1.2s ease;
+}
+.menu-items:hover {
+  transform: scale(1.03);
+}
+.menu-items:hover::after {
+  width: 100%;
+}
+
+.resources label:first-of-type::before {
+  content: "";
+  display: inline-block;
+  background: url("../svg/iconeSeta2.svg") center center no-repeat;
+  background-size: cover;
+  width: 1rem;
+  height: 0.5rem;
+  transform: translate(-28px);
+  cursor: pointer;
+  pointer-events: none;
+}
+.resources select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0.875rem;
+  width: 7rem;
+  border: none;
+  background: linear-gradient(0deg, #8B0930 -30.11%, #FCF6F8 72.03%);
+  border-radius: 2rem;
+  font-size: 15px;
+}
+.resources .partidas {
+  width: 100%;
+  color: #F4EEEF;
+}
+.resources .partidas .card {
+  position: relative;
+  padding: 1.5rem;
+  max-width: 690px;
+}
+.resources .partidas .card .card-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);
+  pointer-events: none;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.24);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 32.0978px 21.3985px;
+  transform: matrix(0.96, 0, -0.29, 1, 0, 0);
+  border: 1px solid #F4EEEF;
+}
+.resources .partidas .card .jogo {
+  width: 100%;
+  padding: 0 1rem;
+}
+.resources .partidas .card .jogo .times {
+  width: 80%;
+  margin: 0 1rem;
+}
+.resources .partidas .card .jogo .times > div {
+  width: 100%;
+}
+.resources .partidas .card .jogo .times input {
+  max-width: 2rem;
+  background: transparent;
+  border: 1px solid #E5D3D6;
+  border-radius: 0.25rem;
+  color: #FCF6F8;
+}
+.resources .partidas .card .jogo .informações {
+  border-left: 1px solid #E5D3D6;
+  padding-left: 1rem;
+}
+
 .primary-button {
   font-family: "Readex Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   padding: 0.5rem 3.5rem;
   margin: 1.5rem 0.5rem;
   color: #FCF6F8;
@@ -704,33 +851,35 @@ img {
   border-radius: 9px 6px;
   transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-15%);
   cursor: pointer;
-  transition: 0.7s ease-out;
+  transition: 0.5s ease-out;
 }
 .primary-button:hover {
-  transform: scale(1.05) matrix(0.96, 0, -0.29, 1, 0, 0);
+  transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%);
   box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
 }
 
 .secundary-button {
   font-family: "Readex Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   padding: 0.5rem 2rem;
-  margin: 1.5rem 0.5rem;
+  margin: 1.5rem 0.1rem;
   color: #FCF6F8;
   background: transparent;
-  border: none;
+  border: 1px solid #E5D3D6;
   border-radius: 9px 6px;
   transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-15%);
   cursor: pointer;
-  transition: 0.7s ease-out;
+  transition: 0.5s ease-out;
 }
 .secundary-button:hover {
-  background-color: #5B011C;
-  transform: scale(1.05) matrix(0.96, 0, -0.29, 1, 0, 0);
-  box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+  color: #5B011C;
+  background: linear-gradient(90deg, #F4EEEF 0%, rgba(244, 238, 239, 0.16) 100%);
+  transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%);
+  border: transparent;
 }
 
 .form {
-  perspective: 4000px;
   max-width: 55%;
   min-width: 500px;
   height: 80vh;
@@ -753,11 +902,13 @@ img {
   box-shadow: 0px 9px 14px rgba(38, 31, 33, 0.23), 0px 3.28515px 5.11023px rgba(38, 31, 33, 0.158696), 0px 1.59488px 2.48092px rgba(38, 31, 33, 0.127947), 0px 0.781839px 1.21619px rgba(38, 31, 33, 0.102053), 0px 0.30914px 0.480885px rgba(38, 31, 33, 0.0713042);
   outline: 0;
   color: #362F31;
-  transform: translateY(-3px);
+  transform: translateY(-5%);
 }
 
 .link {
   font-family: "Readex Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   background: linear-gradient(0deg, #8B0930 -30.11%, #FCF6F8 72.03%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -801,8 +952,8 @@ img {
 
 .circulo2 {
   position: absolute;
-  left: 26%;
-  top: 31%;
+  left: 48.5%;
+  top: 40%;
 }
 
 .circulo3 {
@@ -819,14 +970,66 @@ img {
 
 .estrela1 {
   position: absolute;
-  left: 20%;
-  top: 27.6%;
+  left: 46.5%;
+  top: 49.7%;
 }
 
 .estrela2 {
   position: absolute;
-  left: 23.4%;
-  top: 35%;
+  left: 42%;
+  top: 46%;
+}
+
+.torcedor1 {
+  position: absolute;
+  left: -1.16%;
+  bottom: -3.35%;
+}
+
+.torcedor2 {
+  position: absolute;
+  right: -1.1%;
+  bottom: -2.5%;
+}
+
+.campoDeFutebol1 {
+  position: absolute;
+  right: -1.1%;
+  top: -2.5%;
+}
+
+.campoDeFutebol2 {
+  position: absolute;
+  right: -1.1%;
+  bottom: -2.5%;
+}
+
+.bola1 {
+  position: absolute;
+  right: -1.1%;
+  bottom: -2.5%;
+}
+
+.chute1 {
+  position: absolute;
+  right: -1.1%;
+  bottom: -2.5%;
+}
+
+.redes {
+  position: absolute;
+  top: 40%;
+  left: 6%;
+  gap: 2.5rem;
+  padding: 0.5rem;
+}
+.redes img {
+  width: 1.5vw;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.redes img:hover {
+  transform: translateY(-7%);
 }
 
 .container {
@@ -843,8 +1046,19 @@ img {
 
 .backgroundMain {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   top: 0;
   right: 0;
   height: 100vh;
+}
+
+.background-gradient {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(129.07deg, rgba(41, 1, 14, 0.8) 4.77%, rgba(203, 58, 101, 0.1) 30.38%, rgba(193, 49, 91, 0.05) 42.9%, rgba(153, 12, 50, 0) 54.42%);
+  mix-blend-mode: normal;
+  opacity: 0.64;
 }/*# sourceMappingURL=style.css.map */

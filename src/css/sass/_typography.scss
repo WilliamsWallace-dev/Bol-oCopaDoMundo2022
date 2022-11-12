@@ -21,7 +21,8 @@ h2 {
 h3 {
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.65rem
+  line-height: 1.65rem;
+  margin:1.5rem 0;
 }
 
 // h4 {
@@ -41,27 +42,34 @@ h3 {
 //   font-size: 16px;
 //   font-weight: 300;
 // }
-p{
-  font-family: 'Readex Pro', sans-serif;
-}
 
 .p1 {
+  font-family: 'Readex Pro', sans-serif;
   font-size: 24px;
   font-weight: 300;
 }
 .p2-medium {
+  font-family: 'Readex Pro', sans-serif;
   font-size: 18px;
   font-weight: 500;
 }
-.p2-light {
+.p2-regular {
+  font-family: 'Readex Pro', sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
+.p2-light {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
 .p3 {
+  font-family: 'Readex Pro', sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
 .p4 {
+  font-family: 'Readex Pro', sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 }

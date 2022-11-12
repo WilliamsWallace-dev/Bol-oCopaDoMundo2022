@@ -498,4 +498,11 @@ $gap-9: 128px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
