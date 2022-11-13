@@ -60,7 +60,11 @@
     font-size: 14px;
     font-weight: 400;
     
-    color:$white-dark;
+    background: $gradient-link;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
 
     padding: .1rem 0;
     cursor: pointer;
@@ -82,8 +86,8 @@
     }
   }
 
-  //Resources
-  .resources{
+  //Guess
+  .guess{
     label:first-of-type{
       &::before{
         content:"";
@@ -104,8 +108,11 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    padding: .875rem ;
+
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 500;
     width: 7rem;
+    padding: .875rem ;
     border: none;
     background: $gradient-link;
     border-radius: 2rem;
@@ -113,13 +120,23 @@
     }
 
     .partidas{
-      width: 100%;
+      width: 90%;
       color:$white-normal;
+
+      .card-left{
+        align-self: flex-start;
+      }
+      .card-right{
+        align-self: flex-end;
+      }
+
       .card{
         position: relative;
-        padding: 1.5rem;
         
-        max-width: 690px;
+        width: 100%;
+        max-width: 620px;
+        padding: 1.5rem 1.5rem;
+        margin-bottom: 1rem;
   
         .card-background{
           width: 100%;
@@ -130,14 +147,14 @@
           pointer-events: none;
           
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.24);
-          backdrop-filter: blur(4px);
+          backdrop-filter: blur(1px);
           border-radius: 32.0978px 21.3985px;
           transform: matrix(0.96, 0, -0.29, 1, 0, 0);
           border: 1px solid $white-normal;
         }
         .jogo{
           width: 100%;
-          padding: 0 1rem;
+          padding: 0 .25rem;
           .times{
 
             width: 80%;
@@ -152,12 +169,16 @@
               border-radius: .25rem;
               color: $white-light;
 
+              &::placeholder{
+                color: white;
+              }
+
               
             }
           }
           .informações{
             border-left: 1px solid $white-dark;
-            padding-left: 1rem;
+            padding: 0 .5rem 0 1rem;
           }
         }
         
@@ -201,8 +222,8 @@
     font-weight: 400;
 
     padding: .5rem 2rem;
-    margin: 1.5rem .1rem ;
-
+    margin: 2rem .1rem 1rem .1rem ;
+ 
 
     
     color: $white-light;
@@ -223,6 +244,14 @@
       border: transparent;
     }
 
+    &.active{
+      color: $primary-dark;
+      background: $gradient-input;
+      transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-10%) ;
+      // box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+      border: transparent;
+  }
+    
     // &:hover{  
     //   background-color: $primary-dark;
     //   transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
@@ -230,6 +259,7 @@
     //   border: transparent;
     // }
   }
+  
 
   //Fomulários e Inputs
   .form{
@@ -297,11 +327,12 @@
 //Subtitulos
   .subtitle{
     color: $white-dark;
-    margin: 1rem 0;
+    margin: .25rem 0 1.5rem 0;
     text-align: center;
   }
 
   //Elementos de Composição
+
   .circulo1{
     position: absolute;
     right:25%;
@@ -349,24 +380,37 @@
     bottom:-2.5%;
   }
   .campoDeFutebol1{
+    width: 30%;
     position: absolute;
-    right:-1.1%;
-    top:-2.5%;
+    right:10%;
+    top:13%;
   }
   .campoDeFutebol2{
+    width: 30%;
     position: absolute;
-    right:-1.1%;
-    bottom:-2.5%;
+    left:-10%;
+    bottom:-25%;
   }
   .bola1{
     position: absolute;
-    right:-1.1%;
-    bottom:-2.5%;
+    left:10%;
+    top:15%;
   }
   .chute1{
     position: absolute;
-    right:-1.1%;
-    bottom:-2.5%;
+    left:8.5%;
+    top:11%;
+  }
+
+  .bola2{
+    position: absolute;
+    right:15%;
+    bottom:30%;
+  }
+  .chute2{
+    position: absolute;
+    right:13.8%;
+    bottom:27.5%;
   }
   .redes{
     position:absolute;
@@ -374,9 +418,7 @@
     left:6%;
     gap:2.5rem;
     padding: .5rem;
-    // background-color: white;
     & img{
-      // background-color: #050607;
       width:1.5vw;
       cursor: pointer;
       transition: .5s ease;
@@ -387,6 +429,76 @@
     
   }
 
+  //Classificação 
+
+table{
+  background: linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%);
+  backdrop-filter: blur(4px);
+  border-radius: 15px;
+
+  padding: 1rem;
+  text-align: center;
+
+  border-color: $primary-normal;
+
+}
+th,td{
+  border: none;
+}
+
+th,tr,td{
+  padding: 0 .5rem;;
+}
+
+th{
+  background: $gradient-main;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  padding-bottom: 1rem;
+  
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+td{
+  padding-bottom: .875rem;
+  
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
   
 
-  
+//Instruções
+
+.instructions{
+
+  width: 100%;
+  max-width: 600px;
+
+  margin-top: 2rem;
+  padding: 1rem;
+
+  background: linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%);
+  backdrop-filter: blur(4px);
+  border-radius: 15px;
+
+
+  .collumns p {
+    background: $gradient-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  p{
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+
+  margin-bottom: .5rem;
+  border-bottom: 1px solid $gradient;
+  }
+}

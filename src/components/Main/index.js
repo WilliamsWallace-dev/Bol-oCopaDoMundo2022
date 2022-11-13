@@ -4,7 +4,8 @@
 import Header from "../Header";
 import Form from "../Form";
 import Background from "../Background";
-import Resources from "../Resources"
+import Guess from "../Guess"
+import Classification from "../Classification"
 
 
 const Main = () =>{
@@ -22,11 +23,21 @@ const Main = () =>{
 
         // </>
 
+        // <>
+        // <section className="container main">
+        //     <Background type = {type}></Background>
+        //     <Header></Header>
+        //     <Guess></Guess>
+            
+        // </section>
+
+        // </>
+
         <>
         <section className="container main">
             <Background type = {type}></Background>
             <Header></Header>
-            <Resources></Resources>
+            <Classification></Classification>
             
         </section>
 

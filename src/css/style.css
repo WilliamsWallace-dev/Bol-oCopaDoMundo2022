@@ -22,15 +22,15 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
-  font-weight: 500;
+  font-size: 32px;
+  font-weight: 400;
 }
 
 h3 {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.65rem;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 .p1 {
@@ -67,6 +67,7 @@ h3 {
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   font-weight: 400;
+  color: #E5D3D6;
 }
 
 .s-0 {
@@ -751,7 +752,10 @@ img {
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #E5D3D6;
+  background: linear-gradient(0deg, #8B0930 -30.11%, #FCF6F8 72.03%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   padding: 0.1rem 0;
   cursor: pointer;
 }
@@ -771,7 +775,7 @@ img {
   width: 100%;
 }
 
-.resources label:first-of-type::before {
+.guess label:first-of-type::before {
   content: "";
   display: inline-block;
   background: url("../svg/iconeSeta2.svg") center center no-repeat;
@@ -782,27 +786,37 @@ img {
   cursor: pointer;
   pointer-events: none;
 }
-.resources select {
+.guess select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding: 0.875rem;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 500;
   width: 7rem;
+  padding: 0.875rem;
   border: none;
   background: linear-gradient(0deg, #8B0930 -30.11%, #FCF6F8 72.03%);
   border-radius: 2rem;
   font-size: 15px;
 }
-.resources .partidas {
-  width: 100%;
+.guess .partidas {
+  width: 90%;
   color: #F4EEEF;
 }
-.resources .partidas .card {
-  position: relative;
-  padding: 1.5rem;
-  max-width: 690px;
+.guess .partidas .card-left {
+  align-self: flex-start;
 }
-.resources .partidas .card .card-background {
+.guess .partidas .card-right {
+  align-self: flex-end;
+}
+.guess .partidas .card {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  padding: 1.5rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.guess .partidas .card .card-background {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -810,33 +824,42 @@ img {
   background: linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);
   pointer-events: none;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.24);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
   border-radius: 32.0978px 21.3985px;
   transform: matrix(0.96, 0, -0.29, 1, 0, 0);
   border: 1px solid #F4EEEF;
 }
-.resources .partidas .card .jogo {
+.guess .partidas .card .jogo {
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 0.25rem;
 }
-.resources .partidas .card .jogo .times {
+.guess .partidas .card .jogo .times {
   width: 80%;
   margin: 0 1rem;
 }
-.resources .partidas .card .jogo .times > div {
+.guess .partidas .card .jogo .times > div {
   width: 100%;
 }
-.resources .partidas .card .jogo .times input {
+.guess .partidas .card .jogo .times input {
   max-width: 2rem;
   background: transparent;
   border: 1px solid #E5D3D6;
   border-radius: 0.25rem;
   color: #FCF6F8;
 }
-.resources .partidas .card .jogo .informações {
+.guess .partidas .card .jogo .times input::-moz-placeholder {
+  color: white;
+}
+.guess .partidas .card .jogo .times input:-ms-input-placeholder {
+  color: white;
+}
+.guess .partidas .card .jogo .times input::placeholder {
+  color: white;
+}
+.guess .partidas .card .jogo .informações {
   border-left: 1px solid #E5D3D6;
-  padding-left: 1rem;
+  padding: 0 0.5rem 0 1rem;
 }
 
 .primary-button {
@@ -863,7 +886,7 @@ img {
   font-size: 16px;
   font-weight: 400;
   padding: 0.5rem 2rem;
-  margin: 1.5rem 0.1rem;
+  margin: 2rem 0.1rem 1rem 0.1rem;
   color: #FCF6F8;
   background: transparent;
   border: 1px solid #E5D3D6;
@@ -876,6 +899,12 @@ img {
   color: #5B011C;
   background: linear-gradient(90deg, #F4EEEF 0%, rgba(244, 238, 239, 0.16) 100%);
   transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%);
+  border: transparent;
+}
+.secundary-button.active {
+  color: #5B011C;
+  background: linear-gradient(90deg, #F4EEEF 0%, rgba(244, 238, 239, 0.16) 100%);
+  transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-10%);
   border: transparent;
 }
 
@@ -934,7 +963,7 @@ img {
 
 .subtitle {
   color: #E5D3D6;
-  margin: 1rem 0;
+  margin: 0.25rem 0 1.5rem 0;
   text-align: center;
 }
 
@@ -993,27 +1022,41 @@ img {
 }
 
 .campoDeFutebol1 {
+  width: 30%;
   position: absolute;
-  right: -1.1%;
-  top: -2.5%;
+  right: 10%;
+  top: 13%;
 }
 
 .campoDeFutebol2 {
+  width: 30%;
   position: absolute;
-  right: -1.1%;
-  bottom: -2.5%;
+  left: -10%;
+  bottom: -25%;
 }
 
 .bola1 {
   position: absolute;
-  right: -1.1%;
-  bottom: -2.5%;
+  left: 10%;
+  top: 15%;
 }
 
 .chute1 {
   position: absolute;
-  right: -1.1%;
-  bottom: -2.5%;
+  left: 8.5%;
+  top: 11%;
+}
+
+.bola2 {
+  position: absolute;
+  right: 15%;
+  bottom: 30%;
+}
+
+.chute2 {
+  position: absolute;
+  right: 13.8%;
+  bottom: 27.5%;
 }
 
 .redes {
@@ -1032,6 +1075,65 @@ img {
   transform: translateY(-7%);
 }
 
+table {
+  background: linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  border-color: #8B0930;
+}
+
+th, td {
+  border: none;
+}
+
+th, tr, td {
+  padding: 0 0.5rem;
+}
+
+th {
+  background: linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 1rem;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+td {
+  padding-bottom: 0.875rem;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.instructions {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 15px;
+}
+.instructions .collumns p {
+  background: linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.instructions p {
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1044,7 +1146,7 @@ img {
   padding: 0.5rem 1.5rem;
 }
 
-.backgroundMain {
+.fundocopa {
   position: absolute;
   z-index: -2;
   top: 0;
@@ -1058,7 +1160,7 @@ img {
   position: absolute;
   left: 0;
   z-index: -1;
-  background: linear-gradient(129.07deg, rgba(41, 1, 14, 0.8) 4.77%, rgba(203, 58, 101, 0.1) 30.38%, rgba(193, 49, 91, 0.05) 42.9%, rgba(153, 12, 50, 0) 54.42%);
+  background: linear-gradient(129.07deg, rgba(41, 1, 14, 0.8) 4.77%, rgba(203, 58, 101, 0.1) 30.38%, rgba(193, 49, 91, 0.05) 42.9%, rgba(153, 12, 50, 0) 54.42%), linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);
   mix-blend-mode: normal;
   opacity: 0.64;
 }/*# sourceMappingURL=style.css.map */

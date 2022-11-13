@@ -15,7 +15,8 @@
 }
 
 //Main
-.backgroundMain{
+//backgroundMain
+.fundocopa{
   position:absolute;
   z-index: -2;
   top:0;
@@ -29,7 +30,7 @@
   position: absolute;
   left:0;
   z-index: -1;
-  background: linear-gradient(129.07deg, rgba(41, 1, 14, 0.8) 4.77%, rgba(203, 58, 101, 0.1) 30.38%, rgba(193, 49, 91, 0.05) 42.9%, rgba(153, 12, 50, 0) 54.42%);
+  background: $gradient-background;
   mix-blend-mode: normal;
   opacity: 0.64;
 }
