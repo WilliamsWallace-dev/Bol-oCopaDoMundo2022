@@ -40,10 +40,10 @@ const Form = ({form})=>{
                 
             </>
         )
-    }else if(form == "GerenciarBolões"){
+    }else if(form == "CriarBolão"){
         return(
             <>
-                <section className="container form flex-collumn form-criarBolão">
+                {/* <section className="container form flex-collumn form-criarBolão">
                     <h1>Criar Bolão</h1>
                     <p className="subtitle">Copa do mundo não pode faltar o Bolão com os Amigos!</p>
                     <form className="flex-collumn">
@@ -63,6 +63,57 @@ const Form = ({form})=>{
                         <button className="primary-button">Cria Bolão</button>
                         </div>
                     </form>
+                   
+                </section> */}
+
+                {/* Após Criado o Bolão aparece a seguindo mensagem */}
+
+                <section className="container form flex-collumn convidarAmigos">
+                    <h2>Convidar Amigos</h2>
+                    <p className="subtitle">Criado o Bolão, é necessário que : </p>
+                    <ul>
+                        <li><p>Os Participantes criem sua conta.</p></li>
+                        <li><p>O Administrador compartilha com cada participante a Chave de entrada</p></li>
+                        <li><p>O participante deverá solicitar sua participação no Bolão</p></li>
+                        <li><p>Após confirmar o pagamento, o administrador deve aceitar a solicitação no ícone</p></li>
+                    </ul>
+                        <div>
+                        <button className="primary-button">Enviar Convite</button>
+                        </div>
+                   
+                </section>
+                
+            </>
+        )
+    }else if(form == "ExplorarBolão"){
+        return(
+            <>
+                <section className="container form flex-collumn">
+                    <h1>Explorar Bolão</h1>
+                    <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!</p>
+                    <form className="flex-collumn">
+                        <input className="input" type="text" placeholder="Nome do Bolão"></input>                                         
+                        <div>
+                        <button className="primary-button">Procurar</button>
+                        </div>
+                    </form>
+    
+                    <h2>Resultado da Pesquisa</h2>
+                    <p className="subtitle">Insira a Chave de entrada correspondente ao Bolão para enviar a solicitação.</p>
+                    
+                    <ul className="resultadoPesquisa">
+                        <li className="flex-collumn">
+                            <p>Nome do Bolão</p>
+                            <input className="input" type="text" placeholder="Chave de entrada"></input>
+                            <button className="secundary-button">Enviar Solicitação</button>  
+                        </li>
+
+                        <li className="flex-collumn">
+                            <p>Nome do Bolão</p>
+                            <input className="input" type="text" placeholder="Chave de entrada"></input>
+                            <button className="secundary-button">Enviar Solicitação</button>  
+                        </li>
+                    </ul>
                    
                 </section>
                 

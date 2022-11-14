@@ -54,6 +54,7 @@ h3 {
   font-family: "Readex Pro", sans-serif;
   font-size: 18px;
   font-weight: 300;
+  line-height: 1.4;
 }
 
 .p3 {
@@ -1033,8 +1034,16 @@ img {
 .campoDeFutebol2 {
   width: 30%;
   position: absolute;
+  overflow: hidden;
   left: -10%;
   bottom: -25%;
+}
+
+.campoDeFutebol3 {
+  width: 20%;
+  position: absolute;
+  left: 20%;
+  top: 5%;
 }
 
 .bola1 {
@@ -1177,6 +1186,83 @@ td {
 }
 .form-criarBolão .primary-button {
   margin-top: 1.5rem;
+}
+
+.convidarAmigos ul {
+  padding: 0.5rem;
+  width: 65%;
+}
+.convidarAmigos ul p {
+  display: inline-block;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0.25rem 0.25rem;
+  color: #E5D3D6;
+}
+.convidarAmigos ul li:nth-child(odd):before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background: url("../svg/circulo2.svg") center center no-repeat;
+  background-size: cover;
+}
+.convidarAmigos ul li:nth-child(even):before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background: url("../svg/circulo3.svg") center center no-repeat;
+  background-size: cover;
+}
+.convidarAmigos button::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: url("../svg/iconeWhatsapp.svg") center center no-repeat;
+  background-size: cover;
+  margin-right: 0.5rem;
+  transform: translateY(4px);
+}
+
+.resultadoPesquisa li {
+  border-bottom: 5px solid #AD4766;
+  border-top: 5px solid #AD4766;
+  border-radius: 1rem;
+  margin: 0.5rem 0;
+}
+.resultadoPesquisa p {
+  font-family: "Readex Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0.5rem 0.25rem;
+  color: #E5D3D6;
+}
+.resultadoPesquisa button {
+  margin-top: 1rem;
+}
+
+.regulamento ul {
+  width: 50%;
+  margin-top: 2rem;
+}
+.regulamento ul li {
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 2px solid #AD4766;
+  border-radius: 0.5rem;
+}
+.regulamento ul li p {
+  background: linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.regulamento > p {
+  color: #E5D3D6;
+  margin-top: 1rem;
 }
 
 .container {

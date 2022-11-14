@@ -392,8 +392,15 @@
   .campoDeFutebol2{
     width: 30%;
     position: absolute;
+    overflow: hidden;
     left:-10%;
     bottom:-25%;
+  }
+  .campoDeFutebol3{
+    width: 20%;
+    position: absolute;
+    left:20%;
+    top:5%;
   }
   .bola1{
     position: absolute;
@@ -565,6 +572,109 @@ td{
     }
 
     
+    
 
     
+}
+
+.convidarAmigos{
+
+ul{
+  padding: .5rem;
+  width: 65%;
+  
+
+  p{
+    display: inline-block;
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+
+    padding: .25rem .25rem;
+
+    color: $white-dark;
+  }
+
+  li:nth-child(odd):before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background: url("../svg/circulo2.svg") center center no-repeat;
+    background-size: cover;
+
+  }
+
+  li:nth-child(even):before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background: url("../svg/circulo3.svg") center center no-repeat;
+    background-size: cover;
+
+  }
+}
+
+button{
+  &::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url("../svg/iconeWhatsapp.svg") center center no-repeat;
+    background-size: cover;
+    margin-right: .5rem;
+    transform: translateY(4px);
+  }
+}
+}
+
+
+.resultadoPesquisa{
+  li{
+    border-bottom: 5px solid $primary-light;
+    border-top: 5px solid $primary-light;
+    border-radius: 1rem;
+
+    margin: .5rem 0;
+  }
+  p{
+    font-family: 'Readex Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  padding: .5rem .25rem;
+
+  color: $white-dark;
+  }
+  button{
+    margin-top: 1rem;
+  }
+}
+
+.regulamento{
+  ul{
+    width: 50%;
+    margin-top: 2rem;
+    li{
+      width: 100%;
+      padding: .5rem;
+      border-bottom: 2px solid $primary-light;
+      border-radius: .5rem;
+
+      p{
+        background: linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+     
+      }
+    }
+  }
+  
+  &>p{
+    color:$white-dark;
+    margin-top: 1rem;
+  }
 }

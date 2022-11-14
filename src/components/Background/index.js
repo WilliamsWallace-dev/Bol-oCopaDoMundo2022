@@ -16,6 +16,7 @@ import iconeCompartilhar from "../../svg/iconeCompartilhar.svg";
 
 import campoDeFutebol1 from "../../svg/campoDeFutebol.svg";
 import campoDeFutebol2 from "../../svg/campoDeFutebol.svg";
+import campoDeFutebol3 from "../../svg/campoDeFutebol.svg";
 import bola1 from "../../svg/bola1.svg";
 import chute1 from "../../svg/chute1.svg";
 
@@ -51,6 +52,7 @@ const Background = ({type})=>{
                 {/* <div className="background-gradient"></div> */}
                 <img className="campoDeFutebol1" src={campoDeFutebol1} alt=""></img>
                 <img className="campoDeFutebol2" src={campoDeFutebol2} alt=""></img>
+                <img className="campoDeFutebol3" src={campoDeFutebol3} alt=""></img>
                 
 
                 <img className="bola1" src={bola1} alt=""></img>

@@ -8,11 +8,12 @@ import Guess from "../Guess"
 import Classification from "../Classification"
 import Instructions from "../Instructions";
 import MenuBolão from "../MenuBolão";
+import Regulamento from "../Regulamento";
 
 
 
 const Main = () =>{
-    const formulario = "GerenciarBolões";
+    const formulario = "CriarBolão";
     const type = 2;
     return(
 
@@ -54,11 +55,31 @@ const Main = () =>{
         <section className="container">
             <Background type = {type}></Background>
             <Header></Header>
-            <MenuBolão type = "GerenciarBolões"></MenuBolão>
+            <MenuBolão type = "CriarBolão"></MenuBolão>
             <Form form = {formulario}></Form>
         </section>
 
         </>
+
+        // <>
+        // <section className="container">
+        //     <Background type = {type}></Background>
+        //     <Header></Header>
+        //     <MenuBolão type = "ExplorarBolão"></MenuBolão>
+        //     <Form form = {formulario}></Form>
+        // </section>
+
+        // </>
+
+
+        // <>
+        // <section className="container">
+        //     <Background type = {type}></Background>
+        //     <Header></Header>
+        //     <Regulamento></Regulamento>
+        // </section>
+
+        // </>
     )
 }
 
