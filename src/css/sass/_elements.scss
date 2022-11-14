@@ -103,6 +103,7 @@
         pointer-events: none;
         }
     }
+
     select{
     appearance: none;
     -webkit-appearance: none;
@@ -277,7 +278,7 @@
       border:none;
       padding: 1rem 16rem 1rem 2rem;
       background: $gradient-input;
-      border-radius: 16px;
+      border-radius: 1rem;
       backdrop-filter: blur(4px);
       
       
@@ -327,6 +328,9 @@
 //Subtitulos
   .subtitle{
     color: $white-dark;
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     margin: .25rem 0 1.5rem 0;
     text-align: center;
   }
@@ -441,6 +445,9 @@ table{
 
   border-color: $primary-normal;
 
+  width: 100%;
+  max-width: 60%;
+
 }
 th,td{
   border: none;
@@ -477,7 +484,7 @@ td{
 .instructions{
 
   width: 100%;
-  max-width: 600px;
+  max-width: 55%;
 
   margin-top: 2rem;
   padding: 1rem;
@@ -486,6 +493,13 @@ td{
   backdrop-filter: blur(4px);
   border-radius: 15px;
 
+  .codigo{
+    border-bottom: 2px solid $primary-light;
+  }
+  .pontuação{
+    width: 100%;
+    max-width: 7%;
+  }
 
   .collumns p {
     background: $gradient-main;
@@ -495,10 +509,62 @@ td{
   }
   p{
   font-family: 'Readex Pro', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
 
-  margin-bottom: .5rem;
-  border-bottom: 1px solid $gradient;
+  padding: .5rem .25rem;
+
+  
+  
   }
+}
+
+//Gerenciar Bolões 
+.form-criarBolão{
+
+  #valorDaAposta{
+    width: 100%;
+   }
+
+   label::before{
+    content:"";
+      display: inline-block;
+      background: url("../svg/iconeSeta2.svg") center center no-repeat;
+      background-size: cover;
+      width: 1rem;
+      height: .5rem ;
+
+      transform: translateX(-110px)  translateY(-33px);
+  
+      cursor: pointer;
+      pointer-events: none;
+  }
+
+   select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    align-self: flex-start;
+
+
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 400;
+    width: 7rem;
+    padding: .875rem ;
+    margin-left: 1.5rem;
+    margin-top: 1.125rem ;
+    border: none;
+    background: $gradient-link;
+    border-radius: 1rem;
+    font-size: 15px;
+    }
+
+    .primary-button{
+      margin-top: 1.5rem;
+    }
+
+    
+
+    
 }

@@ -1,4 +1,4 @@
-import MenuBolão from "../MenuBolão";
+ 
 
 //Bandeiras
 import Holanda from "../../svg/bandeiras/Holanda.svg"
@@ -9,7 +9,7 @@ const Guess = ()=>{
         <>
             <section className=" guess flex-collumn">
                 
-                <MenuBolão type = "Guess"></MenuBolão>
+                
 
                 <h2>Realize os palpite dos jogos!</h2>
                 <p className="subtitle p4 ">O palpite poderá ser alterado até 1 hora antes do jogo.</p>

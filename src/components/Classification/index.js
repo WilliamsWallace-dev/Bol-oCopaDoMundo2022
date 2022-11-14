@@ -1,5 +1,4 @@
 
-import MenuBolão from "../MenuBolão";
 
 import Holanda from "../../svg/bandeiras/Holanda.svg"
 
@@ -7,8 +6,6 @@ const Classification = ()=>{
     return (
         <>
         <section className=" guess flex-collumn">
-                
-                <MenuBolão type = "Classification"></MenuBolão>
 
                 <h2>Classificação</h2>
                 <p className="subtitle p4 ">Confira sua classificação nos Bolões que participa!</p>
@@ -72,61 +69,7 @@ const Classification = ()=>{
                     </tr>
                 </table>
 
-                <section className="instructions">
-                    <div className="flex-between collumns">
-                        <p>COD	Descrição</p>
-                        <p>Pontuação</p>
-                    </div>
-
-                    <div className="flex-between">
-                        <div className="flex">
-                            <p className="mr-1">PE</p>
-                            <p>	<b>Placar Exato</b> - (Ex: Palpite 2x2 - Resultado 2x2). Acertou placar exato.	</p>
-                        </div>
-                        <p>25 Pts</p>
-                    </div>
-                    
-                    <div className="flex-between">
-                        <div className="flex">
-                            <p className="mr-1">PE</p>
-                            <p>	<b>Placar Exato</b> - (Ex: Palpite 2x2 - Resultado 2x2). Acertou placar exato.	</p>
-                        </div>
-                        <p>25 Pts</p>
-                    </div>
-                    
-                    <div className="flex-between">
-                        <div className="flex">
-                            <p className="mr-1">PE</p>
-                            <p>	<b>Placar Exato</b> - (Ex: Palpite 2x2 - Resultado 2x2). Acertou placar exato.	</p>
-                        </div>
-                        <p>25 Pts</p>
-                    </div>
-
-                    <div className="flex-between">
-                        <div className="flex">
-                            <p className="mr-1">PE</p>
-                            <p>	<b>Placar Exato</b> - (Ex: Palpite 2x2 - Resultado 2x2). Acertou placar exato.	</p>
-                        </div>
-                        <p>25 Pts</p>
-                    </div>
-
-                    <div className="flex-between">
-                        <div className="flex">
-                            <p className="mr-1">PE</p>
-                            <p>	<b>Placar Exato</b> - (Ex: Palpite 2x2 - Resultado 2x2). Acertou placar exato.	</p>
-                        </div>
-                        <p>25 Pts</p>
-                    </div>
-
-                    <div className="flex-between">
-                        <div className="flex">
-                            <p className="mr-1">PE</p>
-                            <p>	<b>Placar Exato</b> - (Ex: Palpite 2x2 - Resultado 2x2). Acertou placar exato.	</p>
-                        </div>
-                        <p>25 Pts</p>
-                    </div>
-
-                </section>
+                
                 {/* <div className="tabelaDeClassificação">
                     <div className="flex-between">
                         <p className="collumn">Participantes</p>

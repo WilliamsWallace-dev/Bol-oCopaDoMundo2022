@@ -23,7 +23,7 @@ const Background = ({type})=>{
     if(type == 1){
         return(
             <>
-                <div className="background-gradient"></div>
+                {/* <div className="background-gradient"></div> */}
                 <img className="fundocopa" src={fundocopa} alt="Imagem com síbolo da copa do mundo de 2022"></img>
                 <img className="circulo1" src={circulo1} alt=""></img>
                 <img className="circulo1-2" src={circulo1} alt=""></img>
@@ -48,10 +48,10 @@ const Background = ({type})=>{
     }else if(type == 2){
         return(
             <>
-                <div className="background-gradient">
+                {/* <div className="background-gradient"></div> */}
                 <img className="campoDeFutebol1" src={campoDeFutebol1} alt=""></img>
                 <img className="campoDeFutebol2" src={campoDeFutebol2} alt=""></img>
-                </div>
+                
 
                 <img className="bola1" src={bola1} alt=""></img>
                 <img className="chute1" src={chute1} alt=""></img>
