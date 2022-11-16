@@ -380,11 +380,13 @@
     position: absolute;
     left:-1.16%;
     bottom:-3.35%;
+    z-index: -1;
   }
   .torcedor2{
     position: absolute;
     right:-1.1%;
     bottom:-2.5%;
+    z-index: -1;
   }
   .campoDeFutebol1{
     width: 30%;
@@ -674,12 +676,21 @@ button{
       border-bottom: 2px solid $primary-light;
       border-radius: .5rem;
 
-      p{
-        background: linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-     
+      background: linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      div{
+        cursor: pointer;
+        
+      }
+
+      .descrição{
+        max-height: 0px;
+        overflow: hidden;
+
+        transition: .5s ease;
       }
     }
   }
@@ -725,4 +736,15 @@ button{
   button{
     margin-top: 1rem;
   }
+}
+
+
+.mensagem-green { 
+  margin : 1rem 0 -.5rem 0;
+  color: #32D957;
+}
+
+.mensagem-red { 
+  margin : 1rem 0 -.5rem 0;
+  color: #EB3D3D;
 }

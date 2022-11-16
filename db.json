@@ -2,8 +2,52 @@
   "users": [
     {
       "id": 1,
-      "username": "williams",
-      "password": "1234"
+      "username": "e",
+      "password": "e",
+      "admboloes": [],
+      "boloes": [],
+      "pontuacao": []
+    },
+    {
+      "id": 2,
+      "username": "c",
+      "password": "c",
+      "admboloes": [
+        "Bolão do c",
+        "Bolão cOPA 2022"
+      ],
+      "boloes": [
+        "Bolão do c",
+        "Bolão cOPA 2022"
+      ],
+      "pontuacao": ""
+    }
+  ],
+  "boloes": [
+    {
+      "id": 1,
+      "nome": "Bolão da Ceilândia",
+      "chave": "ceilandia",
+      "valor": "50",
+      "participantes": []
+    },
+    {
+      "id": 2,
+      "nome": "Bolão do c",
+      "chave": "c",
+      "valor": "20",
+      "participantes": [
+        "c"
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Bolão cOPA 2022",
+      "chave": "123",
+      "valor": "50",
+      "participantes": [
+        "c"
+      ]
     }
   ]
 }

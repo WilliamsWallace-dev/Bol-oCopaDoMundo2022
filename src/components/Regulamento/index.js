@@ -1,5 +1,17 @@
 import losangoRegulamento from "../../svg/losangoRegulamento.svg"
 
+const MostrarDescrição = (e)=>{
+    let menu = e.currentTarget.nextSibling;
+    menu.classList.toggle("active");
+    console.log(menu)
+    if(menu.classList.contains("active")){
+      menu.style.maxHeight = menu.scrollHeight + "px";
+    }else{
+      menu.style.maxHeight = 0 + "px";
+    }
+
+  }
+
 const Regulamento = ()=>{
     return (
         <>
@@ -12,11 +24,71 @@ const Regulamento = ()=>{
                     <br></br> gratuitamente para participar do bolão.</p>
                     
                     <ul>
-                        <li className="flex-between p4"><p>COMO PARTICIPAR</p><img src={losangoRegulamento}></img>{/* <p></p> */}</li>
-                        <li className="flex-between p4"><p>PONTUAÇÃO</p><img src={losangoRegulamento}></img>{/* <p></p> */}</li>
-                        <li className="flex-between p4"><p>CRITÉRIO DE DESEMPATE</p><img src={losangoRegulamento}></img>{/* <p></p> */}</li>
-                        <li className="flex-between p4"><p>PREMIAÇÃO</p><img src={losangoRegulamento}></img>{/* <p></p> */}</li>
-                        <li className="flex-between p4"><p>DISPOSIÇÃO GERAIS</p><img src={losangoRegulamento}></img>{/* <p></p> */}</li>
+                        <li>
+                            <div className="flex-between p4" onClick={MostrarDescrição} onBlur={MostrarDescrição}>
+                                <p>COMO PARTICIPAR</p>
+                                <img src={losangoRegulamento}></img>
+                            </div>
+                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
+                            dos acertos será feita a partir dos seguintes critérios, não acumulativos:
+                            Acertando o placar exato.
+                            Acertando o vencedor e o número de gols do vencedor.
+                            Acertando o vencedor e o número de gols do perdedor.
+                            </p>
+                        </li>
+                        <li>
+                            <div className="flex-between p4" onClick={MostrarDescrição} onBlur={MostrarDescrição}>
+                                <p>PONTUAÇÃO</p>
+                                <img src={losangoRegulamento}></img>
+                            </div>
+                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
+                            dos acertos será feita a partir dos seguintes critérios, não acumulativos:
+                            Acertando o placar exato.
+                            Acertando o vencedor e o número de gols do vencedor.
+                            Acertando o vencedor e o número de gols do perdedor.
+                            </p>
+                        </li>
+                        <li>
+                            <div className="flex-between p4" onClick={MostrarDescrição} onBlur={MostrarDescrição}>
+                                <p>CRITÉRIO DE DESEMPATE</p>
+                                <img src={losangoRegulamento}></img>
+                            </div>
+                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
+                            dos acertos será feita a partir dos seguintes critérios, não acumulativos:
+                            Acertando o placar exato.
+                            Acertando o vencedor e o número de gols do vencedor.
+                            Acertando o vencedor e o número de gols do perdedor.
+                            </p>
+                        </li>
+                        <li>
+                            <div className="flex-between p4" onClick={MostrarDescrição} onBlur={MostrarDescrição}>
+                                <p>PREMIAÇÃO</p>
+                                <img src={losangoRegulamento}></img>
+                            </div>
+                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
+                            dos acertos será feita a partir dos seguintes critérios, não acumulativos:
+                            Acertando o placar exato.
+                            Acertando o vencedor e o número de gols do vencedor.
+                            Acertando o vencedor e o número de gols do perdedor.
+                            </p>
+                        </li>
+                        <li>
+                            <div className="flex-between p4" onClick={MostrarDescrição} onBlur={MostrarDescrição}>
+                                <p>DISPOSIÇÃO GERAIS</p>
+                                <img src={losangoRegulamento}></img>
+                            </div>
+                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
+                            dos acertos será feita a partir dos seguintes critérios, não acumulativos:
+                            Acertando o placar exato.
+                            Acertando o vencedor e o número de gols do vencedor.
+                            Acertando o vencedor e o número de gols do perdedor.
+                            </p>
+                        </li>
                     </ul>
                     
                 </section>

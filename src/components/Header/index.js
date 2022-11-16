@@ -27,8 +27,8 @@ const logout = ()=>{
                 <img src={logo} alt="logo"></img>
                 <Link to="/regrasdobolão"><a className="link p2-regular">Regras do Bolão</a></Link>
                 <div style={{display:"flex"}}>
-                <Link to="/"><a className="link p2-regular">Registrar-se</a></Link>
-                <Link to="/login"><button className="primary-button" style={{margin: "0 1.5rem" }}>Entrar</button></Link>
+                <Link to="/register"><a className="link p2-regular">Registrar-se</a></Link>
+                <Link to="/"><button className="primary-button" style={{margin: "0 1.5rem" }}>Entrar</button></Link>
                 </div>
             </header>
         </>
@@ -41,7 +41,7 @@ const logout = ()=>{
                     <img src={logo} alt="logo"></img>
                     <Link to="/regrasdobolão"><a className="link p2-regular">Regras do Bolão</a></Link>
                     <div className="username flex-collumn" >
-                        <a>Olá Username</a>
+                        <a>Olá {userOn.username}</a>
                         <ul className="menu-usuário">
                             <li><a className="menu-items ">Meu Perfil</a></li>
                             <li><a className="menu-items">Meus Bolôes</a></li>

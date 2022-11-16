@@ -21,16 +21,16 @@ const AppCopa = ()=>{
     <>
       <BrowserRouter>
       <Header></Header>
-      <Routes>
-        <Route path="/" element={<Register/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/palpites" element={<UserGuess/>}/>
-        <Route path="/classificação" element={<UserClassification/>}/>
-        <Route path="/criarbolão" element={<UserCriarBolão/>}/>
-        <Route path="/explorarbolão" element={<UserExplorarBolão/>}/>
-        <Route path="/regrasdobolão" element={<RegrasDoBolão/>}/>
-        <Route path="/notificações" element={<NotificationsPage/>}/>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/palpites:id" element={<UserGuess/>}/>
+          <Route path="/classificação:id" element={<UserClassification/>}/>
+          <Route path="/criarbolão:id" element={<UserCriarBolão/>}/>
+          <Route path="/explorarbolão:id" element={<UserExplorarBolão/>}/>
+          <Route path="/regrasdobolão" element={<RegrasDoBolão/>}/>
+          <Route path="/notificações:id" element={<NotificationsPage/>}/>
+        </Routes>
     </BrowserRouter>
     </>
     

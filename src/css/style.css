@@ -1016,12 +1016,14 @@ img {
   position: absolute;
   left: -1.16%;
   bottom: -3.35%;
+  z-index: -1;
 }
 
 .torcedor2 {
   position: absolute;
   right: -1.1%;
   bottom: -2.5%;
+  z-index: -1;
 }
 
 .campoDeFutebol1 {
@@ -1246,12 +1248,18 @@ td {
   padding: 0.5rem;
   border-bottom: 2px solid #AD4766;
   border-radius: 0.5rem;
-}
-.regulamento ul li p {
   background: linear-gradient(359.59deg, rgba(222, 123, 153, 0.8) -87.98%, rgba(252, 246, 248, 0.8) 81.26%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+.regulamento ul li div {
+  cursor: pointer;
+}
+.regulamento ul li .descrição {
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease;
 }
 .regulamento > p {
   color: #E5D3D6;
@@ -1275,6 +1283,16 @@ td {
 }
 .notificações button {
   margin-top: 1rem;
+}
+
+.mensagem-green {
+  margin: 1rem 0 -0.5rem 0;
+  color: #32D957;
+}
+
+.mensagem-red {
+  margin: 1rem 0 -0.5rem 0;
+  color: #EB3D3D;
 }
 
 .container {
