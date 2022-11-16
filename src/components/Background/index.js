@@ -18,10 +18,10 @@ import campoDeFutebol1 from "../../svg/campoDeFutebol.svg";
 import campoDeFutebol2 from "../../svg/campoDeFutebol.svg";
 import campoDeFutebol3 from "../../svg/campoDeFutebol.svg";
 import bola1 from "../../svg/bola1.svg";
-import chute1 from "../../svg/chute1.svg";
+// import chute1 from "../../svg/chute1.svg";
 
 const Background = ({type})=>{
-    if(type == 1){
+    if(type == "1"){
         return(
             <>
                 {/* <div className="background-gradient"></div> */}
@@ -46,20 +46,20 @@ const Background = ({type})=>{
             
             </>
         )
-    }else if(type == 2){
+    }else if(type == "2"){
         return(
             <>
                 {/* <div className="background-gradient"></div> */}
                 <img className="campoDeFutebol1" src={campoDeFutebol1} alt=""></img>
                 <img className="campoDeFutebol2" src={campoDeFutebol2} alt=""></img>
-                <img className="campoDeFutebol3" src={campoDeFutebol3} alt=""></img>
+                {/* <img className="campoDeFutebol3" src={campoDeFutebol3} alt=""></img> */}
                 
 
                 <img className="bola1" src={bola1} alt=""></img>
-                <img className="chute1" src={chute1} alt=""></img>
+                {/* <img className="chute1" src={chute1} alt=""></img> */}
 
                 <img className="bola2" src={bola1} alt=""></img>
-                <img className="chute2" src={chute1} alt=""></img>
+                {/* <img className="chute2" src={chute1} alt=""></img> */}
 
                 
     

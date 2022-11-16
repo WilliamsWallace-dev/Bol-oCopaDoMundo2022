@@ -1,25 +1,27 @@
 
 
 
-import Header from "../Header";
-import Form from "../Form";
-import Background from "../Background";
-import Guess from "../Guess"
-import Classification from "../Classification"
-import Instructions from "../Instructions";
-import MenuBolão from "../MenuBolão";
-import Regulamento from "../Regulamento";
+import Header from "../../components/Header";
+import Form from "../../components/Form";
+import Background from "../../components/Background";
+import Guess from "../../components/Guess"
+import Classification from "../../components/Classification"
+import Instructions from "../../components/Instructions";
+import MenuBolão from "../../components/MenuBolão";
+import Regulamento from "../../components/Regulamento";
+
 
 
 
 const Main = () =>{
     const formulario = "CriarBolão";
-    const type = 2;
+    const type = "2";
+    console.log("main")
     return(
 
         // <>
         //     <section className="container main">
-        //         <Background type = {type}></Background>
+        // <Background type = {type}></Background>
         //         <Header></Header>
                 // <Form form = {formulario}></Form>
                 
@@ -29,7 +31,7 @@ const Main = () =>{
 
         // <>
         // <section className="container main">
-        //     <Background type = {type}></Background>
+        // <Background type = {type}></Background>
         //     <Header></Header>
         // <MenuBolão type = "Guess"></MenuBolão>
         //     <Guess></Guess>
@@ -40,7 +42,7 @@ const Main = () =>{
 
         // <>
         // <section className="container">
-        //     <Background type = {type}></Background>
+        // <Background type = {type}></Background>
         //     <Header></Header>
         // <MenuBolão type = "Classification"></MenuBolão>
         //     <Classification></Classification>
@@ -53,8 +55,8 @@ const Main = () =>{
 
         <>
         <section className="container">
-            <Background type = {type}></Background>
-            <Header></Header>
+            {/* <Background type = {type}></Background>
+            <Header type = {type}></Header> */}
             <MenuBolão type = "CriarBolão"></MenuBolão>
             <Form form = {formulario}></Form>
         </section>
@@ -63,7 +65,7 @@ const Main = () =>{
 
         // <>
         // <section className="container">
-        //     <Background type = {type}></Background>
+        // <Background type = {type}></Background>
         //     <Header></Header>
         //     <MenuBolão type = "ExplorarBolão"></MenuBolão>
         //     <Form form = {formulario}></Form>
@@ -74,7 +76,7 @@ const Main = () =>{
 
         // <>
         // <section className="container">
-        //     <Background type = {type}></Background>
+        // <Background type = {type}></Background>
         //     <Header></Header>
         //     <Regulamento></Regulamento>
         // </section>

@@ -44,13 +44,16 @@
   .menu-usuário{
     position: absolute;
     top:3.7rem;
-    padding: .5rem 1rem;
 
-    border:1px solid white;
 
-    
-    border: 1px solid $white-dark;
+    // padding: .5rem 1rem;
+    border: 0px solid $white-dark;
     border-radius: 10px;
+
+    // border-width: 1px;  fazer no js
+
+    max-height: 0px;
+    overflow: hidden;
 
     
   }
@@ -66,7 +69,7 @@
     background-clip: text;
 
 
-    padding: .1rem 0;
+    padding: .125rem 1rem;
     cursor: pointer;
 
     &::after{
@@ -195,7 +198,7 @@
     font-family: 'Readex Pro', sans-serif;
     font-size: 18px;
     font-weight: 500;
-
+  
     padding: .5rem 3.5rem;
     margin: 1.5rem .5rem ;
 
@@ -403,26 +406,33 @@
     top:5%;
   }
   .bola1{
+    width: 7%;
+    max-width: 100px;
     position: absolute;
-    left:10%;
+    left:11%;
     top:15%;
   }
-  .chute1{
-    position: absolute;
-    left:8.5%;
-    top:11%;
-  }
+  // .chute1{
+  //   width: 11%;
+  //   max-width: 100px;
+  //   position: absolute;
+  //   left:8.5%;
+  //   top:11%;
+  // }
 
   .bola2{
+    width: 7%;
+    max-width: 100px;
     position: absolute;
-    right:15%;
+    right:16%;
     bottom:30%;
   }
-  .chute2{
-    position: absolute;
-    right:13.8%;
-    bottom:27.5%;
-  }
+  // .chute2{
+  //   width: 11%;
+  //   position: absolute;
+  //   right:13.8%;
+  //   bottom:27.5%;
+  // }
   .redes{
     position:absolute;
     top:40%;
@@ -431,6 +441,7 @@
     padding: .5rem;
     & img{
       width:1.5vw;
+      min-width: 20px;
       cursor: pointer;
       transition: .5s ease;
       &:hover{
@@ -675,6 +686,43 @@ button{
   
   &>p{
     color:$white-dark;
+    margin-top: 1rem;
+  }
+}
+
+//Notificações
+
+.notificações{
+  li{
+    border-bottom: 5px solid $primary-light;
+    border-top: 5px solid $primary-light;
+    border-radius: 1rem;
+
+    margin: .5rem 0;
+    padding: .875rem .875rem;
+  }
+  // .nomeDoJogador{
+  //   font-family: 'Readex Pro', sans-serif;
+  //   font-size: 16px;
+  //   font-weight: 400;
+  //   font-style: normal;
+  //   padding: .5rem .25rem;
+
+  //   color: $white-dark;
+
+  // }
+  p{
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+
+    margin-bottom: .875rem;
+
+
+    color: $white-dark;
+  }
+  button{
     margin-top: 1rem;
   }
 }

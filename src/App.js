@@ -1,10 +1,18 @@
-// import Header from "./components/Header";
-import Main from "./components/Main";
+ 
+ 
+import AppCopa from "./routes/index.js";
 
+import {CopaProvidor} from "./Context/index"
+import Header from "./components/Header/index.js";
 
 function App() {
   return (
-    <Main></Main>
+      <>
+        <CopaProvidor>
+          <AppCopa></AppCopa>
+        </CopaProvidor>
+        
+      </>
   );
 }
 

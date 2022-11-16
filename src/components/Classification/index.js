@@ -1,8 +1,9 @@
-
+import { Outlet, Link } from "react-router-dom";
 
 import Holanda from "../../svg/bandeiras/Holanda.svg"
 
 const Classification = ()=>{
+    console.log("Classification")
     return (
         <>
         <section className=" guess flex-collumn">
@@ -89,6 +90,7 @@ const Classification = ()=>{
                 </div> */}
 
         </section>
+        <Outlet />
         </>
     )
 }
