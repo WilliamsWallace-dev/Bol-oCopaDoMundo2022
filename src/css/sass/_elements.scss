@@ -1,8 +1,8 @@
 //Elementos Header
 
 .username{
-  &>a{
-    display: flex;
+  &>button{
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -14,6 +14,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+border: none;
 
   transition: 1.5s ease;
 
@@ -46,18 +48,21 @@
     top:3.7rem;
 
 
-    // padding: .5rem 1rem;
+    padding: .25rem 0;
     border: 0px solid $white-dark;
     border-radius: 10px;
 
-    // border-width: 1px;  fazer no js
+    border-width: 1px; 
 
     max-height: 0px;
     overflow: hidden;
 
+    transition: .3s ease;
+
     
   }
   .menu-items{
+    position: relative;
     display: inline-block;
     font-family: 'Readex Pro', sans-serif;
     font-size: 14px;
@@ -70,6 +75,7 @@
 
 
     padding: .125rem 1rem;
+    margin: .125rem 0 ;
     cursor: pointer;
 
     &::after{
@@ -266,20 +272,24 @@
   
 
   //Fomulários e Inputs
-  .form{
-    max-width: 55%;
+  .form-container{
+    width: 100%;
     min-width: 500px;
+    // height: 80vh;
+    padding: 1rem 1rem;
 
-    height: 80vh;
-    padding: 0 1rem;
+  .formCriarBolão, .formSearch{
+      width: 40%;
+    }
 
     // background-color: #050607;
     // opacity: 50%;
-    
+
     .input{
-      max-width: 90%;
+      width: 80%;
+      max-width: 800px;
       border:none;
-      padding: 1rem 16rem 1rem 2rem;
+      padding: 1rem 1rem 1rem 2rem;
       background: $gradient-input;
       border-radius: 1rem;
       backdrop-filter: blur(4px);
@@ -296,6 +306,7 @@
         transform: translateY(-5%);
       }
     }
+
   }
   
 //Links
@@ -542,9 +553,9 @@ td{
 //Gerenciar Bolões 
 .form-criarBolão{
 
-  #valorDaAposta{
-    width: 100%;
-   }
+  // #valorDaAposta{
+  //   width: 100%;
+  //  }
 
    label::before{
     content:"";
@@ -645,6 +656,7 @@ button{
 
 
 .resultadoPesquisa{
+  width: 40%;
   li{
     border-bottom: 5px solid $primary-light;
     border-top: 5px solid $primary-light;
@@ -652,7 +664,7 @@ button{
 
     margin: .5rem 0;
   }
-  p{
+  .nomeBolao{
     font-family: 'Readex Pro', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -738,6 +750,9 @@ button{
   }
 }
 
+// .mensagem{
+//   margin: -.5rem;
+// }
 
 .mensagem-green { 
   margin : 1rem 0 -.5rem 0;

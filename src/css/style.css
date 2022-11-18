@@ -704,7 +704,7 @@ img {
   max-width: 100%;
 }
 
-.username > a {
+.username > button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -715,9 +715,10 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  border: none;
   transition: 1.5s ease;
 }
-.username > a::before {
+.username > button::before {
   content: "";
   display: inline-block;
   background: url("../svg/iconeNotificação.svg") center center no-repeat;
@@ -727,7 +728,7 @@ img {
   margin-right: 1rem;
   cursor: pointer;
 }
-.username > a::after {
+.username > button::after {
   content: "";
   display: inline-block;
   background: url("../svg/iconeSeta.svg") center center no-repeat;
@@ -741,13 +742,17 @@ img {
 .menu-usuário {
   position: absolute;
   top: 3.7rem;
+  padding: 0.25rem 0;
   border: 0px solid #E5D3D6;
   border-radius: 10px;
+  border-width: 1px;
   max-height: 0px;
   overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .menu-items {
+  position: relative;
   display: inline-block;
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
@@ -757,6 +762,7 @@ img {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   padding: 0.125rem 1rem;
+  margin: 0.125rem 0;
   cursor: pointer;
 }
 .menu-items::after {
@@ -908,26 +914,29 @@ img {
   border: transparent;
 }
 
-.form {
-  max-width: 55%;
+.form-container {
+  width: 100%;
   min-width: 500px;
-  height: 80vh;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
 }
-.form .input {
-  max-width: 90%;
+.form-container .formCriarBolão, .form-container .formSearch {
+  width: 40%;
+}
+.form-container .input {
+  width: 80%;
+  max-width: 800px;
   border: none;
-  padding: 1rem 16rem 1rem 2rem;
+  padding: 1rem 1rem 1rem 2rem;
   background: linear-gradient(90deg, #F4EEEF 0%, rgba(244, 238, 239, 0.16) 100%);
   border-radius: 1rem;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   transition: 0.5s ease;
 }
-.form .input + .input {
+.form-container .input + .input {
   margin-top: 1.125rem;
 }
-.form .input:focus {
+.form-container .input:focus {
   box-shadow: 0px 9px 14px rgba(38, 31, 33, 0.23), 0px 3.28515px 5.11023px rgba(38, 31, 33, 0.158696), 0px 1.59488px 2.48092px rgba(38, 31, 33, 0.127947), 0px 0.781839px 1.21619px rgba(38, 31, 33, 0.102053), 0px 0.30914px 0.480885px rgba(38, 31, 33, 0.0713042);
   outline: 0;
   color: #362F31;
@@ -1149,9 +1158,6 @@ td {
   padding: 0.5rem 0.25rem;
 }
 
-.form-criarBolão #valorDaAposta {
-  width: 100%;
-}
 .form-criarBolão label::before {
   content: "";
   display: inline-block;
@@ -1222,13 +1228,16 @@ td {
   transform: translateY(4px);
 }
 
+.resultadoPesquisa {
+  width: 40%;
+}
 .resultadoPesquisa li {
   border-bottom: 5px solid #AD4766;
   border-top: 5px solid #AD4766;
   border-radius: 1rem;
   margin: 0.5rem 0;
 }
-.resultadoPesquisa p {
+.resultadoPesquisa .nomeBolao {
   font-family: "Readex Pro", sans-serif;
   font-size: 16px;
   font-weight: 400;

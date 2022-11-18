@@ -11,13 +11,9 @@ const FormLogin = ()=>{
     const {users,userOn,setUserOn} = useContext(CopaContext);
     let inputs = [];
 
-
-    console.log(users);
-
-
     const VerificaUsuario = () => {
         
-      let usuarioEncontrado = 0;
+      let usuarioEncontrado = -1;
 
         document.querySelectorAll(".formLogin input").forEach((element,index)=>{
           inputs[index] = element.value;
@@ -25,18 +21,16 @@ const FormLogin = ()=>{
           
         })
 
-        console.log(inputs)
 
         users.forEach((element,index,users)=>{
-          console.log(element.username)
-          console.log(element.password)
           if(element.username == inputs[0] && element.password == inputs[1]){
-            usuarioEncontrado = 1;
-          }else if(index === (users.length-1))
-                    if(!usuarioEncontrado){
+            usuarioEncontrado = index;
+          }
+          if(index === (users.length-1))
+                    if(usuarioEncontrado === -1){
                         setUserOn("Error");
                     }else{
-                      setUserOn(element);
+                      setUserOn(users[usuarioEncontrado]);
                     }
         })
       }
@@ -44,7 +38,7 @@ const FormLogin = ()=>{
       if(userOn === "Error"){
         return(
             <>
-                        <section className="form  flex-collumn">
+                        <section className="form-container  flex-collumn">
                             <h1>Realizar Login</h1>
                             <p className="subtitle">Junte-se a seus amigos no Bolão Copa do Mundo 2022.</p>
                             <form className="flex-collumn formLogin">
@@ -64,7 +58,7 @@ const FormLogin = ()=>{
       }else if(!userOn){
                 return(
                     <>
-                    <section className="form  flex-collumn">
+                    <section className="form-container  flex-collumn">
                         <h1>Realizar Login</h1>
                         <p className="subtitle">Junte-se a seus amigos no Bolão Copa do Mundo 2022.</p>
                         <form className="flex-collumn formLogin">

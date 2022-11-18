@@ -11,6 +11,7 @@ const FormRegister = ()=>{
     const {users,setUsers,userOn,setUserOn} = useContext(CopaContext);
     let inputs = [];
 
+
     const CadastrarUsuario = ()=>{
 
         document.querySelectorAll(".formRegister input").forEach((element,index)=>{
@@ -39,18 +40,18 @@ const FormRegister = ()=>{
                                 id : users.length + 1 ,
                                 username: `${inputs[0]}`,
                                 password: `${inputs[1]}`,
-                                admboloes : `${[]}`,
-                                boloes : `${[]}`,
-                                pontuacao : `${[]}`
+                                meusboloes : [],
+                                solicitacoes : [],
+                                pontuacao : []
                                 })
                                 .then(function (response) {
                                     setUsers([...users,{
                                         id : users.length + 1 ,
                                         username: `${inputs[0]}`,
                                         password: `${inputs[1]}`,
-                                        admboloes : `${[]}`,
-                                        boloes : `${[]}`,
-                                        pontuacao : `${[]}`
+                                        meusboloes : [],
+                                        solicitacoes : [],
+                                        pontuacao : []
                                     }])
                                     let mensagem = document.querySelector(".formRegister .mensagem");
                                     mensagem.classList.remove("mensagem-red")
@@ -68,16 +69,14 @@ const FormRegister = ()=>{
 
         return(
             <>
-                <section className="form flex-collumn">
+                <section className="form-container flex-collumn">
                     <h1>Seja um Jogador!</h1>
                     <p className="subtitle">Cadastre-se e se junte a seus amigos no Bolão Copa do Mundo 2022.</p>
                     <form className="flex-collumn formRegister">
-                        <div className="flex-collumn">
                         <input className="input" type="text" placeholder="Username"></input>
                         <input className="input" type="text" placeholder="Senha"></input>
                         <input className="input" type="text" placeholder="Confirmar Senha"></input>
                         <p className="mensagem"></p>
-                        </div>
                         
                         <div>
                         <button type = "button" className="primary-button" onClick = {CadastrarUsuario} >Cadastrar</button>

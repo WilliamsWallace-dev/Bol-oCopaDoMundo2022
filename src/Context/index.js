@@ -20,6 +20,8 @@ function CopaProvidor ({children}) {
 
   const [userOn,setUserOn] = useState("");
 
+  const [search,setSearch] = useState("");
+
   const [boloes,setBoloes] = useState([]);
   useEffect(()=>{
     api.get("http://localhost:4000/boloes")
@@ -57,7 +59,7 @@ function CopaProvidor ({children}) {
 
   return (
     <>
-    <CopaContext.Provider value={{users,setUsers,userOn,setUserOn,boloes,setBoloes}}>
+    <CopaContext.Provider value={{users,setUsers,userOn,setUserOn,boloes,setBoloes,search,setSearch}}>
     {children}
     </CopaContext.Provider>
     </>

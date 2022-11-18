@@ -2,51 +2,48 @@
   "users": [
     {
       "id": 1,
-      "username": "e",
-      "password": "e",
-      "admboloes": [],
-      "boloes": [],
+      "username": "w",
+      "password": "w",
+      "meusboloes": [
+        "Bolão j",
+        "copa do mundo"
+      ],
+      "solicitacoes": [
+        {
+          "nome": "c",
+          "bolao": "copa do mundo"
+        }
+      ],
       "pontuacao": []
     },
     {
       "id": 2,
       "username": "c",
       "password": "c",
-      "admboloes": [
-        "Bolão do c",
-        "Bolão cOPA 2022"
-      ],
-      "boloes": [
-        "Bolão do c",
-        "Bolão cOPA 2022"
-      ],
-      "pontuacao": ""
+      "meusboloes": [],
+      "solicitacoes": [],
+      "pontuacao": []
     }
   ],
   "boloes": [
     {
       "id": 1,
-      "nome": "Bolão da Ceilândia",
-      "chave": "ceilandia",
-      "valor": "50",
-      "participantes": []
-    },
-    {
-      "id": 2,
-      "nome": "Bolão do c",
-      "chave": "c",
+      "adm": "1",
+      "nome": "Bolão j",
+      "chave": "j",
       "valor": "20",
       "participantes": [
-        "c"
+        "w"
       ]
     },
     {
-      "id": 3,
-      "nome": "Bolão cOPA 2022",
-      "chave": "123",
-      "valor": "50",
+      "id": 2,
+      "adm": "1",
+      "nome": "copa do mundo",
+      "chave": "2022",
+      "valor": "22",
       "participantes": [
-        "c"
+        "w"
       ]
     }
   ]

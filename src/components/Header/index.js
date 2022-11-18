@@ -9,6 +9,25 @@ import logo from "../../svg/logo.svg"
 
 const Header = ()=>{
  
+//Funções
+
+const ActiveMenuUse = (e)=>{
+    console.log(e)
+    let menu = e.target.nextSibling;
+    // if(e._reactName == "onBlur"){
+    //     menu.classList.remove("active");
+    //     menu.style.maxHeight = 0 + "px";
+    // }else{
+        menu.classList.toggle("active");
+        if(menu.classList.contains("active")){
+            menu.style.maxHeight = menu.scrollHeight + "px";
+        }else{
+            menu.style.maxHeight = 0 + "px";
+    }
+    // }
+
+  }
+
 //Dados
 const {userOn,setUserOn} = useContext(CopaContext);
 
@@ -41,11 +60,12 @@ const logout = ()=>{
                     <img src={logo} alt="logo"></img>
                     <Link to="/regrasdobolão"><a className="link p2-regular">Regras do Bolão</a></Link>
                     <div className="username flex-collumn" >
-                        <a>Olá {userOn.username}</a>
+                        <button onClick={ActiveMenuUse} >Olá {userOn.username}</button>
                         <ul className="menu-usuário">
                             <li><a className="menu-items ">Meu Perfil</a></li>
-                            <li><a className="menu-items">Meus Bolôes</a></li>
-                            <li><a className="menu-items ">Solicitações</a></li>
+                            <li><a className="menu-items">Meus Bolões</a></li>
+                            <Link to={"/notificações:" + userOn.id}><li><a className="menu-items ">Solicitações</a></li></Link>
+                            
                             <a className="menu-items">Sair</a>
                         </ul>
                         
