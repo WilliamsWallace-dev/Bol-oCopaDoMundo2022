@@ -10,17 +10,82 @@ import MenuBolão from "../MenuBolão";
 
 
 const Notifications = ()=>{
-    const {users,userOn,boloes} = useContext(CopaContext);
+    const {users,userOn,setUserOn,boloes,setBoloes} = useContext(CopaContext);
 
-    console.log(userOn.solicitacoes)
 
     const AceitarSolicitacao = (e,solicitacao)=>{
         let bolao = boloes.filter((bolao)=> bolao.nome == solicitacao.bolao)[0];
+        let aux;
         console.log(bolao)
+        if(bolao.classificacao == undefined || bolao.classificacao.length == 0){
+            bolao.classificacao = [{
+                nome :`${solicitacao.nome}`,
+                pontuacao : []
+            }];
+        }else{
+            bolao.classificacao = [...bolao.classificacao,{
+                nome :`${solicitacao.nome}`,
+                pontuacao : []
+            }];
+        }
+        
+
+        api.patch(`/boloes/${bolao.id}`,{
+            classificacao : [...bolao.classificacao]
+          })
+          .then((response)=>{console.log(response)})
+          .catch((error)=>{console.log(error)})
+
+          aux = boloes;
+          aux.forEach((e,index)=>{
+            if(e.nome === bolao.nome)
+                aux[index] = bolao;
+          })
+          setBoloes(aux)
+
+          let userAux = userOn;
+          userAux.solicitacoes =  userOn.solicitacoes.filter((e)=> e.nome !== solicitacao.nome && e.bolao == solicitacao.bolao);
+          setUserOn(userAux);
+
+          api.patch(`/users/${userOn.id}`,{
+            solicitacoes : userAux.solicitacoes
+          })
+          .then((response)=>{console.log(response)})
+          .catch((error)=>{console.log(error)})
+
+          let user = users.filter((user)=> user.username == solicitacao.nome)[0];
+          api.patch(`/users/${user.id}`,{
+            meusboloes : [...user.meusboloes,solicitacao.bolao]
+          })
+          .then((response)=>{console.log(response)})
+          .catch((error)=>{console.log(error)})
+
+          let mensagem = e.target.parentElement;
+              mensagem.classList.remove("mensagem-red")
+              mensagem.classList.add("mensagem-green");
+              mensagem.classList.add("p4");
+              mensagem.innerHTML = "Jogador adicionado no Bolão!";
+          
     }
 
     const NegarSolicitacao = (e,solicitacao)=>{
-        
+
+          let userAux = userOn;
+          userAux.solicitacoes =  userOn.solicitacoes.filter((e)=> e.nome !== solicitacao.nome && e.bolao == solicitacao.bolao);
+          console.log(userAux.solicitacoes);
+          console.log(userAux)
+          setUserOn(userAux);
+          api.patch(`/users/${userOn.id}`,{
+            solicitacoes : userAux.solicitacoes
+          })
+          .then((response)=>{console.log(response)})
+          .catch((error)=>{console.log(error)})
+
+          let mensagem = e.target.parentElement;
+              mensagem.classList.remove("mensagem-green")
+              mensagem.classList.add("mensagem-red");
+              mensagem.classList.add("p4");
+              mensagem.innerHTML = "Solicitação Recusada";
     }
 
     // let nomeBolao = [];

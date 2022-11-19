@@ -44,7 +44,10 @@ const FormCriarBolão = ()=>{
                             nome: `${inputs[0]}`,
                             chave: `${inputs[1]}`,
                             valor: `${inputs[2]}`,
-                            participantes : [userOn.username]
+                            classificacao : [{
+                                nome :`${userOn.username}`,
+                                pontuacao : [0,0,0,0,0,0,0,0]
+                            }]
                             })
                             .then(function (response) {
                                 setBoloes([...boloes,{
@@ -53,7 +56,10 @@ const FormCriarBolão = ()=>{
                                     nome: `${inputs[0]}`,
                                     chave: `${inputs[1]}`,
                                     valor: `${inputs[2]}`,
-                                    participantes : [userOn.username]
+                                    classificacao : [{
+                                        nome :`${userOn.username}`,
+                                        pontuacao : [0,0,0,0,0,0,0,0]
+                                    }]
                                 }])
                                 let mensagem = document.querySelector(".formCriarBolão .mensagem");
                                     mensagem.classList.remove("mensagem-red");
@@ -72,7 +78,10 @@ const FormCriarBolão = ()=>{
                             nome: `${inputs[0]}`,
                             chave: `${inputs[1]}`,
                             valor: `${inputs[2]}`,
-                            participantes : [userOn.username]
+                            classificacao : [{
+                                nome :`${userOn.username}`,
+                                pontuacao : [0,0,0,0,0,0,0,0]
+                            }]
                             })
                             .then(function (response) {
                                 setBoloes([...boloes,{
@@ -81,7 +90,10 @@ const FormCriarBolão = ()=>{
                                     nome: `${inputs[0]}`,
                                     chave: `${inputs[1]}`,
                                     valor: `${inputs[2]}`,
-                                    participantes : [userOn.username]
+                                    classificacao : [{
+                                        nome :`${userOn.username}`,
+                                        pontuacao : [0,0,0,0,0,0,0,0]
+                                    }]
                                 }])
                                 let mensagem = document.querySelector(".formCriarBolão .mensagem");
                                     mensagem.classList.remove("mensagem-red");

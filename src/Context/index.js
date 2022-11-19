@@ -9,27 +9,41 @@ function CopaProvidor ({children}) {
   let vetAux = [];
 
 
+  const [userOn,setUserOn] = useState("");
+
+  const [search,setSearch] = useState("");
+
+  const [classificacao,setClassificacao] = useState("");
+
   const [users,setUsers] = useState([]);
   useEffect(()=>{
     api.get("http://localhost:4000/users")
     .then((response)=>{
+ 
       setUsers(response.data);
     })
     .catch((error)=>{console.log(error);})
-  },[])
-
-  const [userOn,setUserOn] = useState("");
-
-  const [search,setSearch] = useState("");
+  },[userOn])
 
   const [boloes,setBoloes] = useState([]);
   useEffect(()=>{
     api.get("http://localhost:4000/boloes")
     .then((response)=>{
+ 
       setBoloes(response.data)
     })
     .catch((error)=>{console.log(error)})
-  },[])
+  },[userOn])
+
+  const [jogos,setJogos] = useState([]);
+  useEffect(()=>{
+    api.get("http://localhost:4000/jogos")
+    .then((response)=>{
+ 
+      setJogos(response.data)
+    })
+    .catch((error)=>{console.log(error)})
+  },[userOn])
 
 
 
@@ -59,7 +73,7 @@ function CopaProvidor ({children}) {
 
   return (
     <>
-    <CopaContext.Provider value={{users,setUsers,userOn,setUserOn,boloes,setBoloes,search,setSearch}}>
+    <CopaContext.Provider value={{users,setUsers,userOn,setUserOn,boloes,setBoloes,search,setSearch,classificacao,setClassificacao}}>
     {children}
     </CopaContext.Provider>
     </>

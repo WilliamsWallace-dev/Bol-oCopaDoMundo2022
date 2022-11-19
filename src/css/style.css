@@ -745,7 +745,10 @@ img {
   padding: 0.25rem 0;
   border: 0px solid #E5D3D6;
   border-radius: 10px;
-  border-width: 1px;
+  background: rgba(217, 217, 217, 0.01);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  z-index: 1;
   max-height: 0px;
   overflow: hidden;
   transition: 0.3s ease;
@@ -1302,6 +1305,30 @@ td {
 .mensagem-red {
   margin: 1rem 0 -0.5rem 0;
   color: #EB3D3D;
+}
+
+.listaBoloes li {
+  background: linear-gradient(0deg, #8B0930 -30.11%, #FCF6F8 72.03%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  transition: 1.5s ease;
+}
+.listaBoloes li::after {
+  content: "";
+  display: block;
+  margin-top: 0.2rem;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(102.01deg, rgba(162, 13, 53, 0.64) 8.77%, #FCF6F8 95.09%);
+  transition: 1.2s ease;
+}
+.listaBoloes li:hover {
+  transform: scale(1.03);
+}
+.listaBoloes li:hover::after {
+  width: 100%;
 }
 
 .container {

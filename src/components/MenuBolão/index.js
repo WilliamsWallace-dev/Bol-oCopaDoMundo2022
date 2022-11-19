@@ -6,11 +6,14 @@ import { CopaContext } from "../../Context";
 
 const MenuBolão = ({type}) => {
 
-    const {userOn,setSearch} = useContext(CopaContext);
+    const {userOn,setSearch,setClassificacao} = useContext(CopaContext);
 
 
     const CleanSearch = ()=>{
         setSearch("");
+      }
+      const CleanClassification = ()=>{
+        setClassificacao("");
       }
 
 
@@ -19,7 +22,7 @@ const MenuBolão = ({type}) => {
             <>
                 <ul className=" container flex">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button active">Meus Palpites</button></li></Link>
-                    <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button">Classificação</button></li></Link>
+                    <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button" onClick = {CleanClassification}>Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button">Criar Bolão</button></li></Link>
                     <Link to={"/explorarbolão:" + userOn.id}><li><button className="secundary-button" onClick = {CleanSearch}>Explorar Bolões</button></li></Link>
                 </ul>
@@ -41,7 +44,7 @@ const MenuBolão = ({type}) => {
             <>
                 <ul className=" container flex">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button ">Meus Palpites</button></li></Link>
-                    <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button ">Classificação</button></li></Link>
+                    <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button " onClick = {CleanClassification}>Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button active">Criar Bolão</button></li></Link>
                     <Link to={"/explorarbolão:" + userOn.id}><li><button className="secundary-button" onClick = {CleanSearch}>Explorar Bolões</button></li></Link>
                     </ul>
@@ -52,7 +55,7 @@ const MenuBolão = ({type}) => {
             <>
                 <ul className=" container flex">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button ">Meus Palpites</button></li></Link>
-                    <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button ">Classificação</button></li></Link>
+                    <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button " onClick = {CleanClassification}>Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button ">Criar Bolão</button></li></Link>
                     <Link to={"/explorarbolão:" + userOn.id}><li><button className="secundary-button active">Explorar Bolões</button></li></Link>
                     </ul>
@@ -63,7 +66,7 @@ const MenuBolão = ({type}) => {
             <>
                 <ul className=" container flex">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button ">Meus Palpites</button></li></Link>
-                    <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button ">Classificação</button></li></Link>
+                    <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button "onClick = {CleanClassification}>Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button ">Criar Bolão</button></li></Link>
                     <Link to={"/explorarbolão:" + userOn.id}><li><button className="secundary-button" onClick = {CleanSearch}>Explorar Bolões</button></li></Link>
                     </ul>
@@ -74,5 +77,3 @@ const MenuBolão = ({type}) => {
 }
 
 export default MenuBolão;
-
-<Link to="/login"></Link>

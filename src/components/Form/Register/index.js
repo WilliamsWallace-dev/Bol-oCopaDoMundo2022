@@ -40,18 +40,18 @@ const FormRegister = ()=>{
                                 id : users.length + 1 ,
                                 username: `${inputs[0]}`,
                                 password: `${inputs[1]}`,
+                                palpites : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                                 meusboloes : [],
                                 solicitacoes : [],
-                                pontuacao : []
                                 })
                                 .then(function (response) {
                                     setUsers([...users,{
                                         id : users.length + 1 ,
                                         username: `${inputs[0]}`,
                                         password: `${inputs[1]}`,
+                                        palpites : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                                         meusboloes : [],
                                         solicitacoes : [],
-                                        pontuacao : []
                                     }])
                                     let mensagem = document.querySelector(".formRegister .mensagem");
                                     mensagem.classList.remove("mensagem-red")

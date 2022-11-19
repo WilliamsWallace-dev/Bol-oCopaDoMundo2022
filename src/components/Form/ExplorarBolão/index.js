@@ -30,6 +30,7 @@ const FormExplorarBolão = ()=>{
           userOn.meusboloes.forEach((element)=>{
             bolaoSearch = bolaoSearch.filter((e)=> e.nome !== element);
           })
+
           setSearch(bolaoSearch);
       }
 
@@ -37,24 +38,27 @@ const FormExplorarBolão = ()=>{
 
 
       const EnviarSolicitação = (e,bolao)=>{
-        let userAdm = users.filter((user)=>user.id == bolao.adm)[0]
+        let userAdm = users.filter((user)=>user.id == bolao.adm)[0];
         let solicitacoes = [];
         let chave = e.target.previousSibling.previousSibling.value;
+
+        console.log(userAdm)
+        console.log(userAdm.solicitacoes)
         if(chave == bolao.chave){
-            console.log("dasdasd")
-            if(userAdm.solicitacoes == undefined){
+            if(userAdm.solicitacoes == undefined || userAdm.solicitacoes.length == 0){
                     solicitacoes = [{
                         nome : `${userOn.username}`,
                         bolao: `${bolao.nome}`
                 }
                 ];
             }else{
-                     solicitacoes = [...userAdm.solicitacoes,{
-                    nome : `${userOn.username}`,
-                    bolao: `${bolao.nome}`
-                }
-                ];
+                    solicitacoes = [...userAdm.solicitacoes.filter((e)=>e.nome !== userOn.username && e.bolao !== bolao.nome),{
+                        nome : `${userOn.username}`,
+                        bolao: `${bolao.nome}`
+                        }]
             }
+            
+            
             
 
             api.patch(`/users/${userAdm.id}`,{
@@ -63,11 +67,15 @@ const FormExplorarBolão = ()=>{
               .then((response)=>{console.log(response)})
               .catch((error)=>{console.log(error)})
 
-              let mensagem = e.target.parentElement;
+              let mensagem = e.target.parentElement.parentElement;
               mensagem.classList.remove("mensagem-red")
               mensagem.classList.add("mensagem-green");
               mensagem.classList.add("p4");
               mensagem.innerHTML = "Solicitação Enviada";
+
+              setTimeout(()=>{
+                setSearch("");
+              },2000)
                 
         }else{
             let mensagem = document.querySelector(".resultadoPesquisa .mensagem");
@@ -79,6 +87,9 @@ const FormExplorarBolão = ()=>{
 
       }
     
+
+
+      console.log(search)
       if(search === ""){
         return(
             <>

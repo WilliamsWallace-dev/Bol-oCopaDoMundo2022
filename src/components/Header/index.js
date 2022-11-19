@@ -21,8 +21,10 @@ const ActiveMenuUse = (e)=>{
         menu.classList.toggle("active");
         if(menu.classList.contains("active")){
             menu.style.maxHeight = menu.scrollHeight + "px";
+            menu.style.borderWidth = 1 + "px";
         }else{
             menu.style.maxHeight = 0 + "px";
+            menu.style.borderWidth = 0;
     }
     // }
 
@@ -65,8 +67,7 @@ const logout = ()=>{
                             <li><a className="menu-items ">Meu Perfil</a></li>
                             <li><a className="menu-items">Meus Bolões</a></li>
                             <Link to={"/notificações:" + userOn.id}><li><a className="menu-items ">Solicitações</a></li></Link>
-                            
-                            <a className="menu-items">Sair</a>
+                            <a className="menu-items" onClick = {logout}>Sair</a>
                         </ul>
                         
                     </div>

@@ -51,9 +51,9 @@ border: none;
     padding: .25rem 0;
     border: 0px solid $white-dark;
     border-radius: 10px;
-
-    border-width: 1px; 
-
+    background: rgba(217, 217, 217, 0.01);
+    backdrop-filter: blur(8px);
+    z-index: 1;
     max-height: 0px;
     overflow: hidden;
 
@@ -762,4 +762,37 @@ button{
 .mensagem-red { 
   margin : 1rem 0 -.5rem 0;
   color: #EB3D3D;
+}
+
+//Classificacao
+
+.listaBoloes{
+  li{
+    
+    background: $gradient-link;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  cursor: pointer;
+
+  transition: 1.5s ease;
+  &::after{
+    content:"";
+    display: block;
+    margin-top: .2rem;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(102.01deg, rgba(162, 13, 53, 0.64) 8.77%, #FCF6F8 95.09%);
+    transition: 1.2s ease;
+  }
+  &:hover{
+    transform: scale(1.03);
+    &::after{
+      width: 100%;
+    }
+  }
+  }
+  
+
 }
