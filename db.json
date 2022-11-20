@@ -112,8 +112,8 @@
     },
     {
       "id": 2,
-      "username": "",
-      "password": "",
+      "username": "eu",
+      "password": "eu",
       "palpites": [
         0,
         0,
@@ -861,17 +861,19 @@
       "password": "estrela",
       "palpites": [
         "2",
-        "2",
-        "2",
-        "2",
-        "2",
-        "2",
-        "2",
-        "2",
+        "1",
         "3",
-        "4",
-        "5",
-        "2",
+        "0",
+        "0",
+        "00",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
         "3",
         "2",
         "1",
@@ -965,30 +967,20 @@
     }
   ],
   "jogos": [
-    {
-      "time1": "1",
-      "time2": "2"
-    },
-    {
-      "time1": "2",
-      "time2": "0"
-    },
-    {
-      "time1": "3",
-      "time2": "1"
-    },
-    {
-      "time1": "0",
-      "time2": "0"
-    },
-    {
-      "time1": "6",
-      "time2": "2"
-    },
-    {
-      "time1": "",
-      "time2": ""
-    }
+    2,
+    2,
+    3,
+    1,
+    3,
+    2,
+    1,
+    1,
+    1,
+    0,
+    0,
+    2,
+    0,
+    0
   ],
   "boloes": [
     {
@@ -1000,7 +992,16 @@
       "classificacao": [
         {
           "nome": "Williams",
-          "pontuacao": []
+          "pontuacao": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
         }
       ]
     },
@@ -1013,7 +1014,16 @@
       "classificacao": [
         {
           "nome": "Williams",
-          "pontuacao": []
+          "pontuacao": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
         }
       ]
     },
@@ -1026,7 +1036,16 @@
       "classificacao": [
         {
           "nome": "Isis",
-          "pontuacao": []
+          "pontuacao": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
         }
       ]
     },
@@ -1039,15 +1058,42 @@
       "classificacao": [
         {
           "nome": "Pedro",
-          "pontuacao": []
+          "pontuacao": [
+            1,
+            0,
+            0,
+            2,
+            0,
+            0,
+            2,
+            61
+          ]
         },
         {
           "nome": "Williams",
-          "pontuacao": []
+          "pontuacao": [
+            1,
+            0,
+            0,
+            2,
+            0,
+            0,
+            2,
+            61
+          ]
         },
         {
           "nome": "CamilaFarias",
-          "pontuacao": []
+          "pontuacao": [
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            3,
+            67
+          ]
         }
       ]
     },
@@ -1060,11 +1106,29 @@
       "classificacao": [
         {
           "nome": "Williams",
-          "pontuacao": []
+          "pontuacao": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
         },
         {
           "nome": "Isis",
-          "pontuacao": []
+          "pontuacao": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
         }
       ]
     },
@@ -1078,14 +1142,14 @@
         {
           "nome": "CamilaFarias",
           "pontuacao": [
+            1,
+            1,
+            0,
+            1,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
+            3,
+            67
           ]
         }
       ]

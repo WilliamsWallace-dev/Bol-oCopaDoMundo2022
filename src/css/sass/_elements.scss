@@ -1,5 +1,6 @@
 //Elementos Header
 
+ 
 .username{
   &>button{
   display: flex;
@@ -52,12 +53,16 @@ border: none;
     border: 0px solid $white-dark;
     border-radius: 10px;
     background: rgba(217, 217, 217, 0.01);
-    backdrop-filter: blur(8px);
-    z-index: 1;
+    // backdrop-filter: blur(8px);
+    z-index: +1;
     max-height: 0px;
     overflow: hidden;
 
     transition: .3s ease;
+
+    @media only screen and (max-width : 540px) {
+      top:4.4rem;
+    }
 
     
   }
@@ -147,6 +152,12 @@ border: none;
         max-width: 620px;
         padding: 1.5rem 1.5rem;
         margin-bottom: 1rem;
+
+        @media only screen and (max-width : 540px) {
+          padding: 1rem 1rem;
+          margin-bottom: 1rem;
+    
+        }
   
         .card-background{
           width: 100%;
@@ -157,9 +168,10 @@ border: none;
           pointer-events: none;
           
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.24);
-          backdrop-filter: blur(1px);
+          backdrop-filter: blur(2px);
           border-radius: 32.0978px 21.3985px;
           transform: matrix(0.96, 0, -0.29, 1, 0, 0);
+          
           border: 1px solid $white-normal;
         }
         .jogo{
@@ -174,29 +186,45 @@ border: none;
             }
             input{
               max-width: 2rem ;
+              padding: .125rem 0rem .125rem .3rem;
               background: transparent;
-              border:1px solid $white-dark;
+              border:2px solid $white-dark;
               border-radius: .25rem;
               color: $white-light;
+              
 
               &::placeholder{
-                color: white;
+                color: $white-light;
               }
 
+              @media only screen and (max-width : 540px) {
+                padding: .06rem 0rem .06rem .15rem;
+                margin-top: .25rem;
+          
+              }
               
             }
           }
           .informações{
             border-left: 1px solid $white-dark;
             padding: 0 .5rem 0 1rem;
+
+            @media only screen and (max-width : 540px) {
+              padding: 0 .25rem 0 .25rem;
+        
+            }
           }
         }
-        
+
       }
       
     }
    
-    
+    @media only screen and (max-width : 540px) {
+      img{
+        width: 20px;
+      }
+    }
   }
 
 //Botões
@@ -223,6 +251,12 @@ border: none;
       // background: linear-gradient(105.18deg, #8B0930 0%, #1E0009 80.14%);
       transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
       box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+    }
+
+
+
+    @media only screen and (max-width : 540px) {
+      font-size: 12px;
     }
   }
 
@@ -262,12 +296,9 @@ border: none;
       border: transparent;
   }
     
-    // &:hover{  
-    //   background-color: $primary-dark;
-    //   transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
-    //   // box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
-    //   border: transparent;
-    // }
+  @media only screen and (max-width : 540px) {
+    font-size: 12px;
+  }
   }
   
 
@@ -280,6 +311,10 @@ border: none;
 
   .formCriarBolão, .formSearch{
       width: 40%;
+
+      @media only screen and (max-width : 540px) {
+        width: 80%;
+      }
     }
 
     // background-color: #050607;
@@ -312,7 +347,7 @@ border: none;
 //Links
   .link{
   font-family: 'Readex Pro', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
 
   background: $gradient-link;
@@ -338,6 +373,11 @@ border: none;
       width: 100%;
     }
   }
+
+
+  @media only screen and (max-width : 540px) {
+    font-size: 16px;
+  }
   }
 //Subtitulos
   .subtitle{
@@ -352,83 +392,171 @@ border: none;
   //Elementos de Composição
 
   .circulo1{
-    position: absolute;
-    right:25%;
-    top:15%;
+    position: fixed;
+    right:20%;
+    top:18%;
+    z-index: -1;
+    @media only screen and (max-width : 540px) {
+      right:15%;
+      top:18%;
+    
+  }
+   
   }
   .circulo1-2{
-    position: absolute;
-    right:34%;
+    position: fixed;
+    right:30%;
     top:9%;
+    z-index: -1;
+    @media only screen and (max-width : 540px) {
+      right:35%;
+      top:9%;
+    
   }
+  }
+
   .circulo2{
-    position: absolute;
+    position: fixed;
     left:48.5%;
     top:40%;
+    z-index: -1;
+    @media only screen and (max-width : 540px) {
+      left:59%;
+      top:43%;
+    
+  }
   }
   .circulo3{
-    position: absolute;
-    right:29%;
+    position: fixed;
+    right:25%;
     top:10%;
+    z-index: -1;
+    @media only screen and (max-width : 540px) {
+      width: 12%;
+    
+  }
   }
   .circulo4{
-    position: absolute;
-    right:21%;
-    top:7%;
+    position: fixed;
+    right:17%;
+    top:9%;
+    z-index: -1;
+    @media only screen and (max-width : 540px) {
+      width: 15%;
+      right:12%;
+      top:9%;
+    
+  }
+
   }
 
   .estrela1{
-    position: absolute;
+    position: fixed;
     left:46.5%;
     top:49.7%;
+    z-index: -1;
   }
   .estrela2{
-    position: absolute;
+    position: fixed;
     left:42%;
     top:46%;
+    z-index: -1;
+  }
+  .estrela3{
+    position: fixed;
+    left:5%;
+    bottom:10%;
+    z-index: -1;
+    @media only screen and (max-width : 540px) {
+      left:15%;
+      bottom:2%;
+      width: 13%;
+  }
+  }
+  .estrela4{
+    position: fixed;
+    left:10%;
+    bottom:7%;
+    z-index: -1;
+    @media only screen and (max-width : 540px) {
+      left:15%;
+      width: 10%;
+  }
+  }
+  .losango1{
+    position: fixed;
+    left:9%;
+    bottom:14%;
+    z-index: -1;
+    @media only screen and (max-width : 540px) {
+      left:10%;
+      bottom:2%;
+      width: 8%;
+  }
+  }
+  .losango2{
+    position: fixed;
+    left:1%;
+    bottom:40%;
+    z-index: -1;
+    @media only screen and (max-width : 540px) {
+      bottom:25%;
+      width: 8%;
+  }
   }
   .torcedor1{
-    position: absolute;
+    position: fixed;
     left:-1.16%;
     bottom:-3.35%;
     z-index: -1;
+    @media only screen and (max-width : 540px) {
+      width: 25%;
+    
+  }
   }
   .torcedor2{
-    position: absolute;
+    position: fixed;
     right:-1.1%;
     bottom:-2.5%;
     z-index: -1;
+    @media only screen and (max-width : 540px) {
+      width: 25%;
+    
+  }
   }
   .campoDeFutebol1{
     width: 30%;
-    position: absolute;
+    position: fixed;
     right:10%;
     top:13%;
+    z-index: -1;
   }
   .campoDeFutebol2{
     width: 30%;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     left:-10%;
     bottom:-25%;
+    z-index: -1;
   }
   .campoDeFutebol3{
     width: 20%;
-    position: absolute;
-    left:20%;
-    top:5%;
+    position: fixed;
+    left:10%;
+    top:12%;
+    z-index: -1;
   }
   .bola1{
     width: 7%;
     max-width: 100px;
-    position: absolute;
+    position: fixed;
     left:11%;
     top:15%;
   }
   // .chute1{
   //   width: 11%;
   //   max-width: 100px;
-  //   position: absolute;
+  //   position: fixed;
   //   left:8.5%;
   //   top:11%;
   // }
@@ -436,20 +564,20 @@ border: none;
   .bola2{
     width: 7%;
     max-width: 100px;
-    position: absolute;
+    position: fixed;
     right:16%;
     bottom:30%;
   }
   // .chute2{
   //   width: 11%;
-  //   position: absolute;
+  //   position: fixed;
   //   right:13.8%;
   //   bottom:27.5%;
   // }
   .redes{
-    position:absolute;
+    position:fixed;
     top:40%;
-    left:6%;
+    left:12%;
     gap:2.5rem;
     padding: .5rem;
     & img{
@@ -461,7 +589,14 @@ border: none;
         transform: translateY(-7%);
       }
     }
-    
+    @media only screen and (max-width : 540px) {
+        flex-direction: row;
+        top:auto;
+        bottom:5%;
+        left:0;
+        right: 0;
+      
+    }
   }
 
   //Classificação 
@@ -545,7 +680,10 @@ td{
 
   padding: .5rem .25rem;
 
+  @media only screen and (max-width : 540px) {
+    font-size: 10px;
   
+}
   
   }
 }
@@ -682,6 +820,11 @@ button{
   ul{
     width: 50%;
     margin-top: 2rem;
+
+    @media only screen and (max-width : 540px) {
+      width: 70%;
+      }
+
     li{
       width: 100%;
       padding: .5rem;
@@ -695,6 +838,7 @@ button{
 
       div{
         cursor: pointer;
+        width: 100%;
         
       }
 
@@ -703,6 +847,8 @@ button{
         overflow: hidden;
 
         transition: .5s ease;
+
+        width: 100%;
       }
     }
   }
@@ -711,7 +857,15 @@ button{
     color:$white-dark;
     margin-top: 1rem;
   }
+
+  @media only screen and (max-width : 540px) {
+    .p2-light{
+      font-size: 11px;
+      padding: 0rem 1rem;
+    }
+    }
 }
+
 
 //Notificações
 
@@ -795,4 +949,15 @@ button{
   }
   
 
+}
+
+.menuBolao{
+  @media only screen and (max-width : 540px) {
+    flex-wrap: wrap;
+    padding: 0rem 4rem ;
+    .secundary-button{
+      font-size: 12px;
+      margin: .5rem .1rem 1rem .1rem ;
+    }
+  }
 }

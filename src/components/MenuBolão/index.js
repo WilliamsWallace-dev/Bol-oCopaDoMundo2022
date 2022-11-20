@@ -20,7 +20,7 @@ const MenuBolão = ({type}) => {
     if(type=="Guess"){
         return (
             <>
-                <ul className=" container flex">
+                <ul className=" container flex menuBolao">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button active">Meus Palpites</button></li></Link>
                     <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button" onClick = {CleanClassification}>Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button">Criar Bolão</button></li></Link>
@@ -31,7 +31,7 @@ const MenuBolão = ({type}) => {
     }else  if(type=="Classification"){
         return (
             <>
-                <ul className=" container flex">
+                <ul className=" container flex menuBolao">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button ">Meus Palpites</button></li></Link>
                     <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button active">Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button">Criar Bolão</button></li></Link>
@@ -42,7 +42,7 @@ const MenuBolão = ({type}) => {
     }else  if(type=="CriarBolão"){
         return (
             <>
-                <ul className=" container flex">
+                <ul className=" container flex menuBolao">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button ">Meus Palpites</button></li></Link>
                     <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button " onClick = {CleanClassification}>Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button active">Criar Bolão</button></li></Link>
@@ -53,7 +53,7 @@ const MenuBolão = ({type}) => {
     }else if(type=="ExplorarBolão") {
         return (
             <>
-                <ul className=" container flex">
+                <ul className=" container flex menuBolao">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button ">Meus Palpites</button></li></Link>
                     <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button " onClick = {CleanClassification}>Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button ">Criar Bolão</button></li></Link>
@@ -64,7 +64,7 @@ const MenuBolão = ({type}) => {
     }else{
         return (
             <>
-                <ul className=" container flex">
+                <ul className=" container flex menuBolao">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button ">Meus Palpites</button></li></Link>
                     <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button "onClick = {CleanClassification}>Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button ">Criar Bolão</button></li></Link>

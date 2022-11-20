@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: .5rem 1.5rem;
+  padding: 1rem 1rem .25rem 1rem;
 
 }
 
@@ -22,17 +22,34 @@
   top:0;
   right: 0;
   height: 100vh;
+
+  @media only screen and (max-width : 540px) {
+
+    position: absolute;
+    display: block;
+    text-align: center;
+    right: auto;
+    top: auto;
+
+
+  }
 }
 
 .background-gradient{
+  position: fixed;
   width: 100%;
-  height: 100vh;
-  position: absolute;
-  left:0;
+  height: 100%;
   z-index: -1;
-  background: $gradient-background;
+  background:linear-gradient(101.2deg, #0D0005 4.75%, #A10B2E 49.86%, #120006 86.08%);
   mix-blend-mode: normal;
   opacity: 0.64;
+}
+
+ //Background
+
+ .background2{
+  position: fixed;
+  border: 10px solid white;
 }
 
 

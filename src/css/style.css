@@ -19,10 +19,20 @@ h1 {
   font-size: 48px;
   font-weight: 600;
 }
+@media only screen and (max-width: 540px) {
+  h1 {
+    font-size: 32px;
+  }
+}
 
 h2 {
   font-size: 32px;
   font-weight: 400;
+}
+@media only screen and (max-width: 540px) {
+  h2 {
+    font-size: 24px;
+  }
 }
 
 h3 {
@@ -31,11 +41,21 @@ h3 {
   line-height: 1.65rem;
   margin: 1.5rem 0 1.5rem 0;
 }
+@media only screen and (max-width: 540px) {
+  h3 {
+    font-size: 20px;
+  }
+}
 
 .p1 {
   font-family: "Readex Pro", sans-serif;
   font-size: 24px;
   font-weight: 300;
+}
+@media only screen and (max-width: 540px) {
+  .p1 {
+    font-size: 20px;
+  }
 }
 
 .p2-medium {
@@ -43,11 +63,21 @@ h3 {
   font-size: 18px;
   font-weight: 500;
 }
+@media only screen and (max-width: 540px) {
+  .p2-medium {
+    font-size: 16px;
+  }
+}
 
 .p2-regular {
   font-family: "Readex Pro", sans-serif;
   font-size: 18px;
   font-weight: 400;
+}
+@media only screen and (max-width: 540px) {
+  .p2-regular {
+    font-size: 10px;
+  }
 }
 
 .p2-light {
@@ -56,11 +86,21 @@ h3 {
   font-weight: 300;
   line-height: 1.4;
 }
+@media only screen and (max-width: 540px) {
+  .p2-light {
+    font-size: 16px;
+  }
+}
 
 .p3 {
   font-family: "Readex Pro", sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+@media only screen and (max-width: 540px) {
+  .p3 {
+    font-size: 10px;
+  }
 }
 
 .p4 {
@@ -68,6 +108,11 @@ h3 {
   font-size: 14px;
   font-weight: 400;
   color: #E5D3D6;
+}
+@media only screen and (max-width: 540px) {
+  .p4 {
+    font-size: 12px;
+  }
 }
 
 .s-0 {
@@ -746,12 +791,15 @@ img {
   border: 0px solid #E5D3D6;
   border-radius: 10px;
   background: rgba(217, 217, 217, 0.01);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
   z-index: 1;
   max-height: 0px;
   overflow: hidden;
   transition: 0.3s ease;
+}
+@media only screen and (max-width: 540px) {
+  .menu-usuário {
+    top: 4.4rem;
+  }
 }
 
 .menu-items {
@@ -825,6 +873,12 @@ img {
   padding: 1.5rem 1.5rem;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 540px) {
+  .guess .partidas .card {
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+  }
+}
 .guess .partidas .card .card-background {
   width: 100%;
   height: 100%;
@@ -833,8 +887,8 @@ img {
   background: linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);
   pointer-events: none;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.24);
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   border-radius: 32.0978px 21.3985px;
   transform: matrix(0.96, 0, -0.29, 1, 0, 0);
   border: 1px solid #F4EEEF;
@@ -852,23 +906,40 @@ img {
 }
 .guess .partidas .card .jogo .times input {
   max-width: 2rem;
+  padding: 0.125rem 0rem 0.125rem 0.3rem;
   background: transparent;
-  border: 1px solid #E5D3D6;
+  border: 2px solid #E5D3D6;
   border-radius: 0.25rem;
   color: #FCF6F8;
 }
 .guess .partidas .card .jogo .times input::-moz-placeholder {
-  color: white;
+  color: #FCF6F8;
 }
 .guess .partidas .card .jogo .times input:-ms-input-placeholder {
-  color: white;
+  color: #FCF6F8;
 }
 .guess .partidas .card .jogo .times input::placeholder {
-  color: white;
+  color: #FCF6F8;
+}
+@media only screen and (max-width: 540px) {
+  .guess .partidas .card .jogo .times input {
+    padding: 0.06rem 0rem 0.06rem 0.15rem;
+    margin-top: 0.25rem;
+  }
 }
 .guess .partidas .card .jogo .informações {
   border-left: 1px solid #E5D3D6;
   padding: 0 0.5rem 0 1rem;
+}
+@media only screen and (max-width: 540px) {
+  .guess .partidas .card .jogo .informações {
+    padding: 0 0.25rem 0 0.25rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .guess img {
+    width: 20px;
+  }
 }
 
 .primary-button {
@@ -888,6 +959,11 @@ img {
 .primary-button:hover {
   transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%);
   box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+}
+@media only screen and (max-width: 540px) {
+  .primary-button {
+    font-size: 12px;
+  }
 }
 
 .secundary-button {
@@ -916,6 +992,11 @@ img {
   transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-10%);
   border: transparent;
 }
+@media only screen and (max-width: 540px) {
+  .secundary-button {
+    font-size: 12px;
+  }
+}
 
 .form-container {
   width: 100%;
@@ -924,6 +1005,11 @@ img {
 }
 .form-container .formCriarBolão, .form-container .formSearch {
   width: 40%;
+}
+@media only screen and (max-width: 540px) {
+  .form-container .formCriarBolão, .form-container .formSearch {
+    width: 80%;
+  }
 }
 .form-container .input {
   width: 80%;
@@ -948,7 +1034,7 @@ img {
 
 .link {
   font-family: "Readex Pro", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   background: linear-gradient(0deg, #8B0930 -30.11%, #FCF6F8 72.03%);
   -webkit-background-clip: text;
@@ -972,6 +1058,11 @@ img {
 .link:hover::after {
   width: 100%;
 }
+@media only screen and (max-width: 540px) {
+  .link {
+    font-size: 16px;
+  }
+}
 
 .subtitle {
   color: #E5D3D6;
@@ -983,87 +1074,191 @@ img {
 }
 
 .circulo1 {
-  position: absolute;
-  right: 25%;
-  top: 15%;
+  position: fixed;
+  right: 20%;
+  top: 18%;
+  z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .circulo1 {
+    right: 15%;
+    top: 18%;
+  }
 }
 
 .circulo1-2 {
-  position: absolute;
-  right: 34%;
+  position: fixed;
+  right: 30%;
   top: 9%;
+  z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .circulo1-2 {
+    right: 35%;
+    top: 9%;
+  }
 }
 
 .circulo2 {
-  position: absolute;
+  position: fixed;
   left: 48.5%;
   top: 40%;
+  z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .circulo2 {
+    left: 59%;
+    top: 43%;
+  }
 }
 
 .circulo3 {
-  position: absolute;
-  right: 29%;
+  position: fixed;
+  right: 25%;
   top: 10%;
+  z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .circulo3 {
+    width: 12%;
+  }
 }
 
 .circulo4 {
-  position: absolute;
-  right: 21%;
-  top: 7%;
+  position: fixed;
+  right: 17%;
+  top: 9%;
+  z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .circulo4 {
+    width: 15%;
+    right: 12%;
+    top: 9%;
+  }
 }
 
 .estrela1 {
-  position: absolute;
+  position: fixed;
   left: 46.5%;
   top: 49.7%;
+  z-index: -1;
 }
 
 .estrela2 {
-  position: absolute;
+  position: fixed;
   left: 42%;
   top: 46%;
+  z-index: -1;
+}
+
+.estrela3 {
+  position: fixed;
+  left: 5%;
+  bottom: 10%;
+  z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .estrela3 {
+    left: 15%;
+    bottom: 2%;
+    width: 13%;
+  }
+}
+
+.estrela4 {
+  position: fixed;
+  left: 10%;
+  bottom: 7%;
+  z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .estrela4 {
+    left: 15%;
+    width: 10%;
+  }
+}
+
+.losango1 {
+  position: fixed;
+  left: 9%;
+  bottom: 14%;
+  z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .losango1 {
+    left: 10%;
+    bottom: 2%;
+    width: 8%;
+  }
+}
+
+.losango2 {
+  position: fixed;
+  left: 1%;
+  bottom: 40%;
+  z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .losango2 {
+    bottom: 25%;
+    width: 8%;
+  }
 }
 
 .torcedor1 {
-  position: absolute;
+  position: fixed;
   left: -1.16%;
   bottom: -3.35%;
   z-index: -1;
 }
+@media only screen and (max-width: 540px) {
+  .torcedor1 {
+    width: 25%;
+  }
+}
 
 .torcedor2 {
-  position: absolute;
+  position: fixed;
   right: -1.1%;
   bottom: -2.5%;
   z-index: -1;
 }
+@media only screen and (max-width: 540px) {
+  .torcedor2 {
+    width: 25%;
+  }
+}
 
 .campoDeFutebol1 {
   width: 30%;
-  position: absolute;
+  position: fixed;
   right: 10%;
   top: 13%;
+  z-index: -1;
 }
 
 .campoDeFutebol2 {
   width: 30%;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   left: -10%;
   bottom: -25%;
+  z-index: -1;
 }
 
 .campoDeFutebol3 {
   width: 20%;
-  position: absolute;
-  left: 20%;
-  top: 5%;
+  position: fixed;
+  left: 10%;
+  top: 12%;
+  z-index: -1;
 }
 
 .bola1 {
   width: 7%;
   max-width: 100px;
-  position: absolute;
+  position: fixed;
   left: 11%;
   top: 15%;
 }
@@ -1071,15 +1266,15 @@ img {
 .bola2 {
   width: 7%;
   max-width: 100px;
-  position: absolute;
+  position: fixed;
   right: 16%;
   bottom: 30%;
 }
 
 .redes {
-  position: absolute;
+  position: fixed;
   top: 40%;
-  left: 6%;
+  left: 12%;
   gap: 2.5rem;
   padding: 0.5rem;
 }
@@ -1091,6 +1286,15 @@ img {
 }
 .redes img:hover {
   transform: translateY(-7%);
+}
+@media only screen and (max-width: 540px) {
+  .redes {
+    flex-direction: row;
+    top: auto;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+  }
 }
 
 table {
@@ -1159,6 +1363,11 @@ td {
   font-size: 12px;
   font-weight: 300;
   padding: 0.5rem 0.25rem;
+}
+@media only screen and (max-width: 540px) {
+  .instructions p {
+    font-size: 10px;
+  }
 }
 
 .form-criarBolão label::before {
@@ -1255,6 +1464,11 @@ td {
   width: 50%;
   margin-top: 2rem;
 }
+@media only screen and (max-width: 540px) {
+  .regulamento ul {
+    width: 70%;
+  }
+}
 .regulamento ul li {
   width: 100%;
   padding: 0.5rem;
@@ -1267,15 +1481,23 @@ td {
 }
 .regulamento ul li div {
   cursor: pointer;
+  width: 100%;
 }
 .regulamento ul li .descrição {
   max-height: 0px;
   overflow: hidden;
   transition: 0.5s ease;
+  width: 100%;
 }
 .regulamento > p {
   color: #E5D3D6;
   margin-top: 1rem;
+}
+@media only screen and (max-width: 540px) {
+  .regulamento .p2-light {
+    font-size: 11px;
+    padding: 0rem 1rem;
+  }
 }
 
 .notificações li {
@@ -1331,6 +1553,17 @@ td {
   width: 100%;
 }
 
+@media only screen and (max-width: 540px) {
+  .menuBolao {
+    flex-wrap: wrap;
+    padding: 0rem 4rem;
+  }
+  .menuBolao .secundary-button {
+    font-size: 12px;
+    margin: 0.5rem 0.1rem 1rem 0.1rem;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1340,7 +1573,7 @@ td {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 1rem 0.25rem 1rem;
 }
 
 .fundocopa {
@@ -1350,16 +1583,29 @@ td {
   right: 0;
   height: 100vh;
 }
+@media only screen and (max-width: 540px) {
+  .fundocopa {
+    position: absolute;
+    display: block;
+    text-align: center;
+    right: auto;
+    top: auto;
+  }
+}
 
 .background-gradient {
+  position: fixed;
   width: 100%;
-  height: 100vh;
-  position: absolute;
-  left: 0;
+  height: 100%;
   z-index: -1;
-  background: linear-gradient(129.07deg, rgba(41, 1, 14, 0.8) 4.77%, rgba(203, 58, 101, 0.1) 30.38%, rgba(193, 49, 91, 0.05) 42.9%, rgba(153, 12, 50, 0) 54.42%), linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);
+  background: linear-gradient(101.2deg, #0D0005 4.75%, #A10B2E 49.86%, #120006 86.08%);
   mix-blend-mode: normal;
   opacity: 0.64;
+}
+
+.background2 {
+  position: fixed;
+  border: 10px solid white;
 }
 
 li {

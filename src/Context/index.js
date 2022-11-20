@@ -39,11 +39,10 @@ function CopaProvidor ({children}) {
   useEffect(()=>{
     api.get("http://localhost:4000/jogos")
     .then((response)=>{
- 
       setJogos(response.data)
     })
     .catch((error)=>{console.log(error)})
-  },[userOn])
+  },[])
 
 
 
@@ -73,7 +72,7 @@ function CopaProvidor ({children}) {
 
   return (
     <>
-    <CopaContext.Provider value={{users,setUsers,userOn,setUserOn,boloes,setBoloes,search,setSearch,classificacao,setClassificacao}}>
+    <CopaContext.Provider value={{users,setUsers,userOn,setUserOn,boloes,setBoloes,search,setSearch,classificacao,setClassificacao,jogos,setJogos}}>
     {children}
     </CopaContext.Provider>
     </>

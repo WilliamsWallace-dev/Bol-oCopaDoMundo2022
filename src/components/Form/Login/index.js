@@ -1,7 +1,8 @@
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import { CopaContext } from "../../../Context";
 
 import { Navigate } from 'react-router-dom';
+
 
 
 
@@ -38,7 +39,7 @@ const FormLogin = ()=>{
       if(userOn === "Error"){
         return(
             <>
-                        <section className="form-container  flex-collumn">
+                        <section className="form-container  flex-collumn" style = {{height : "80vh", width : "65%"}}>
                             <h1>Realizar Login</h1>
                             <p className="subtitle">Junte-se a seus amigos no Bolão Copa do Mundo 2022.</p>
                             <form className="flex-collumn formLogin">
@@ -58,7 +59,7 @@ const FormLogin = ()=>{
       }else if(!userOn){
                 return(
                     <>
-                    <section className="form-container  flex-collumn">
+                    <section className="form-container  flex-collumn" style = {{height : "80vh", width : "65%"}}>
                         <h1>Realizar Login</h1>
                         <p className="subtitle">Junte-se a seus amigos no Bolão Copa do Mundo 2022.</p>
                         <form className="flex-collumn formLogin">

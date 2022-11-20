@@ -11,11 +11,18 @@ h6 {
 h1 {
   font-size: 48px;
   font-weight: 600 ;
+  @media only screen and (max-width : 540px) {
+    font-size: 32px;
+  }
 }
 
 h2 {
   font-size: 32px;
   font-weight: 400;
+  @media only screen and (max-width : 540px) {
+    font-size: 24px;
+  }
+  
 }
 
 h3 {
@@ -23,6 +30,9 @@ h3 {
   font-weight: 400;
   line-height: 1.65rem;
   margin:1.5rem 0 1.5rem 0;
+  @media only screen and (max-width : 540px) {
+    font-size: 20px;
+  }
 }
 
 // h4 {
@@ -47,16 +57,25 @@ h3 {
   font-family: 'Readex Pro', sans-serif;
   font-size: 24px;
   font-weight: 300;
+  @media only screen and (max-width : 540px) {
+    font-size: 20px;
+  }
 }
 .p2-medium {
   font-family: 'Readex Pro', sans-serif;
   font-size: 18px;
   font-weight: 500;
+  @media only screen and (max-width : 540px) {
+    font-size: 16px;
+  }
 }
 .p2-regular {
   font-family: 'Readex Pro', sans-serif;
   font-size: 18px;
   font-weight: 400;
+  @media only screen and (max-width : 540px) {
+    font-size: 10px;
+  }
 
 }
 .p2-light {
@@ -64,15 +83,24 @@ h3 {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.4;
+  @media only screen and (max-width : 540px) {
+    font-size: 16px;
+  }
 }
 .p3 {
   font-family: 'Readex Pro', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  @media only screen and (max-width : 540px) {
+    font-size: 10px;
+  }
 }
 .p4 {
   font-family: 'Readex Pro', sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: $white-dark;
+  @media only screen and (max-width : 540px) {
+    font-size: 12px;
+  }
 }

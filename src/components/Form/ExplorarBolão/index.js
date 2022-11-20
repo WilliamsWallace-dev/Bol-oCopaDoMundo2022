@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import { CopaContext } from "../../../Context";
 
 import api from "../../../services/api";
@@ -11,6 +11,15 @@ const FormExplorarBolão = ()=>{
     const {users,userOn,setUserOn,search,setSearch,boloes} = useContext(CopaContext);
     let inputs = [];
     
+
+    useEffect(()=>{
+        const input = document.querySelector(".inputExplirarBolao")
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+            }
+        })
+    })
     
       //Pesquisa de Bolão
       const SearchBolao = (e)=>{
@@ -97,7 +106,7 @@ const FormExplorarBolão = ()=>{
                     <h1>Explorar Bolão</h1>
                     <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!</p>
                     <form className="flex-collumn formSearch">
-                        <input className="input" type="text" placeholder="Nome do Bolão"></input>                                         
+                        <input className="input inputExplirarBolao" type="text" placeholder="Nome do Bolão"></input>                                         
                         <div>
                         <button type="button" className="primary-button" onClick={SearchBolao}>Procurar</button>
                         </div>
@@ -113,7 +122,7 @@ const FormExplorarBolão = ()=>{
                     <h1>Explorar Bolão</h1>
                     <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!</p>
                     <form className="flex-collumn formSearch">
-                        <input className="input" type="text" placeholder="Nome do Bolão"></input>                                         
+                        <input className="input inputExplirarBolao" type="text" placeholder="Nome do Bolão"></input>                                         
                         <div>
                         <button type="button" className="primary-button" onClick={SearchBolao}>Procurar</button>
                         </div>
@@ -134,7 +143,7 @@ const FormExplorarBolão = ()=>{
                     <h1>Explorar Bolão</h1>
                     <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!</p>
                     <form className="flex-collumn formSearch">
-                        <input className="input" type="text" placeholder="Nome do Bolão"></input>                                         
+                        <input className="input inputExplirarBolao" type="text" placeholder="Nome do Bolão"></input>                                         
                         <div>
                         <button type="button" className="primary-button" onClick={SearchBolao}>Procurar</button>
                         </div>

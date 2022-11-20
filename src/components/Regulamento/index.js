@@ -29,7 +29,7 @@ const Regulamento = ()=>{
                                 <p>COMO PARTICIPAR</p>
                                 <img src={losangoRegulamento}></img>
                             </div>
-                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            <p className="descrição p4">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
                             partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
                             dos acertos será feita a partir dos seguintes critérios, não acumulativos:
                             Acertando o placar exato.
@@ -42,7 +42,7 @@ const Regulamento = ()=>{
                                 <p>PONTUAÇÃO</p>
                                 <img src={losangoRegulamento}></img>
                             </div>
-                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            <p className="descrição p4">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
                             partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
                             dos acertos será feita a partir dos seguintes critérios, não acumulativos:
                             Acertando o placar exato.
@@ -55,7 +55,7 @@ const Regulamento = ()=>{
                                 <p>CRITÉRIO DE DESEMPATE</p>
                                 <img src={losangoRegulamento}></img>
                             </div>
-                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            <p className="descrição p4">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
                             partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
                             dos acertos será feita a partir dos seguintes critérios, não acumulativos:
                             Acertando o placar exato.
@@ -68,7 +68,7 @@ const Regulamento = ()=>{
                                 <p>PREMIAÇÃO</p>
                                 <img src={losangoRegulamento}></img>
                             </div>
-                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            <p className="descrição p4">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
                             partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
                             dos acertos será feita a partir dos seguintes critérios, não acumulativos:
                             Acertando o placar exato.
@@ -81,7 +81,7 @@ const Regulamento = ()=>{
                                 <p>DISPOSIÇÃO GERAIS</p>
                                 <img src={losangoRegulamento}></img>
                             </div>
-                            <p className="descrição">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
+                            <p className="descrição p4">A pontuação dos participantes será feita em função de seus prognósticos para o resultado e o placar das
                             partidas, conforme abaixo. Por resultado entende-se a indicação de vitória/derrota ou empate deste ou daquele time. A pontuação 
                             dos acertos será feita a partir dos seguintes critérios, não acumulativos:
                             Acertando o placar exato.
