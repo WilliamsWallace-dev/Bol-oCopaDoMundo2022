@@ -3,6 +3,9 @@ import { CopaContext } from "../../Context";
 
 import api from "../../services/api";
 
+import db from "../../services/apifb"
+import { collection, updateDoc,addDoc,where,doc } from "firebase/firestore"; 
+
 //Bandeiras
 import Holanda from "../../svg/bandeiras/Holanda.svg"
 import Canada from "../../svg/bandeiras/Canada.svg"
@@ -53,7 +56,6 @@ const Guess = ()=>{
         let hora = now.getHours();
         let dia = now.getDate();
         let mes = now.getMonth() + 1;
-        console.log(mes)
 
         // jogos.forEach((jogo)=>{
         //     let informacoes = [jogo.dia,jogo.hora];
@@ -100,10 +102,14 @@ const Guess = ()=>{
         });
         console.log(aux.palpites)
         setUserOn(aux);
-
-        api.patch(`/users/${userOn.id}`,{
+       
+        updateDoc(doc(db, "users", `${userOn.id}`), {
             palpites : [...aux.palpites]
           })
+
+        // api.patch(`/users/${userOn.id}`,{
+        //     palpites : [...aux.palpites]
+        //   })
           .then((response)=>{console.log(response)})
           .catch((error)=>{console.log(error)})
 

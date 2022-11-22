@@ -3,6 +3,9 @@ import { CopaContext } from "../../Context";
 
 import api from "../../services/api";
 
+import db from "../../services/apifb"
+import { collection, updateDoc,addDoc,where,doc } from "firebase/firestore"; 
+
 import { Outlet, Link } from "react-router-dom";
 
 import Holanda from "../../svg/bandeiras/Holanda.svg"
@@ -40,11 +43,24 @@ const Classification = ()=>{
 
         let aux = classificacao.filter((element,index)=>index !== classificacao.length-1);
         let id = classificacao.filter((element,index)=>index == classificacao.length-1)[0];
-        console.log(id)
 
-        api.patch(`/boloes/${id}`,{
+        //Ordenar classificaçao pela pontuação 
+        let ordenaAux;
+        for(let i = 0;i<aux.length;i++)
+            for(let j = i;j<aux.length;j++){
+                if(aux[i].pontuação[7] - aux[j].pontuação[7] > 0 ){
+                    ordenaAux = aux[i].pontuação[7];
+                    aux[i].pontuação[7] = aux[j].pontuação[7];
+                    aux[j].pontuação[7] = aux;
+                }
+            }
+
+        updateDoc(doc(db, "boloes", `${id}`), {
             classificacao : aux
           })
+        // api.patch(`/boloes/${id}`,{
+        //     classificacao : aux
+        //   })
           .then((response)=>{console.log(response)})
           .catch((error)=>{console.log(error)})
 

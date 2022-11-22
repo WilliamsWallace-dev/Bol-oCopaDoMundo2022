@@ -8,6 +8,11 @@ import Background from "../Background";
 import logo from "../../svg/logo.svg"
 
 const Header = ()=>{
+
+//Dados
+const {userOn,setUserOn,users} = useContext(CopaContext);
+
+
  
 //Funções
 
@@ -32,10 +37,6 @@ const ActiveMenuUse = (e)=>{
 
   }
 
-//Dados
-const {userOn,setUserOn} = useContext(CopaContext);
-
-
 //Logout
 const logout = ()=>{
     setUserOn("");
@@ -50,7 +51,7 @@ const logout = ()=>{
                     
                     <img src={logo} alt="logo"></img>
                     <Link to="/register"><a className="link p2-regular">Registrar-se</a></Link>
-                    <Link to="/"><button className="primary-button" style={{margin: "0 1.5rem" }}>Entrar</button></Link>
+                    <Link to="/"><button className="primary-button" style={{padding: ".5rem 2.5rem" }}>Entrar</button></Link>
                     
                 </header>
             </>
@@ -103,8 +104,8 @@ const logout = ()=>{
                         <div className="username flex-collumn" >
                             <button onClick={ActiveMenuUse} >Olá {userOn.username}</button>
                             <ul className="menu-usuário">
-                                <li><a className="menu-items ">Meu Perfil</a></li>
-                                <li><a className="menu-items">Meus Bolões</a></li>
+                                {/* <li><a className="menu-items ">Meu Perfil</a></li>
+                                <li><a className="menu-items">Meus Bolões</a></li> */}
                                 <Link to={"/notificações:" + userOn.id}><li><a className="menu-items ">Solicitações</a></li></Link>
                                 <a className="menu-items" onClick = {logout}>Sair</a>
                             </ul>

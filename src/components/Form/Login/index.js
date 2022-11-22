@@ -3,6 +3,10 @@ import { CopaContext } from "../../../Context";
 
 import { Navigate } from 'react-router-dom';
 
+import TelaInicial from "../../TelaInicial";
+
+import Modal from "../../Modal";
+
 
 
 
@@ -11,6 +15,16 @@ const FormLogin = ()=>{
 
     const {users,userOn,setUserOn} = useContext(CopaContext);
     let inputs = [];
+
+
+    
+    
+    function modalActiveted() {
+      let modal = document.querySelector(".modal-background");
+      modal.style.opacity = "100";
+      modal.style.pointerEvents = "all";
+    
+    }
 
     const VerificaUsuario = () => {
         
@@ -39,16 +53,17 @@ const FormLogin = ()=>{
       if(userOn === "Error"){
         return(
             <>
+                        <Modal type = "login"></Modal>
                         <section className="form-container  flex-collumn" style = {{height : "80vh", width : "65%"}}>
                             <h1>Realizar Login</h1>
                             <p className="subtitle">Junte-se a seus amigos no Bolão Copa do Mundo 2022.</p>
                             <form className="flex-collumn formLogin">
-                                <input className="input" type="text" placeholder="Username"></input>
+                                <input className="input" type="text" placeholder="Nome de Usuário"></input>
                                 <input className="input" type="password" placeholder="Senha"></input>
                                 <p className="mensagem-red p4">Username e senha não conferem.</p>
                                 <div>
-                                <button type = "button" className="primary-button" onClick = {VerificaUsuario}>Login</button>
-                                <button type = "button" className="secundary-button">Compartilhar com os amigos!</button>
+                                <button type = "button" className="primary-button" onClick = {VerificaUsuario}>Entrar</button>
+                                <button type = "button" className="secundary-button" >Compartilhar com os amigos!</button>
                                 </div>
                             </form>
                         
@@ -59,15 +74,16 @@ const FormLogin = ()=>{
       }else if(!userOn){
                 return(
                     <>
+                    <Modal type = "login"></Modal>
                     <section className="form-container  flex-collumn" style = {{height : "80vh", width : "65%"}}>
                         <h1>Realizar Login</h1>
                         <p className="subtitle">Junte-se a seus amigos no Bolão Copa do Mundo 2022.</p>
                         <form className="flex-collumn formLogin">
-                            <input className="input" type="text" placeholder="Username"></input>
+                            <input className="input" type="text" placeholder="Nome de Usuário"></input>
                             <input className="input" type="password" placeholder="Senha"></input>
                             <div>
-                            <button type = "button" className="primary-button"  onClick = {VerificaUsuario}>Login</button>
-                            <button type = "button" className="secundary-button" >Compartilhar com os amigos!</button>
+                            <button type = "button" className="primary-button"  onClick = {VerificaUsuario}>Entrar</button>
+                            <button type = "button" className="secundary-button" onClick={modalActiveted}>Compartilhar com os amigos!</button>
                             </div>
                         </form>
                     

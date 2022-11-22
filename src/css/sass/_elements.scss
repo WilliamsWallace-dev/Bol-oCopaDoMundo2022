@@ -1,6 +1,82 @@
+//Botões
+.primary-button{
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  padding: .5rem 3.5rem;
+  margin: 1.5rem .5rem ;
+
+
+  
+  color: $white-light;
+  background: $gradient-button;
+  border:none;
+  border-radius: 9px 6px;
+  
+  transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-15%);
+
+  cursor: pointer;
+  transition: .5s ease-out;
+  &:hover{
+    // background: linear-gradient(105.18deg, #8B0930 0%, #1E0009 80.14%);
+    transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
+    box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+  }
+
+
+
+  @media only screen and (max-width : 540px) {
+    font-size: 12px;
+  }
+}
+
+.secundary-button{
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  padding: .5rem 2rem;
+  margin: 2rem .1rem 1rem .1rem ;
+
+
+  
+  color: $white-light;
+  background: transparent;
+  border: 1px solid $white-dark;
+  border-radius: 9px 6px;
+  
+  transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-15%);
+
+  cursor: pointer;
+  transition: .5s ease-out;
+
+  &:hover{  
+    color: $primary-dark;
+    background: $gradient-input;
+    transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
+    // box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+    border: transparent;
+  }
+
+  &.active{
+    color: $primary-dark;
+    background: $gradient-input;
+    transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-10%) ;
+    // box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
+    border: transparent;
+}
+  
+@media only screen and (max-width : 540px) {
+  font-size: 12px;
+}
+}
+
+
 //Elementos Header
 
  
+
 .username{
   &>button{
   display: flex;
@@ -46,7 +122,7 @@ border: none;
   }
   .menu-usuário{
     position: absolute;
-    top:3.7rem;
+    top:4.4rem;
 
 
     padding: .25rem 0;
@@ -59,6 +135,7 @@ border: none;
     overflow: hidden;
 
     transition: .3s ease;
+    
 
     @media only screen and (max-width : 540px) {
       top:4.4rem;
@@ -227,80 +304,6 @@ border: none;
     }
   }
 
-//Botões
-.primary-button{
-    font-family: 'Readex Pro', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-  
-    padding: .5rem 3.5rem;
-    margin: 1.5rem .5rem ;
-
-
-    
-    color: $white-light;
-    background: $gradient-button;
-    border:none;
-    border-radius: 9px 6px;
-    
-    transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-15%);
-
-    cursor: pointer;
-    transition: .5s ease-out;
-    &:hover{
-      // background: linear-gradient(105.18deg, #8B0930 0%, #1E0009 80.14%);
-      transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
-      box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
-    }
-
-
-
-    @media only screen and (max-width : 540px) {
-      font-size: 12px;
-    }
-  }
-
-  .secundary-button{
-    font-family: 'Readex Pro', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-
-    padding: .5rem 2rem;
-    margin: 2rem .1rem 1rem .1rem ;
- 
-
-    
-    color: $white-light;
-    background: transparent;
-    border: 1px solid $white-dark;
-    border-radius: 9px 6px;
-    
-    transform: matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-15%);
-
-    cursor: pointer;
-    transition: .5s ease-out;
-
-    &:hover{  
-      color: $primary-dark;
-      background: $gradient-input;
-      transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-5%) ;
-      // box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
-      border: transparent;
-    }
-
-    &.active{
-      color: $primary-dark;
-      background: $gradient-input;
-      transform:  matrix(0.96, 0, -0.29, 1, 0, 0) translateY(-10%) ;
-      // box-shadow: -4px 18px 31px rgba(30, 0, 9, 0.18), -4px 6.5703px 11.3155px rgba(30, 0, 9, 0.124197), -4px 3.18976px 5.49347px rgba(30, 0, 9, 0.100132), -4px 1.56368px 2.693px rgba(30, 0, 9, 0.0798677), -4px 0.618281px 1.06482px rgba(30, 0, 9, 0.0558033);
-      border: transparent;
-  }
-    
-  @media only screen and (max-width : 540px) {
-    font-size: 12px;
-  }
-  }
-  
 
   //Fomulários e Inputs
   .form-container{
@@ -455,12 +458,58 @@ border: none;
     left:46.5%;
     top:49.7%;
     z-index: -1;
+
+    transform: translate3d(20px,20px,0);
+    transform: translate3d(23px,-5px,0);
+    transform: translate3d(20px,0px,0);
+
+    animation: estrela1 15s ease 0s infinite alternate forwards ;
+
+    @keyframes estrela1 {
+
+      0%{
+        transform: translate3d(20px,20px,0);
+      }
+      50%{
+        transform: translate3d(23px,5px,0);
+      }
+      100%{
+        transform: translate3d(20px,0px,0);
+      }
+      
+    }
+  
   }
   .estrela2{
     position: fixed;
     left:42%;
     top:46%;
     z-index: -1;
+
+    animation: estrela2 20s ease 0s infinite alternate forwards ;
+
+    @keyframes estrela2 {
+
+      0%{
+        transform: translate3d(10px,0px,0);
+      }
+      20%{
+        transform: translate3d(0px,5px,0);
+      }
+      40%{
+        transform: translate3d(-5px,0px,0);
+      }
+      60%{
+        transform: translate3d(0px,-5px,0);
+      }
+      80%{
+        transform: translate3d(5px,-10px,0);
+      }
+      100%{
+        transform: translate3d(10px,0px,0);
+      }
+      
+    }
   }
   .estrela3{
     position: fixed;
@@ -509,9 +558,34 @@ border: none;
     left:-1.16%;
     bottom:-3.35%;
     z-index: -1;
+
+    animation: torcedor1 15s ease 0s infinite alternate forwards ;
+
+      @keyframes torcedor1 {
+  
+        0%{
+          transform: translate3d(-2px,3px,0) scale(1);
+        }
+        20%{
+          transform: translate3d(0px,0px,0) scale(1);
+        }
+        40%{
+          transform: translate3d(2px,-3px,0) scale(1.2);
+        }
+        60%{
+          transform: translate3d(0px,0px,0) scale(1.2);
+        }
+        80%{
+          transform: translate3d(-2px,-3px,0) scale(1);
+        }
+        100%{
+          transform: translate3d(0px,0px,0) scale(1);
+        }
+        
+      }
+
     @media only screen and (max-width : 540px) {
       width: 25%;
-    
   }
   }
   .torcedor2{
@@ -519,6 +593,32 @@ border: none;
     right:-1.1%;
     bottom:-2.5%;
     z-index: -1;
+
+    animation: torcedor2 15s ease 0s infinite alternate forwards ;
+
+    @keyframes torcedor2 {
+
+      0%{
+        transform: translate3d(0px,0px,0) scale(1);
+      }
+      20%{
+        transform: translate3d(1px,-2px,0) scale(1);
+      }
+      40%{
+        transform: translate3d(0px,-5px,0) scale(0.9);
+      }
+      60%{
+        transform: translate3d(0px,2px,0) scale(0.9);
+      }
+      80%{
+        transform: translate3d(1px,-5px,0) scale(1);
+      }
+      100%{
+        transform: translate3d(0px,0px,0) scale(1);
+      }
+      
+    }
+
     @media only screen and (max-width : 540px) {
       width: 25%;
     
@@ -592,9 +692,14 @@ border: none;
     @media only screen and (max-width : 540px) {
         flex-direction: row;
         top:auto;
-        bottom:5%;
+        bottom:25%;
         left:0;
         right: 0;
+
+        & img{
+        min-width: 23px;
+        }
+        
       
     }
   }
@@ -958,6 +1063,280 @@ button{
     .secundary-button{
       font-size: 12px;
       margin: .5rem .1rem 1rem .1rem ;
+    }
+  }
+}
+
+
+
+
+
+//Tela de Animação
+
+.transicao{
+  .transicao-background{
+    width: 100%;
+    height: 100%;
+    top : 0;
+    z-index: +2;
+    position: fixed;
+    background-color: #0f0f0f;
+    opacity: .7;
+  }
+  
+
+  .bola{
+    position: absolute;
+    z-index: +2;
+
+    margin: auto auto;
+
+    left: 0;
+    right: 0;
+
+    top:0;
+    bottom:0;
+    
+    transform-origin: center center;
+    transform-box: fill-box;
+
+    animation: bounce 4s ease infinite normal;
+    animation-fill-mode: both;
+
+    @keyframes bounce {
+      0% { transform: scale(1,1) translateY(0); }
+      5% { transform: scale(1.1,0.9) translateY(0); }
+      25% { transform: scale(0.9,1.1) translateY(-208px);}
+      50% {transform: scale(1.1,0.9) translateY(0); }
+      60% { transform: scale(0.9,1.1) translateY(-40px); }
+      70% {transform: scale(1.1,0.9) translateY(0); }
+      100% {transform: scale(1,1) translateY(0);}
+             
+    }
+  }
+}
+
+//modal
+.modal-background{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.5s ease-in;
+}
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: +2;
+
+  background-color: #0f0f0f;
+  top: 0;
+  right: 0;
+
+  
+}
+
+.modal-containerText{
+  background: $gradient-input;
+
+  z-index: +3;
+
+  border-radius: 1rem ;
+  padding: 1.5rem;
+  
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  color:black;
+
+  @media only screen and (max-width : 540px) {
+    font-size: 12px;
+    padding: 1rem;
+  }
+
+
+}
+
+.modal-container {
+  background: $gradient-main;
+  color: $white-light;
+  position: relative;
+
+
+  max-width: 600px;
+  min-height: 230px;
+
+  z-index: +3;
+
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+
+  border: 2px solid $white-dark;
+
+  transform: translateY(-50%);
+
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  align-items: center;
+
+  .modal-title,
+  .modal-content {
+    text-align: center;
+  }
+
+  .modal-closed {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    cursor: pointer;
+
+    transition: 0.5s ease;
+
+    &:hover {
+      color: $primary-normal;
+    }
+  }
+
+  a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .button-wpp{
+    margin: 0 auto;
+    border: 1px solid $white-light;
+    &::before{
+      content:"";
+      display: inline-block;
+      background: url("../svg/iconeWpp.svg") center center no-repeat;
+      background-size: cover;
+      width: .875rem;
+      height: 1rem ;
+      margin-right: 1rem;
+
+      
+      cursor: pointer;
+    
+    }
+    @media only screen and (max-width : 540px) {
+      padding: .5rem 1.5rem;
+      margin: .25rem 0;
+      font-size: 14px;
+
+    }
+  }
+
+  @media only screen and (max-width : 540px) {
+    padding: .5rem;
+    margin: 2rem;
+  }
+}
+
+//Tela Inicial
+
+.telaInicial{
+  pointer-events: none;
+  .telaInicial-background{
+    width: 100%;
+    height: 100vh;
+    top : 0;
+    z-index: +2;
+    position: fixed;
+    background-color: #0f0f0f;
+    opacity: 1;
+
+    animation: animacaoImagem 1s ease 9s forwards ;
+
+    @keyframes animacaoBack {
+
+      0%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+  }
+
+  img{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+
+
+    animation: animacaoImagem 5s ease 6s forwards ;
+
+      @keyframes animacaoImagem {
+
+        0%{
+        opacity: 0;
+        }
+        50%,70%{
+        opacity: 1;
+
+        }
+        100%{
+          opacity: 0;
+        }
+      }
+  }
+
+  .telaInicial-animacao{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    z-index: +3;
+
+
+    #animacaoCopa{
+      position: fixed;
+      transform: translateY(16%);
+
+ 
+
+      animation: animacaoCopaInicial 7s ease 0s forwards ;
+
+      @keyframes animacaoCopaInicial {
+
+        0%{
+          fill-opacity: 0;      
+      stroke-dasharray: 1 1000;
+      stroke-dashoffset: 0;
+      stroke-width: 0;
+      opacity: 1;
+        }
+        80%{
+          fill-opacity: 1;
+      stroke-dasharray: 100 0;
+      stroke-dashoffset: 50;
+      stroke-width: 0;
+      opacity: 1;
+        }
+        100%{
+          fill-opacity: 0;
+      stroke-dasharray: 150 0;
+      stroke-dashoffset: 0;
+      stroke-width: 0;
+      opacity: 0;
+
+        }
+        
+      }
     }
   }
 }

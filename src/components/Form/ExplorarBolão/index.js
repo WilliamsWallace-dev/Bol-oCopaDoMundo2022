@@ -3,6 +3,9 @@ import { CopaContext } from "../../../Context";
 
 import api from "../../../services/api";
 
+import db from "../../../services/apifb"
+import { collection, updateDoc,addDoc,where,doc } from "firebase/firestore"; 
+
 import { Outlet, Link } from "react-router-dom";
 
 const FormExplorarBolão = ()=>{
@@ -68,11 +71,12 @@ const FormExplorarBolão = ()=>{
             }
             
             
-            
-
-            api.patch(`/users/${userAdm.id}`,{
+            updateDoc(doc(db, "users", `${userAdm.id}`), {
                 solicitacoes : [...solicitacoes]
               })
+            // api.patch(`/users/${userAdm.id}`,{
+            //     solicitacoes : [...solicitacoes]
+            //   })
               .then((response)=>{console.log(response)})
               .catch((error)=>{console.log(error)})
 

@@ -3,6 +3,9 @@ import { CopaContext } from "../../../Context";
 
 import api from "../../../services/api";
 
+import db from "../../../services/apifb"
+import { collection, addDoc,setDoc,doc,updateDoc } from "firebase/firestore"; 
+
 import { Outlet, Link } from "react-router-dom";
 
 const FormCriarBolão = ()=>{
@@ -27,7 +30,7 @@ const FormCriarBolão = ()=>{
         let bolaoExistente = 0;
         if(inputs.length === 3){
             boloes.forEach((element,index)=>{
-                if(element.nome === inputs[0]){
+                if(element.nome.toUpperCase() == inputs[0].toUpperCase()){
                     bolaoExistente = 1;
                 }
             })
@@ -38,7 +41,7 @@ const FormCriarBolão = ()=>{
                 mensagem.innerHTML = "Bolão já existente!";
             }else if(bolaoExistente === 0){
                     if(boloes.length === 0){
-                        api.post('/boloes', {
+                        setDoc(doc(db, "boloes","1"), {
                             id : 1 ,
                             adm: `${userOn.id}`,
                             nome: `${inputs[0]}`,
@@ -48,7 +51,18 @@ const FormCriarBolão = ()=>{
                                 nome :`${userOn.username}`,
                                 pontuacao : [0,0,0,0,0,0,0,0]
                             }]
-                            })
+                        })
+                        // api.post('/boloes', {
+                        //     id : 1 ,
+                        //     adm: `${userOn.id}`,
+                        //     nome: `${inputs[0]}`,
+                        //     chave: `${inputs[1]}`,
+                        //     valor: `${inputs[2]}`,
+                        //     classificacao : [{
+                        //         nome :`${userOn.username}`,
+                        //         pontuacao : [0,0,0,0,0,0,0,0]
+                        //     }]
+                        //     })
                             .then(function (response) {
                                 setBoloes([...boloes,{
                                     id : boloes.length + 1 ,
@@ -72,7 +86,7 @@ const FormCriarBolão = ()=>{
                                 console.log(error);
                                 });
                     }else{
-                        api.post('/boloes', {
+                        setDoc(doc(db, "boloes",`${boloes.length + 1}`), {
                             id : boloes.length + 1 ,
                             adm: `${userOn.id}`,
                             nome: `${inputs[0]}`,
@@ -82,7 +96,18 @@ const FormCriarBolão = ()=>{
                                 nome :`${userOn.username}`,
                                 pontuacao : [0,0,0,0,0,0,0,0]
                             }]
-                            })
+                        })
+                        // api.post('/boloes', {
+                        //     id : boloes.length + 1 ,
+                        //     adm: `${userOn.id}`,
+                        //     nome: `${inputs[0]}`,
+                        //     chave: `${inputs[1]}`,
+                        //     valor: `${inputs[2]}`,
+                        //     classificacao : [{
+                        //         nome :`${userOn.username}`,
+                        //         pontuacao : [0,0,0,0,0,0,0,0]
+                        //     }]
+                        //     })
                             .then(function (response) {
                                 setBoloes([...boloes,{
                                     id : boloes.length + 1 ,
@@ -109,9 +134,13 @@ const FormCriarBolão = ()=>{
                         let userOnAux = userOn;
                         userOnAux.meusboloes = [...userOnAux.meusboloes,inputs[0]];
 
-                        api.patch(`/users/${userOn.id}`,{
+                        updateDoc(doc(db, "users", `${userOn.id}`), {
                             meusboloes : [...userOnAux.meusboloes]
                           })
+
+                        // api.patch(`/users/${userOn.id}`,{
+                        //     meusboloes : [...userOnAux.meusboloes]
+                        //   })
                           .then((response)=>{console.log(response)})
                           .catch((error)=>{console.log(error)})
                         setUserOn(userOnAux);
@@ -142,8 +171,8 @@ const FormCriarBolão = ()=>{
                     <h1>Criar Bolão</h1>
                     <p className="subtitle">Copa do mundo não pode faltar o Bolão com os Amigos!</p>
                     <form className="flex-collumn formCriarBolão">
-                        <input className="input" type="text" placeholder="Nome do Bolão"></input>
-                        <input className="input" type="text" placeholder="Chave de entrada"></input>
+                        <input className="input" type="text" placeholder="Nome do Bolão"  maxlength="15"></input>
+                        <input className="input" type="text" placeholder="Chave de entrada" maxlength="15"></input>
                         <input className="input" type="number" placeholder="Valor da aposta" id="valorDaAposta" name="valorDaAposta" min="0" max="500"></input>
                         <p className="mensagem"></p>
                         {/* <select name="tipoChavePix" id="tipoChavePix">

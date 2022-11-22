@@ -1,0 +1,21 @@
+[debug] [2022-11-21T15:08:00.032Z] ----------------------------------------------------------------------
+[debug] [2022-11-21T15:08:00.034Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\walla\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-21T15:08:00.035Z] CLI Version:   11.16.1
+[debug] [2022-11-21T15:08:00.035Z] Platform:      win32
+[debug] [2022-11-21T15:08:00.035Z] Node Version:  v16.18.0
+[debug] [2022-11-21T15:08:00.036Z] Time:          Mon Nov 21 2022 12:08:00 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-11-21T15:08:00.036Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-21T15:08:00.047Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-21T15:08:00.048Z] > authorizing via signed-in user (wwallace.dev@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\walla\OneDrive\Área de Trabalho\Programador\FrontPush2.0\ProjetosPessoaisDuranteOCurso\SiteBolao\copa-app
+

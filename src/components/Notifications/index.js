@@ -3,6 +3,9 @@ import { CopaContext } from "../../Context";
 
 import api from "../../services/api";
 
+import db from "../../services/apifb"
+import { collection, updateDoc,addDoc,where,doc } from "firebase/firestore"; 
+
 import { Outlet, Link } from "react-router-dom";
 import MenuBolão from "../MenuBolão";
 
@@ -20,19 +23,21 @@ const Notifications = ()=>{
         if(bolao.classificacao == undefined || bolao.classificacao.length == 0){
             bolao.classificacao = [{
                 nome :`${solicitacao.nome}`,
-                pontuacao : []
+                pontuacao : [0,0,0,0,0,0,0,0]
             }];
         }else{
             bolao.classificacao = [...bolao.classificacao,{
                 nome :`${solicitacao.nome}`,
-                pontuacao : []
+                pontuacao : [0,0,0,0,0,0,0,0]
             }];
         }
         
-
-        api.patch(`/boloes/${bolao.id}`,{
+        updateDoc(doc(db, "boloes", `${bolao.id}`), {
             classificacao : [...bolao.classificacao]
           })
+        // api.patch(`/boloes/${bolao.id}`,{
+        //     classificacao : [...bolao.classificacao]
+        //   })
           .then((response)=>{console.log(response)})
           .catch((error)=>{console.log(error)})
 
@@ -47,16 +52,23 @@ const Notifications = ()=>{
           userAux.solicitacoes =  userOn.solicitacoes.filter((e)=> e.nome !== solicitacao.nome && e.bolao == solicitacao.bolao);
           setUserOn(userAux);
 
-          api.patch(`/users/${userOn.id}`,{
+          updateDoc(doc(db, "users", `${userOn.id}`), {
             solicitacoes : userAux.solicitacoes
           })
+        //   api.patch(`/users/${userOn.id}`,{
+        //     solicitacoes : userAux.solicitacoes
+        //   })
           .then((response)=>{console.log(response)})
           .catch((error)=>{console.log(error)})
 
           let user = users.filter((user)=> user.username == solicitacao.nome)[0];
-          api.patch(`/users/${user.id}`,{
+          
+          updateDoc(doc(db, "users", `${user.id}`), {
             meusboloes : [...user.meusboloes,solicitacao.bolao]
           })
+        //   api.patch(`/users/${user.id}`,{
+        //     meusboloes : [...user.meusboloes,solicitacao.bolao]
+        //   })
           .then((response)=>{console.log(response)})
           .catch((error)=>{console.log(error)})
 
@@ -75,9 +87,14 @@ const Notifications = ()=>{
           console.log(userAux.solicitacoes);
           console.log(userAux)
           setUserOn(userAux);
-          api.patch(`/users/${userOn.id}`,{
+
+        
+          updateDoc(doc(db, "users", `${userOn.id}`), {
             solicitacoes : userAux.solicitacoes
           })
+        //   api.patch(`/users/${userOn.id}`,{
+        //     solicitacoes : userAux.solicitacoes
+        //   })
           .then((response)=>{console.log(response)})
           .catch((error)=>{console.log(error)})
 
