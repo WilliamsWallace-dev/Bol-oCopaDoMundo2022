@@ -1793,8 +1793,9 @@ td {
 
 .modal-background {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
   opacity: 0;
   pointer-events: none;
   transition: 0.5s ease-in;
@@ -1804,10 +1805,9 @@ td {
   position: fixed;
   width: 100%;
   height: 100vh;
-  z-index: 2;
   background-color: #0f0f0f;
   top: 0;
-  right: 0;
+  left: 0;
 }
 
 .modal-containerText {
@@ -1830,14 +1830,14 @@ td {
 .modal-container {
   background: linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);
   color: #FCF6F8;
-  position: relative;
+  position: fixed;
   max-width: 600px;
   min-height: 230px;
   z-index: 3;
   padding: 1rem 2rem;
   border-radius: 2rem;
   border: 2px solid #E5D3D6;
-  transform: translateY(-50%);
+  transform: translateY(-30%) translateX(-60%);
   display: grid;
   grid-template-rows: 1fr 3fr;
   align-items: center;
@@ -2030,11 +2030,11 @@ td {
 }
 
 .fundocopa {
-  position: absolute;
+  position: fixed;
   z-index: -2;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
 }
 @media only screen and (max-width: 540px) {
   .fundocopa {

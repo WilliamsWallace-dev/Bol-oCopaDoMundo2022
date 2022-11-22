@@ -171,8 +171,8 @@ const FormCriarBolão = ()=>{
                     <h1>Criar Bolão</h1>
                     <p className="subtitle">Copa do mundo não pode faltar o Bolão com os Amigos!</p>
                     <form className="flex-collumn formCriarBolão">
-                        <input className="input" type="text" placeholder="Nome do Bolão"  maxlength="15"></input>
-                        <input className="input" type="text" placeholder="Chave de entrada" maxlength="15"></input>
+                        <input className="input" type="text" placeholder="Nome do Bolão"  maxLength="15"></input>
+                        <input className="input" type="text" placeholder="Chave de entrada" maxLength="15"></input>
                         <input className="input" type="number" placeholder="Valor da aposta" id="valorDaAposta" name="valorDaAposta" min="0" max="500"></input>
                         <p className="mensagem"></p>
                         {/* <select name="tipoChavePix" id="tipoChavePix">

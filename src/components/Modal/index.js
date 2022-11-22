@@ -13,7 +13,7 @@ const Modal = ({type})=>{
       if(type == "login"){
         return(
             <>
-                <section className="flex-collumn modal-background">
+                <section className="flex-collumn modal-background ">
                 <div class="modal">
     
                 </div>

@@ -23,11 +23,11 @@
 //Main
 //backgroundMain
 .fundocopa{
-  position:absolute;
+  position:fixed;
   z-index: -2;
   top:0;
   right: 0;
-  height: 100vh;
+  height: 100%;
 
   @media only screen and (max-width : 540px) {
 

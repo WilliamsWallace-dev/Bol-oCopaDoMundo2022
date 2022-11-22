@@ -674,6 +674,7 @@ border: none;
   //   right:13.8%;
   //   bottom:27.5%;
   // }
+  
   .redes{
     position:fixed;
     top:40%;
@@ -1119,9 +1120,9 @@ button{
 //modal
 .modal-background{
   width: 100%;
-  height: 100%;
-  position: absolute;
-
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
   opacity: 0;
   pointer-events: none;
 
@@ -1131,12 +1132,10 @@ button{
   position: fixed;
   width: 100%;
   height: 100vh;
-  z-index: +2;
-
+  
   background-color: #0f0f0f;
   top: 0;
-  right: 0;
-
+  left: 0;
   
 }
 
@@ -1165,7 +1164,7 @@ button{
 .modal-container {
   background: $gradient-main;
   color: $white-light;
-  position: relative;
+  position: fixed;
 
 
   max-width: 600px;
@@ -1178,7 +1177,8 @@ button{
 
   border: 2px solid $white-dark;
 
-  transform: translateY(-50%);
+  transform: translateY(-30%) translateX(-60%);
+
 
   display: grid;
   grid-template-rows: 1fr 3fr;
