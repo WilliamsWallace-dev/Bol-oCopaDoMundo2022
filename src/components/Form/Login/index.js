@@ -3,7 +3,7 @@ import { CopaContext } from "../../../Context";
 
 import { Navigate } from 'react-router-dom';
 
-import TelaInicial from "../../TelaInicial";
+import TelaDeTransicao from "../../TelaDeTransicao"
 
 import Modal from "../../Modal";
 
@@ -35,6 +35,7 @@ const FormLogin = ()=>{
           element.value = "";
           
         })
+        console.log(inputs)
 
 
         users.forEach((element,index,users)=>{
@@ -45,15 +46,25 @@ const FormLogin = ()=>{
                     if(usuarioEncontrado === -1){
                         setUserOn("Error");
                     }else{
-                      setUserOn(users[usuarioEncontrado]);
+                      let modal = document.querySelector(".transicao");
+                          modal.style.opacity = "100";
+                          modal.style.pointerEvents = "all";
+                      setTimeout(() => {
+                        setUserOn(users[usuarioEncontrado]);
+                        modal.style.opacity = "0";
+                        modal.style.pointerEvents = "none";
+                      }, 5000);
+                      clearTimeout();
+                      
                     }
         })
       }
 
       if(userOn === "Error"){
         return(
-            <>
-                        {/* <Modal type = "login"></Modal> */}
+            <>          
+                        <TelaDeTransicao></TelaDeTransicao>
+                        <Modal type = "login"></Modal>
                         <section className="form-container  flex-collumn" style = {{height : "80vh", width : "65%"}}>
                             <h1>Realizar Login</h1>
                             <p className="subtitle">Junte-se a seus amigos no Bolão Copa do Mundo 2022.</p>
@@ -74,6 +85,7 @@ const FormLogin = ()=>{
       }else if(!userOn){
                 return(
                     <>
+                    <TelaDeTransicao></TelaDeTransicao>
                     <Modal type = "login"></Modal>
                     <section className="form-container  flex-collumn" style = {{height : "80vh", width : "65%"}}>
                         <h1>Realizar Login</h1>

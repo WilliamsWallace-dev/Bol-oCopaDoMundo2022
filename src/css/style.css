@@ -959,23 +959,29 @@ img {
 }
 .guess .partidas .card .jogo .times > div {
   width: 100%;
+  margin-bottom: 0.5rem;
 }
 .guess .partidas .card .jogo .times input {
-  max-width: 2rem;
+  max-width: 3rem;
+  min-height: 2rem;
   padding: 0.125rem 0rem 0.125rem 0.3rem;
   background: transparent;
   border: 2px solid #E5D3D6;
   border-radius: 0.25rem;
   color: #FCF6F8;
+  font-size: 1.125rem;
 }
 .guess .partidas .card .jogo .times input::-moz-placeholder {
   color: #FCF6F8;
+  font-size: 1rem;
 }
 .guess .partidas .card .jogo .times input:-ms-input-placeholder {
   color: #FCF6F8;
+  font-size: 1rem;
 }
 .guess .partidas .card .jogo .times input::placeholder {
   color: #FCF6F8;
+  font-size: 1rem;
 }
 @media only screen and (max-width: 540px) {
   .guess .partidas .card .jogo .times input {
@@ -1083,6 +1089,30 @@ img {
   .circulo1 {
     right: 15%;
     top: 18%;
+    -webkit-animation: estrela1 10s ease 0s infinite alternate forwards;
+            animation: estrela1 10s ease 0s infinite alternate forwards;
+  }
+  @-webkit-keyframes estrela1 {
+    0% {
+      transform: translate3d(20px, 20px, 0);
+    }
+    50% {
+      transform: translate3d(23px, 5px, 0);
+    }
+    100% {
+      transform: translate3d(20px, 0px, 0);
+    }
+  }
+  @keyframes estrela1 {
+    0% {
+      transform: translate3d(20px, 20px, 0);
+    }
+    50% {
+      transform: translate3d(23px, 5px, 0);
+    }
+    100% {
+      transform: translate3d(20px, 0px, 0);
+    }
   }
 }
 
@@ -1109,6 +1139,30 @@ img {
   .circulo2 {
     left: 59%;
     top: 43%;
+    -webkit-animation: estrela1 10s ease 0s infinite alternate forwards;
+            animation: estrela1 10s ease 0s infinite alternate forwards;
+  }
+  @-webkit-keyframes estrela1 {
+    0% {
+      transform: translate3d(20px, 20px, 0);
+    }
+    50% {
+      transform: translate3d(23px, 5px, 0);
+    }
+    100% {
+      transform: translate3d(20px, 0px, 0);
+    }
+  }
+  @keyframes estrela1 {
+    0% {
+      transform: translate3d(20px, 20px, 0);
+    }
+    50% {
+      transform: translate3d(23px, 5px, 0);
+    }
+    100% {
+      transform: translate3d(20px, 0px, 0);
+    }
   }
 }
 
@@ -1135,6 +1189,63 @@ img {
     width: 15%;
     right: 12%;
     top: 9%;
+  }
+}
+
+.circulo5 {
+  position: fixed;
+  right: 30%;
+  right: 15%;
+  top: 9%;
+  z-index: 0;
+}
+@media only screen and (max-width: 540px) {
+  .circulo5 {
+    width: 15%;
+    right: 8%;
+    top: 9%;
+    -webkit-animation: estrela2 20s ease 0s infinite alternate forwards;
+            animation: estrela2 20s ease 0s infinite alternate forwards;
+  }
+  @-webkit-keyframes estrela2 {
+    0% {
+      transform: translate3d(10px, 0px, 0);
+    }
+    20% {
+      transform: translate3d(0px, 5px, 0);
+    }
+    40% {
+      transform: translate3d(-5px, 0px, 0);
+    }
+    60% {
+      transform: translate3d(0px, -5px, 0);
+    }
+    80% {
+      transform: translate3d(5px, -10px, 0);
+    }
+    100% {
+      transform: translate3d(10px, 0px, 0);
+    }
+  }
+  @keyframes estrela2 {
+    0% {
+      transform: translate3d(10px, 0px, 0);
+    }
+    20% {
+      transform: translate3d(0px, 5px, 0);
+    }
+    40% {
+      transform: translate3d(-5px, 0px, 0);
+    }
+    60% {
+      transform: translate3d(0px, -5px, 0);
+    }
+    80% {
+      transform: translate3d(5px, -10px, 0);
+    }
+    100% {
+      transform: translate3d(10px, 0px, 0);
+    }
   }
 }
 
@@ -1223,9 +1334,31 @@ img {
 
 .estrela3 {
   position: fixed;
-  left: 5%;
-  bottom: 10%;
+  left: 18%;
+  bottom: 12%;
   z-index: -1;
+  -webkit-animation: estrela2 20s ease 0s infinite alternate forwards;
+          animation: estrela2 20s ease 0s infinite alternate forwards;
+}
+@keyframes estrela2 {
+  0% {
+    transform: translate3d(10px, 0px, 0);
+  }
+  20% {
+    transform: translate3d(0px, 5px, 0);
+  }
+  40% {
+    transform: translate3d(-5px, 0px, 0);
+  }
+  60% {
+    transform: translate3d(0px, -5px, 0);
+  }
+  80% {
+    transform: translate3d(5px, -10px, 0);
+  }
+  100% {
+    transform: translate3d(10px, 0px, 0);
+  }
 }
 @media only screen and (max-width: 540px) {
   .estrela3 {
@@ -1240,6 +1373,19 @@ img {
   left: 10%;
   bottom: 7%;
   z-index: -1;
+  -webkit-animation: estrela1 15s ease 0s infinite alternate forwards;
+          animation: estrela1 15s ease 0s infinite alternate forwards;
+}
+@keyframes estrela1 {
+  0% {
+    transform: translate3d(20px, 20px, 0);
+  }
+  50% {
+    transform: translate3d(23px, 5px, 0);
+  }
+  100% {
+    transform: translate3d(20px, 0px, 0);
+  }
 }
 @media only screen and (max-width: 540px) {
   .estrela4 {
@@ -1250,9 +1396,31 @@ img {
 
 .losango1 {
   position: fixed;
-  left: 9%;
+  left: 13%;
   bottom: 14%;
   z-index: -1;
+  -webkit-animation: estrela2 20s ease 0s infinite alternate forwards;
+          animation: estrela2 20s ease 0s infinite alternate forwards;
+}
+@keyframes estrela2 {
+  0% {
+    transform: translate3d(10px, 0px, 0);
+  }
+  20% {
+    transform: translate3d(0px, 5px, 0);
+  }
+  40% {
+    transform: translate3d(-5px, 0px, 0);
+  }
+  60% {
+    transform: translate3d(0px, -5px, 0);
+  }
+  80% {
+    transform: translate3d(5px, -10px, 0);
+  }
+  100% {
+    transform: translate3d(10px, 0px, 0);
+  }
 }
 @media only screen and (max-width: 540px) {
   .losango1 {
@@ -1267,6 +1435,19 @@ img {
   left: 1%;
   bottom: 40%;
   z-index: -1;
+  -webkit-animation: estrela1 15s ease 0s infinite alternate forwards;
+          animation: estrela1 15s ease 0s infinite alternate forwards;
+}
+@keyframes estrela1 {
+  0% {
+    transform: translate3d(20px, 20px, 0);
+  }
+  50% {
+    transform: translate3d(23px, 5px, 0);
+  }
+  100% {
+    transform: translate3d(20px, 0px, 0);
+  }
 }
 @media only screen and (max-width: 540px) {
   .losango2 {
@@ -1276,6 +1457,8 @@ img {
 }
 
 .torcedor1 {
+  width: 17%;
+  max-width: 250px;
   position: fixed;
   left: -1.16%;
   bottom: -3.35%;
@@ -1291,10 +1474,10 @@ img {
     transform: translate3d(0px, 0px, 0) scale(1);
   }
   40% {
-    transform: translate3d(2px, -3px, 0) scale(1.2);
+    transform: translate3d(2px, -3px, 0) scale(1.1);
   }
   60% {
-    transform: translate3d(0px, 0px, 0) scale(1.2);
+    transform: translate3d(0px, 0px, 0) scale(1.1);
   }
   80% {
     transform: translate3d(-2px, -3px, 0) scale(1);
@@ -1311,10 +1494,10 @@ img {
     transform: translate3d(0px, 0px, 0) scale(1);
   }
   40% {
-    transform: translate3d(2px, -3px, 0) scale(1.2);
+    transform: translate3d(2px, -3px, 0) scale(1.1);
   }
   60% {
-    transform: translate3d(0px, 0px, 0) scale(1.2);
+    transform: translate3d(0px, 0px, 0) scale(1.1);
   }
   80% {
     transform: translate3d(-2px, -3px, 0) scale(1);
@@ -1330,6 +1513,8 @@ img {
 }
 
 .torcedor2 {
+  width: 20%;
+  max-width: 280px;
   position: fixed;
   right: -1.1%;
   bottom: -2.5%;
@@ -1384,28 +1569,35 @@ img {
 }
 
 .campoDeFutebol1 {
-  width: 30%;
+  width: 25%;
   position: fixed;
-  right: 10%;
-  top: 13%;
+  right: -10%;
+  top: 32%;
   z-index: -1;
 }
-
-.campoDeFutebol2 {
-  width: 30%;
-  position: fixed;
-  overflow: hidden;
-  left: -10%;
-  bottom: -25%;
-  z-index: -1;
+@media only screen and (max-width: 540px) {
+  .campoDeFutebol1 {
+    width: 45%;
+    position: fixed;
+    right: -25%;
+    top: 32%;
+  }
 }
 
 .campoDeFutebol3 {
-  width: 20%;
+  width: 27%;
   position: fixed;
-  left: 10%;
-  top: 12%;
+  left: -12%;
+  top: 15%;
   z-index: -1;
+}
+@media only screen and (max-width: 540px) {
+  .campoDeFutebol3 {
+    width: 40%;
+    position: fixed;
+    left: -15%;
+    top: 32%;
+  }
 }
 
 .bola1 {
@@ -1422,13 +1614,6 @@ img {
   position: fixed;
   right: 16%;
   bottom: 30%;
-}
-
-.chute2 {
-  width: 11%;
-  position: fixed;
-  right: 13.8%;
-  bottom: 27.5%;
 }
 
 .redes {
@@ -1727,10 +1912,16 @@ td {
   }
 }
 
+.transicao {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in;
+}
 .transicao .transicao-background {
   width: 100%;
   height: 100%;
   top: 0;
+  left: 0;
   z-index: 2;
   position: fixed;
   background-color: #0f0f0f;

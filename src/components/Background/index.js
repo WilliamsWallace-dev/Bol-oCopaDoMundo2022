@@ -76,8 +76,8 @@ const Background = ({type})=>{
                     <div className="background-gradient"></div>
     
                     <img className="campoDeFutebol1" src={campoDeFutebol1} alt=""></img>
-                    {/* <img className="campoDeFutebol2" src={campoDeFutebol2} alt=""></img> */}
                     <img className="campoDeFutebol3" src={campoDeFutebol3} alt=""></img>
+                    {/* <img className="campoDeFutebol2" src={campoDeFutebol1} alt=""></img> */}
                     
     
                     {/* <img className="bola1" src={bola1} alt=""></img> */}
@@ -98,6 +98,7 @@ const Background = ({type})=>{
                     <img className="circulo1-2" src={circulo1} alt=""></img>
                     <img className="circulo3" src={circulo3} alt=""></img>
                     <img className="circulo4" src={circulo4} alt=""></img>
+                    <img className="circulo5" src={circulo2} alt=""></img>
     
                     
         
@@ -121,7 +122,7 @@ const Background = ({type})=>{
                     <img className="circulo3" src={circulo1} alt=""></img>
                     <img className="circulo4" src={circulo4} alt=""></img>
         
-                    <img className="circulo2" src={losango} alt=""></img>
+                    <img className="circulo2" src={circulo2} alt=""></img>
                     <img className="estrela1" src={estrela} alt=""></img>
                     <img className="estrela2" src={estrela} alt=""></img>
 
@@ -149,9 +150,9 @@ const Background = ({type})=>{
                 <>
                     <div className="background-gradient"></div>
     
-                    <img className="campoDeFutebol1" src={campoDeFutebol1} alt=""></img>
-                    {/* <img className="campoDeFutebol2" src={campoDeFutebol2} alt=""></img> */}
+                    {/* <img className="campoDeFutebol1" src={campoDeFutebol1} alt=""></img>
                     <img className="campoDeFutebol3" src={campoDeFutebol3} alt=""></img>
+                    <img className="campoDeFutebol2" src={campoDeFutebol1} alt=""></img> */}
                     
     
                     {/* <img className="bola1" src={bola1} alt=""></img> */}
@@ -175,11 +176,7 @@ const Background = ({type})=>{
     
                     
         
-                    <div className="redes flex-collumn">
-                    <a href = "https://web.whatsapp.com/" target="_blank" ><img className="" src={iconeCompartilhar} alt=""></img></a>
-                        <a href = "https://www.instagram.com/wwallace357/" target="_blank" ><img className="" src={iconeInstagram} alt=""></img></a>
-                        <a href = "https://www.linkedin.com/in/williams-wallace-alves-passos-b4123a252/" target="_blank" ><img className="" src={iconeLinkedIn} alt=""></img></a>
-                    </div>
+                    
                 
                 </>
             )

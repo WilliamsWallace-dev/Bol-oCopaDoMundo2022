@@ -8,7 +8,7 @@ import { collection, updateDoc,addDoc,where,doc } from "firebase/firestore";
 
 import { Outlet, Link } from "react-router-dom";
 
-import Holanda from "../../svg/bandeiras/Holanda.svg"
+import TelaDeTransicao from "../TelaDeTransicao"
 
 const Classification = ()=>{
 
@@ -48,10 +48,10 @@ const Classification = ()=>{
         let ordenaAux;
         for(let i = 0;i<aux.length;i++)
             for(let j = i;j<aux.length;j++){
-                if(aux[i].pontuação[7] - aux[j].pontuação[7] > 0 ){
-                    ordenaAux = aux[i].pontuação[7];
-                    aux[i].pontuação[7] = aux[j].pontuação[7];
-                    aux[j].pontuação[7] = aux;
+                if(aux[i].pontuacao[7] - aux[j].pontuacao[7] > 0 ){
+                    ordenaAux = aux[i].pontuacao[7];
+                    aux[i].pontuacao[7] = aux[j].pontuacao[7];
+                    aux[j].pontuacao[7] = aux;
                 }
             }
 
@@ -64,8 +64,16 @@ const Classification = ()=>{
           .then((response)=>{console.log(response)})
           .catch((error)=>{console.log(error)})
 
-          setClassificacao([...aux,id]);
-        
+          console.log("PASSEI AQUI")
+
+          let modal = document.querySelector(".transicao");
+            modal.style.opacity = "100";
+            modal.style.pointerEvents = "all";
+          setTimeout(() => {
+            setClassificacao([...aux,id]);
+            modal.style.opacity = "0";
+            modal.style.pointerEvents = "none";
+          }, 5000);
     }
 
     const CalcularPontuação = (palpites,jogador)=>{
@@ -173,6 +181,7 @@ const Classification = ()=>{
     }else{
         return (
             <>
+            <TelaDeTransicao></TelaDeTransicao>
             <section className=" classificacao flex-collumn">
     
                     <h2>Classificação</h2>

@@ -260,18 +260,23 @@ border: none;
             margin: 0 1rem;
             &>div{ 
               width: 100%;
+              margin-bottom: .5rem;
             }
             input{
-              max-width: 2rem ;
+              max-width: 3rem ;
+              min-height: 2rem;
               padding: .125rem 0rem .125rem .3rem;
               background: transparent;
               border:2px solid $white-dark;
               border-radius: .25rem;
               color: $white-light;
+
+              font-size: 1.125rem;
               
 
               &::placeholder{
                 color: $white-light;
+                font-size: 1rem;
               }
 
               @media only screen and (max-width : 540px) {
@@ -402,6 +407,22 @@ border: none;
     @media only screen and (max-width : 540px) {
       right:15%;
       top:18%;
+
+      animation: estrela1 10s ease 0s infinite alternate forwards ;
+
+    @keyframes estrela1 {
+
+      0%{
+        transform: translate3d(20px,20px,0);
+      }
+      50%{
+        transform: translate3d(23px,5px,0);
+      }
+      100%{
+        transform: translate3d(20px,0px,0);
+      }
+      
+    }
     
   }
    
@@ -426,6 +447,22 @@ border: none;
     @media only screen and (max-width : 540px) {
       left:59%;
       top:43%;
+
+      animation: estrela1 10s ease 0s infinite alternate forwards ;
+
+    @keyframes estrela1 {
+
+      0%{
+        transform: translate3d(20px,20px,0);
+      }
+      50%{
+        transform: translate3d(23px,5px,0);
+      }
+      100%{
+        transform: translate3d(20px,0px,0);
+      }
+      
+    }
     
   }
   }
@@ -448,6 +485,46 @@ border: none;
       width: 15%;
       right:12%;
       top:9%;
+    
+  }
+
+  }
+
+  .circulo5{
+    position: fixed;
+    right:30%;
+    right:15%;
+    top:9%;
+    z-index: 0;
+    @media only screen and (max-width : 540px) {
+      width: 15%;
+      right:8%;
+      top:9%;
+
+      animation: estrela2 20s ease 0s infinite alternate forwards ;
+
+    @keyframes estrela2 {
+
+      0%{
+        transform: translate3d(10px,0px,0);
+      }
+      20%{
+        transform: translate3d(0px,5px,0);
+      }
+      40%{
+        transform: translate3d(-5px,0px,0);
+      }
+      60%{
+        transform: translate3d(0px,-5px,0);
+      }
+      80%{
+        transform: translate3d(5px,-10px,0);
+      }
+      100%{
+        transform: translate3d(10px,0px,0);
+      }
+      
+    }
     
   }
 
@@ -513,9 +590,34 @@ border: none;
   }
   .estrela3{
     position: fixed;
-    left:5%;
-    bottom:10%;
+    left:18%;
+    bottom:12%;
     z-index: -1;
+
+    animation: estrela2 20s ease 0s infinite alternate forwards ;
+
+    @keyframes estrela2 {
+
+      0%{
+        transform: translate3d(10px,0px,0);
+      }
+      20%{
+        transform: translate3d(0px,5px,0);
+      }
+      40%{
+        transform: translate3d(-5px,0px,0);
+      }
+      60%{
+        transform: translate3d(0px,-5px,0);
+      }
+      80%{
+        transform: translate3d(5px,-10px,0);
+      }
+      100%{
+        transform: translate3d(10px,0px,0);
+      }
+      
+    }
     @media only screen and (max-width : 540px) {
       left:15%;
       bottom:2%;
@@ -527,6 +629,22 @@ border: none;
     left:10%;
     bottom:7%;
     z-index: -1;
+
+    animation: estrela1 15s ease 0s infinite alternate forwards ;
+
+    @keyframes estrela1 {
+
+      0%{
+        transform: translate3d(20px,20px,0);
+      }
+      50%{
+        transform: translate3d(23px,5px,0);
+      }
+      100%{
+        transform: translate3d(20px,0px,0);
+      }
+      
+    }
     @media only screen and (max-width : 540px) {
       left:15%;
       width: 10%;
@@ -534,9 +652,34 @@ border: none;
   }
   .losango1{
     position: fixed;
-    left:9%;
+    left:13%;
     bottom:14%;
     z-index: -1;
+
+    animation: estrela2 20s ease 0s infinite alternate forwards ;
+
+    @keyframes estrela2 {
+
+      0%{
+        transform: translate3d(10px,0px,0);
+      }
+      20%{
+        transform: translate3d(0px,5px,0);
+      }
+      40%{
+        transform: translate3d(-5px,0px,0);
+      }
+      60%{
+        transform: translate3d(0px,-5px,0);
+      }
+      80%{
+        transform: translate3d(5px,-10px,0);
+      }
+      100%{
+        transform: translate3d(10px,0px,0);
+      }
+      
+    }
     @media only screen and (max-width : 540px) {
       left:10%;
       bottom:2%;
@@ -548,12 +691,31 @@ border: none;
     left:1%;
     bottom:40%;
     z-index: -1;
+
+    animation: estrela1 15s ease 0s infinite alternate forwards ;
+
+    @keyframes estrela1 {
+
+      0%{
+        transform: translate3d(20px,20px,0);
+      }
+      50%{
+        transform: translate3d(23px,5px,0);
+      }
+      100%{
+        transform: translate3d(20px,0px,0);
+      }
+      
+    }
+
     @media only screen and (max-width : 540px) {
       bottom:25%;
       width: 8%;
   }
   }
   .torcedor1{
+    width: 17%;
+    max-width: 250px;
     position: fixed;
     left:-1.16%;
     bottom:-3.35%;
@@ -570,10 +732,10 @@ border: none;
           transform: translate3d(0px,0px,0) scale(1);
         }
         40%{
-          transform: translate3d(2px,-3px,0) scale(1.2);
+          transform: translate3d(2px,-3px,0) scale(1.1);
         }
         60%{
-          transform: translate3d(0px,0px,0) scale(1.2);
+          transform: translate3d(0px,0px,0) scale(1.1);
         }
         80%{
           transform: translate3d(-2px,-3px,0) scale(1);
@@ -589,6 +751,8 @@ border: none;
   }
   }
   .torcedor2{
+    width: 20%;
+    max-width: 280px;
     position: fixed;
     right:-1.1%;
     bottom:-2.5%;
@@ -625,26 +789,38 @@ border: none;
   }
   }
   .campoDeFutebol1{
-    width: 30%;
+    width: 25%;
     position: fixed;
-    right:10%;
-    top:13%;
+    right:-10%;
+    top:32%;
     z-index: -1;
+
+    @media only screen and (max-width : 540px) {
+      width: 45%;
+      position: fixed;
+      right:-25%;
+      top:32%;
   }
-  .campoDeFutebol2{
-    width: 30%;
-    position: fixed;
-    overflow: hidden;
-    left:-10%;
-    bottom:-25%;
-    z-index: -1;
   }
+  // .campoDeFutebol2{
+  //   width: 30%;
+  //   position: fixed;
+  //   right:33%;
+  //   bottom:25%;
+  //   z-index: -1;
+  // }
   .campoDeFutebol3{
-    width: 20%;
+    width: 27%;
     position: fixed;
-    left:10%;
-    top:12%;
+    left:-12%;
+    top:15%;
     z-index: -1;
+    @media only screen and (max-width : 540px) {
+      width: 40%;
+    position: fixed;
+    left:-15%;
+    top:32%;
+  }
   }
   .bola1{
     width: 7%;
@@ -668,12 +844,12 @@ border: none;
     right:16%;
     bottom:30%;
   }
-  .chute2{
-    width: 11%;
-    position: fixed;
-    right:13.8%;
-    bottom:27.5%;
-  }
+  // .chute2{
+  //   width: 11%;
+  //   position: fixed;
+  //   right:13.8%;
+  //   bottom:27.5%;
+  // }
   
   .redes{
     position:fixed;
@@ -1075,10 +1251,16 @@ button{
 //Tela de Animação
 
 .transicao{
+  opacity: 0;
+  pointer-events: none;
+  
+  
+  transition: 0.5s ease-in;
   .transicao-background{
     width: 100%;
     height: 100%;
     top : 0;
+    left: 0;
     z-index: +2;
     position: fixed;
     background-color: #0f0f0f;
