@@ -1424,6 +1424,13 @@ img {
   bottom: 30%;
 }
 
+.chute2 {
+  width: 11%;
+  position: fixed;
+  right: 13.8%;
+  bottom: 27.5%;
+}
+
 .redes {
   position: fixed;
   top: 40%;
