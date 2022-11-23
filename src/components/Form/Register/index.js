@@ -8,11 +8,21 @@ import { collection, addDoc,setDoc,doc } from "firebase/firestore";
 
 import { Outlet, Link } from "react-router-dom";
 
+import Modal from "../../Modal";
+
 
 const FormRegister = ()=>{
 
     const {users,setUsers,userOn,setUserOn} = useContext(CopaContext);
     let inputs = [];
+
+
+    function modalActiveted() {
+        let modal = document.querySelector(".modal-background");
+        modal.style.opacity = "100";
+        modal.style.pointerEvents = "all";
+      
+      }
 
     
     const CadastrarUsuario = ()=>{
@@ -96,6 +106,7 @@ const FormRegister = ()=>{
 
         return(
             <>
+                <Modal type = "login"></Modal>
                 <section className="form-container flex-collumn" style = {{height : "80vh", width : "65%"}}>
                     <h1>Seja um Jogador!</h1>
                     <p className="subtitle">Cadastre-se e se junte a seus amigos no Bolão Copa do Mundo 2022.</p>
@@ -107,7 +118,7 @@ const FormRegister = ()=>{
                         
                         <div>
                         <button type = "button" className="primary-button" onClick = {CadastrarUsuario} >Cadastrar</button>
-                        <button type = "button" className="secundary-button">Compartilhar com os amigos!</button>
+                        <button type = "button" className="secundary-button" onClick={modalActiveted}>Compartilhar com os amigos!</button>
                         </div>
                     </form>
                     

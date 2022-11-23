@@ -100,7 +100,6 @@ const Guess = ()=>{
             }
             
         });
-        console.log(aux.palpites)
         setUserOn(aux);
        
         updateDoc(doc(db, "users", `${userOn.id}`), {
@@ -139,7 +138,7 @@ const Guess = ()=>{
                 
 
                 <h2>Realize os palpite dos jogos!</h2>
-                <p className="subtitle p4 ">O palpite poderá ser alterado até a hora antes do jogo.</p>
+                <p className="subtitle p4 " style={{marginRigth : "1rem"}}>O palpite poderá ser alterado até a hora antes do jogo.</p>
 
                 {/* <form>
                     

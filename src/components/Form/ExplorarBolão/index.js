@@ -28,14 +28,16 @@ const FormExplorarBolão = ()=>{
       const SearchBolao = (e)=>{
  
         let bolaoSearch = [];
-    
+        
 
           let inputText = document.querySelector(".formSearch input").value;
           inputText = inputText.split(" ").filter((e)=>e.length > 2)
           inputText.forEach((element,index) => {
             boloes.forEach((bolao)=>{
-            if(bolao.nome.split(" ").filter((e) => e.length > 2 && e.toUpperCase() == element.toUpperCase()).length !== 0 )
-              bolaoSearch = [...bolaoSearch,bolao];
+            if(bolao.nome.split(" ").filter((e) => e.length > 2 && e.toUpperCase() == element.toUpperCase()).length !== 0 ){
+                bolaoSearch = [...bolaoSearch,bolao];
+            }
+            
             })
           })
           
@@ -102,13 +104,13 @@ const FormExplorarBolão = ()=>{
     
 
 
-      console.log(search)
+    //   console.log(search)
       if(search === ""){
         return(
             <>
                 <section className="form-container flex-collumn">
                     <h1>Explorar Bolão</h1>
-                    <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!</p>
+                    <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!<br></br>Os bolões que você participa não serão exibidos</p>
                     <form className="flex-collumn formSearch">
                         <input className="input inputExplirarBolao" type="text" placeholder="Nome do Bolão"></input>                                         
                         <div>
@@ -124,7 +126,7 @@ const FormExplorarBolão = ()=>{
             <>
                 <section className="form-container flex-collumn">
                     <h1>Explorar Bolão</h1>
-                    <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!</p>
+                    <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!<br></br>Os bolões que você participa não serão exibidos</p>
                     <form className="flex-collumn formSearch">
                         <input className="input inputExplirarBolao" type="text" placeholder="Nome do Bolão"></input>                                         
                         <div>
@@ -145,7 +147,7 @@ const FormExplorarBolão = ()=>{
             <>
                 <section className="form-container flex-collumn">
                     <h1>Explorar Bolão</h1>
-                    <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!</p>
+                    <p className="subtitle">Encontre o Bolão por meio da Chave de entrada e envie a solicitação para participar!<br></br>Os bolões que você participa não serão exibidos.</p>
                     <form className="flex-collumn formSearch">
                         <input className="input inputExplirarBolao" type="text" placeholder="Nome do Bolão"></input>                                         
                         <div>

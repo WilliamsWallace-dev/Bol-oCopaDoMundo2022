@@ -35,9 +35,9 @@ const FormLogin = ()=>{
           element.value = "";
           
         })
-        console.log(inputs)
-
-
+        if(users.length == 0){
+          setUserOn("Error");
+        }
         users.forEach((element,index,users)=>{
           if(element.username == inputs[0] && element.password == inputs[1]){
             usuarioEncontrado = index;
@@ -72,9 +72,9 @@ const FormLogin = ()=>{
                                 <input className="input" type="text" placeholder="Nome de Usuário"></input>
                                 <input className="input" type="password" placeholder="Senha"></input>
                                 <p className="mensagem-red p4">Username e senha não conferem.</p>
-                                <div>
+                                <div className="flex"> 
                                 <button type = "button" className="primary-button" onClick = {VerificaUsuario}>Entrar</button>
-                                <button type = "button" className="secundary-button" >Compartilhar com os amigos!</button>
+                                <button type = "button" className="secundary-button" onClick={modalActiveted}>Compartilhar com os amigos!</button>
                                 </div>
                             </form>
                         
@@ -93,7 +93,7 @@ const FormLogin = ()=>{
                         <form className="flex-collumn formLogin">
                             <input className="input" type="text" placeholder="Nome de Usuário"></input>
                             <input className="input" type="password" placeholder="Senha"></input>
-                            <div>
+                            <div className="flex">
                             <button type = "button" className="primary-button"  onClick = {VerificaUsuario}>Entrar</button>
                             <button type = "button" className="secundary-button" onClick={modalActiveted}>Compartilhar com os amigos!</button>
                             </div>

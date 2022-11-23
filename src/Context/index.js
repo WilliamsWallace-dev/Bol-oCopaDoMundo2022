@@ -75,6 +75,7 @@ useEffect(()=>{
     response.forEach((doc)=>{
       boloesFb = [...boloesFb,doc.data()]
     })
+    console.log(boloesFb)
     setBoloes(boloesFb);
   })
   .catch((error)=>{console.log(error);})
@@ -87,7 +88,7 @@ useEffect(()=>{
     response.forEach((doc)=>{
       jogosFb = [...jogosFb,doc.data()]
     })
-    setJogos(jogosFb);
+    setJogos(jogosFb[0].partidas);
   })
   .catch((error)=>{console.log(error);})
 },[userOn])

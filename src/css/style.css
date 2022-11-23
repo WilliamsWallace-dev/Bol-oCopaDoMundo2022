@@ -771,6 +771,7 @@ img {
   .primary-button {
     font-size: 12px;
     padding: 0.5rem 2.125rem;
+    flex-wrap: wrap;
   }
 }
 
@@ -981,6 +982,17 @@ img {
   font-size: 1rem;
 }
 @media only screen and (max-width: 540px) {
+  .guess .partidas .card .jogo .times input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .guess .partidas .card .jogo .times input:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .guess .partidas .card .jogo .times input::placeholder {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 540px) {
   .guess .partidas .card .jogo .times input {
     padding: 0.06rem 0rem 0.06rem 0.15rem;
     margin-top: 0.125rem;
@@ -1085,7 +1097,7 @@ img {
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  margin: 0.25rem 0 1.5rem 0;
+  margin: 0.5rem 1rem 1.5rem 0.5rem;
   text-align: center;
 }
 
@@ -1649,7 +1661,7 @@ img {
 }
 
 .redes {
-  position: fixed;
+  position: absolute;
   top: 40%;
   left: 12%;
   gap: 2.5rem;
@@ -1668,7 +1680,7 @@ img {
   .redes {
     flex-direction: row;
     top: auto;
-    bottom: 25%;
+    bottom: 90px;
     left: 0;
     right: 0;
   }
@@ -1720,6 +1732,23 @@ th {
 }
 @media only screen and (max-width: 540px) {
   th {
+    font-size: 12px;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.colocacaoTabela {
+  margin: 0.125rem;
+  background: linear-gradient(105.18deg, #A20D35 35.63%, rgba(30, 0, 9, 0.72) 80.14%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media only screen and (max-width: 540px) {
+  .colocacaoTabela {
     font-size: 12px;
     padding-bottom: 0.5rem;
   }
@@ -2069,10 +2098,19 @@ td {
   width: 100%;
   height: 100vh;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
   opacity: 0;
   pointer-events: none;
   transition: 0.5s ease-in;
+}
+@media only screen and (max-width: 540px) {
+  .modal-background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+  }
 }
 
 .modal {
@@ -2080,8 +2118,7 @@ td {
   width: 100%;
   height: 100vh;
   background-color: #0f0f0f;
-  top: 0;
-  left: 0;
+  opacity: 0.7;
 }
 
 .modal-containerText {
@@ -2098,6 +2135,7 @@ td {
   .modal-containerText {
     font-size: 12px;
     padding: 1rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -2111,10 +2149,15 @@ td {
   padding: 1rem 2rem;
   border-radius: 2rem;
   border: 2px solid #E5D3D6;
-  transform: translateY(-30%) translateX(-60%);
   display: grid;
   grid-template-rows: 1fr 3fr;
   align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .modal-container {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+  }
 }
 .modal-container .modal-title,
 .modal-container .modal-content {
@@ -2137,7 +2180,7 @@ td {
   align-items: center;
 }
 .modal-container .button-wpp {
-  margin: 0 auto;
+  margin: 1rem auto 0 auto;
   border: 1px solid #FCF6F8;
 }
 .modal-container .button-wpp::before {
@@ -2155,12 +2198,7 @@ td {
     padding: 0.5rem 1.5rem;
     margin: 0.25rem 0;
     font-size: 14px;
-  }
-}
-@media only screen and (max-width: 540px) {
-  .modal-container {
-    padding: 0.5rem;
-    margin: 2rem;
+    margin: 1.5rem auto 0 auto;
   }
 }
 

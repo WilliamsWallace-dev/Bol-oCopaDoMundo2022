@@ -29,6 +29,8 @@
   @media only screen and (max-width : 540px) {
     font-size: 12px;
     padding: .5rem 2.125rem;
+    // width: 30%;
+    flex-wrap: wrap;
   }
 }
 
@@ -283,6 +285,10 @@
               &::placeholder{
                 color: $white-light;
                 font-size: 1rem;
+                @media only screen and (max-width : 540px) {
+                  font-size: 12px;
+            
+                }
               }
 
               @media only screen and (max-width : 540px) {
@@ -410,7 +416,7 @@
     font-family: 'Readex Pro', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    margin: .25rem 0 1.5rem 0;
+    margin: .5rem 1rem 1.5rem .5rem;
     text-align: center;
   }
 
@@ -889,7 +895,7 @@
   // }
   
   .redes{
-    position:fixed;
+    position:absolute;
     top:40%;
     left:12%;
     gap:2.5rem;
@@ -906,7 +912,7 @@
     @media only screen and (max-width : 540px) {
         flex-direction: row;
         top:auto;
-        bottom:25%;
+        bottom:90px;
         left:0;
         right: 0;
 
@@ -963,6 +969,21 @@ th{
   font-size: 14px;
   font-weight: 400;
 
+  @media only screen and (max-width : 540px) {
+    font-size: 12px;
+    padding-bottom: .5rem;
+  }
+}
+
+.colocacaoTabela{
+  margin: .125rem;
+  background: $gradient-main;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   @media only screen and (max-width : 540px) {
     font-size: 12px;
     padding-bottom: .5rem;
@@ -1374,11 +1395,18 @@ button{
   width: 100%;
   height: 100vh;
   position: fixed;
+  top:0;
+  left: 0;
   z-index: 1;
   opacity: 0;
   pointer-events: none;
 
   transition: 0.5s ease-in;
+  @media only screen and (max-width : 540px) {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    }
 }
 .modal {
   position: fixed;
@@ -1386,8 +1414,7 @@ button{
   height: 100vh;
   
   background-color: #0f0f0f;
-  top: 0;
-  left: 0;
+  opacity: .7;
   
 }
 
@@ -1408,6 +1435,7 @@ button{
   @media only screen and (max-width : 540px) {
     font-size: 12px;
     padding: 1rem;
+    margin-top: .5rem;
   }
 
 
@@ -1429,12 +1457,17 @@ button{
 
   border: 2px solid $white-dark;
 
-  transform: translateY(-30%) translateX(-60%);
+  // transform: translateY(-30%) translateX(-20%);
 
 
   display: grid;
   grid-template-rows: 1fr 3fr;
   align-items: center;
+
+  @media only screen and (max-width : 540px) {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+  }
 
   .modal-title,
   .modal-content {
@@ -1465,7 +1498,7 @@ button{
   }
 
   .button-wpp{
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
     border: 1px solid $white-light;
     &::before{
       content:"";
@@ -1484,14 +1517,12 @@ button{
       padding: .5rem 1.5rem;
       margin: .25rem 0;
       font-size: 14px;
+      margin: 1.5rem auto 0 auto;
 
     }
   }
 
-  @media only screen and (max-width : 540px) {
-    padding: .5rem;
-    margin: 2rem;
-  }
+  
 }
 
 //Tela Inicial
