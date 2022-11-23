@@ -5,7 +5,7 @@ import { CopaContext } from "../../Context";
 
 import Notifications from "../../components/Notifications";
 import MenuBolão from "../../components/MenuBolão";
-
+import Footer from "../../components/Footer";
 const NotificationsPage = ()=>{
     
     const {userOn} = useContext(CopaContext);
@@ -18,6 +18,7 @@ const NotificationsPage = ()=>{
                     <MenuBolão type = "none"></MenuBolão>
                     <Notifications></Notifications>
                 </section>
+               <Footer></Footer>
             </>
         )
     }else {

@@ -5,7 +5,7 @@ import { CopaContext } from "../../Context";
 import Header from "../../components/Header";
 import FormExplorarBolão from "../../components/Form/ExplorarBolão";
 import MenuBolão from "../../components/MenuBolão";
-
+import Footer from "../../components/Footer";
 
 const UserExplorarBolão = ()=>{
     
@@ -20,6 +20,7 @@ const UserExplorarBolão = ()=>{
                     <MenuBolão type = "ExplorarBolão"></MenuBolão>
                     <FormExplorarBolão ></FormExplorarBolão>
                 </section>
+                <Footer></Footer>
             </>
         )
     

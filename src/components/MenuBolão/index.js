@@ -20,12 +20,15 @@ const MenuBolão = ({type}) => {
     if(type=="Guess"){
         return (
             <>
+            <div className="menuBolao-container">
                 <ul className=" container flex menuBolao">
                     <Link to={"/palpites:" + userOn.id}><li><button className="secundary-button active">Meus Palpites</button></li></Link>
                     <Link to={"/classificação:" + userOn.id}><li><button className="secundary-button" onClick = {CleanClassification}>Classificação</button></li></Link>
                     <Link to={"/criarbolão:" + userOn.id}><li><button className="secundary-button">Criar Bolão</button></li></Link>
                     <Link to={"/explorarbolão:" + userOn.id}><li><button className="secundary-button" onClick = {CleanSearch}>Explorar Bolões</button></li></Link>
                 </ul>
+            </div>
+                
             </>
         )
     }else  if(type=="Classification"){

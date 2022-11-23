@@ -65,7 +65,7 @@ const Guess = ()=>{
         // console.log(jogo.attributes.dia.value)
         // console.log(jogo.attributes.hora.value)
         jogos.forEach((jogo)=>{
-            if(mes > jogo.attributes.mes.value || (mes == jogo.attributes.mes.value && (dia > jogo.attributes.dia.value || (dia == jogo.attributes.dia.value && hora >= (jogo.attributes.hora.value - 1))))){
+            if(mes > jogo.attributes.mes.value || (mes == jogo.attributes.mes.value && (dia > jogo.attributes.dia.value || (dia == jogo.attributes.dia.value && hora >= (jogo.attributes.hora.value))))){
                 jogo.querySelectorAll("input").forEach((input)=>{
                     input.setAttribute("disabled", "");
                     input.style.borderWidth = 0 + "px";
@@ -139,7 +139,7 @@ const Guess = ()=>{
                 
 
                 <h2>Realize os palpite dos jogos!</h2>
-                <p className="subtitle p4 ">O palpite poderá ser alterado até 1 hora antes do jogo.</p>
+                <p className="subtitle p4 ">O palpite poderá ser alterado até a hora antes do jogo.</p>
 
                 {/* <form>
                     

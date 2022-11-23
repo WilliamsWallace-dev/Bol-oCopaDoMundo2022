@@ -770,6 +770,7 @@ img {
 @media only screen and (max-width: 540px) {
   .primary-button {
     font-size: 12px;
+    padding: 0.5rem 2.125rem;
   }
 }
 
@@ -802,6 +803,7 @@ img {
 @media only screen and (max-width: 540px) {
   .secundary-button {
     font-size: 12px;
+    padding: 0.375rem 1.25rem;
   }
 }
 
@@ -819,15 +821,10 @@ img {
   border: none;
   transition: 1.5s ease;
 }
-.username > button::before {
-  content: "";
-  display: inline-block;
-  background: url("../svg/iconeNotificação.svg") center center no-repeat;
-  background-size: cover;
-  width: 0.875rem;
-  height: 1rem;
-  margin-right: 1rem;
-  cursor: pointer;
+@media only screen and (max-width: 540px) {
+  .username > button {
+    font-size: 16px;
+  }
 }
 .username > button::after {
   content: "";
@@ -986,7 +983,15 @@ img {
 @media only screen and (max-width: 540px) {
   .guess .partidas .card .jogo .times input {
     padding: 0.06rem 0rem 0.06rem 0.15rem;
-    margin-top: 0.25rem;
+    margin-top: 0.125rem;
+    min-height: 0.25rem;
+    font-size: 12px;
+    max-width: 1.5rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .guess .partidas .card .jogo .times {
+    margin: 0 0.25rem 0 0.125rem;
   }
 }
 .guess .partidas .card .jogo .informações {
@@ -995,7 +1000,7 @@ img {
 }
 @media only screen and (max-width: 540px) {
   .guess .partidas .card .jogo .informações {
-    padding: 0 0.25rem 0 0.25rem;
+    padding: 0 0.125rem 0 0.125rem;
   }
 }
 @media only screen and (max-width: 540px) {
@@ -1015,6 +1020,11 @@ img {
 @media only screen and (max-width: 540px) {
   .form-container .formCriarBolão, .form-container .formSearch {
     width: 80%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .form-container {
+    min-width: 100%;
   }
 }
 .form-container .input {
@@ -1079,6 +1089,15 @@ img {
   text-align: center;
 }
 
+#logo {
+  max-width: 70px;
+}
+@media only screen and (max-width: 540px) {
+  #logo {
+    max-width: 70px;
+  }
+}
+
 .circulo1 {
   position: fixed;
   right: 20%;
@@ -1088,7 +1107,7 @@ img {
 @media only screen and (max-width: 540px) {
   .circulo1 {
     right: 15%;
-    top: 18%;
+    top: 17%;
     -webkit-animation: estrela1 10s ease 0s infinite alternate forwards;
             animation: estrela1 10s ease 0s infinite alternate forwards;
   }
@@ -1125,7 +1144,7 @@ img {
 @media only screen and (max-width: 540px) {
   .circulo1-2 {
     right: 35%;
-    top: 9%;
+    top: 7%;
   }
 }
 
@@ -1169,12 +1188,36 @@ img {
 .circulo3 {
   position: fixed;
   right: 25%;
-  top: 10%;
+  top: 13.5%;
   z-index: -1;
+  -webkit-animation: estrela1 10s ease 0s infinite alternate forwards;
+          animation: estrela1 10s ease 0s infinite alternate forwards;
 }
 @media only screen and (max-width: 540px) {
   .circulo3 {
     width: 12%;
+  }
+}
+@-webkit-keyframes estrela1 {
+  0% {
+    transform: translate3d(10px, 20px, 0);
+  }
+  50% {
+    transform: translate3d(23px, 5px, 0);
+  }
+  100% {
+    transform: translate3d(20px, 0px, 0);
+  }
+}
+@keyframes estrela1 {
+  0% {
+    transform: translate3d(10px, 20px, 0);
+  }
+  50% {
+    transform: translate3d(23px, 5px, 0);
+  }
+  100% {
+    transform: translate3d(20px, 0px, 0);
   }
 }
 
@@ -1188,7 +1231,7 @@ img {
   .circulo4 {
     width: 15%;
     right: 12%;
-    top: 9%;
+    top: 8.5%;
   }
 }
 
@@ -1259,17 +1302,6 @@ img {
   transform: translate3d(20px, 0px, 0);
   -webkit-animation: estrela1 15s ease 0s infinite alternate forwards;
           animation: estrela1 15s ease 0s infinite alternate forwards;
-}
-@-webkit-keyframes estrela1 {
-  0% {
-    transform: translate3d(20px, 20px, 0);
-  }
-  50% {
-    transform: translate3d(23px, 5px, 0);
-  }
-  100% {
-    transform: translate3d(20px, 0px, 0);
-  }
 }
 @keyframes estrela1 {
   0% {
@@ -1458,7 +1490,7 @@ img {
 
 .torcedor1 {
   width: 17%;
-  max-width: 250px;
+  max-width: 200px;
   position: fixed;
   left: -1.16%;
   bottom: -3.35%;
@@ -1514,7 +1546,7 @@ img {
 
 .torcedor2 {
   width: 20%;
-  max-width: 280px;
+  max-width: 240px;
   position: fixed;
   right: -1.1%;
   bottom: -2.5%;
@@ -1656,6 +1688,12 @@ table {
   width: 100%;
   max-width: 60%;
 }
+@media only screen and (max-width: 540px) {
+  table {
+    max-width: 95%;
+    padding: 0.125rem;
+  }
+}
 
 th, td {
   border: none;
@@ -1663,6 +1701,11 @@ th, td {
 
 th, tr, td {
   padding: 0 0.5rem;
+}
+@media only screen and (max-width: 540px) {
+  th, tr, td {
+    padding: 0 0.225rem;
+  }
 }
 
 th {
@@ -1675,12 +1718,23 @@ th {
   font-size: 14px;
   font-weight: 400;
 }
+@media only screen and (max-width: 540px) {
+  th {
+    font-size: 12px;
+    padding-bottom: 0.5rem;
+  }
+}
 
 td {
   padding-bottom: 0.875rem;
   font-family: "Readex Pro", sans-serif;
   font-size: 14px;
   font-weight: 400;
+}
+@media only screen and (max-width: 540px) {
+  td {
+    padding-bottom: 0.5rem;
+  }
 }
 
 .instructions {
@@ -1692,6 +1746,12 @@ td {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 15px;
+}
+@media only screen and (max-width: 540px) {
+  .instructions {
+    max-width: 70%;
+    margin-bottom: 1rem;
+  }
 }
 .instructions .codigo {
   border-bottom: 2px solid #AD4766;
@@ -1808,13 +1868,23 @@ td {
   margin-top: 1rem;
 }
 
+@media only screen and (max-width: 540px) {
+  .regulamento > p {
+    background: rgba(217, 217, 217, 0.01);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+  }
+}
 .regulamento ul {
   width: 50%;
   margin-top: 2rem;
 }
 @media only screen and (max-width: 540px) {
   .regulamento ul {
-    width: 70%;
+    width: 90%;
+    background: rgba(217, 217, 217, 0.01);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
   }
 }
 .regulamento ul li {
@@ -1899,6 +1969,12 @@ td {
 }
 .listaBoloes li:hover::after {
   width: 100%;
+}
+
+@media only screen and (max-width: 540px) {
+  .menuBolao-container {
+    margin: 1.5rem 0;
+  }
 }
 
 @media only screen and (max-width: 540px) {
@@ -2099,8 +2175,8 @@ td {
   position: fixed;
   background-color: #0f0f0f;
   opacity: 1;
-  -webkit-animation: animacaoImagem 1s ease 9s forwards;
-          animation: animacaoImagem 1s ease 9s forwards;
+  -webkit-animation: animacaoBack 1.3s ease 6.3s forwards;
+          animation: animacaoBack 1.3s ease 6.3s forwards;
 }
 @-webkit-keyframes animacaoBack {
   0% {
@@ -2151,6 +2227,7 @@ td {
 }
 .telaInicial .telaInicial-animacao {
   position: absolute;
+  display: inline-block;
   width: 100%;
   height: 100%;
   display: flex;
@@ -2158,9 +2235,14 @@ td {
   justify-items: center;
   z-index: 3;
 }
+.telaInicial .telaInicial-animacao svg {
+  display: inline-block;
+  padding: 2rem 5rem;
+}
 .telaInicial .telaInicial-animacao #animacaoCopa {
   position: fixed;
   transform: translateY(16%);
+  pointer-events: none;
   -webkit-animation: animacaoCopaInicial 7s ease 0s forwards;
           animation: animacaoCopaInicial 7s ease 0s forwards;
 }
@@ -2172,10 +2254,17 @@ td {
     stroke-width: 0;
     opacity: 1;
   }
-  80% {
+  60% {
+    fill-opacity: 0;
+    stroke-dasharray: 150 0;
+    stroke-dashoffset: 0;
+    stroke-width: 1;
+    opacity: 1;
+  }
+  80%, 90% {
     fill-opacity: 1;
-    stroke-dasharray: 100 0;
-    stroke-dashoffset: 50;
+    stroke-dasharray: 150 0;
+    stroke-dashoffset: 0;
     stroke-width: 0;
     opacity: 1;
   }
@@ -2195,10 +2284,17 @@ td {
     stroke-width: 0;
     opacity: 1;
   }
-  80% {
+  60% {
+    fill-opacity: 0;
+    stroke-dasharray: 150 0;
+    stroke-dashoffset: 0;
+    stroke-width: 1;
+    opacity: 1;
+  }
+  80%, 90% {
     fill-opacity: 1;
-    stroke-dasharray: 100 0;
-    stroke-dashoffset: 50;
+    stroke-dasharray: 150 0;
+    stroke-dashoffset: 0;
     stroke-width: 0;
     opacity: 1;
   }
@@ -2208,6 +2304,22 @@ td {
     stroke-dashoffset: 0;
     stroke-width: 0;
     opacity: 0;
+  }
+}
+
+#footer {
+  text-align: center;
+  font-family: "Mukta", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #E5D3D6;
+  padding: 1rem 0;
+}
+@media only screen and (max-width: 540px) {
+  #footer {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1rem 0;
   }
 }
 

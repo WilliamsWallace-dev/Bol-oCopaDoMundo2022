@@ -5,7 +5,7 @@ import MenuBolão from "../../components/MenuBolão";
 import { Navigate } from 'react-router-dom';
 import { useContext } from "react";
 import { CopaContext } from "../../Context";
-
+import Footer from "../../components/Footer";
 
 const UserClassification = ()=>{
     
@@ -21,6 +21,7 @@ const UserClassification = ()=>{
                     <Classification></Classification>
                     <Instructions></Instructions>
                 </section>
+                <Footer></Footer>
             </>
         )
     }else {

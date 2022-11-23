@@ -200,14 +200,14 @@ const Classification = ()=>{
                         
                     </ul>
                     
-                    <table border="1" frame="below" >
+                    <table border="1" frame="below" className="tabelaClassificacao" >
                         <tr>
                             <th>Participantes</th>
                             <th>PE</th>
-                            <th>V-Gv</th>
-                            <th>V-SG</th>
+                            <th>GV</th>
+                            <th>SG</th>
                             <th>E</th>
-                            <th>V-Gp</th>
+                            <th>GP</th>
                             <th>V</th>
                             <th>G1</th>
                             <th>Pontuação</th>

@@ -12,6 +12,8 @@ import Instructions from "../../components/Instructions";
 import MenuBolão from "../../components/MenuBolão";
 import Regulamento from "../../components/Regulamento";
 
+import Footer from "../../components/Footer";
+
 const UserGuess = ()=>{
     
     const {userOn} = useContext(CopaContext);
@@ -25,6 +27,7 @@ const UserGuess = ()=>{
                     <MenuBolão type = "Guess"></MenuBolão>
                     <Guess></Guess>
                 </section>
+                <Footer></Footer>
             </>
         )
     }else {

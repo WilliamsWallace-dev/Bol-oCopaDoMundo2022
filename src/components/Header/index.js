@@ -49,7 +49,7 @@ const logout = ()=>{
                 <Background type = "1"></Background>
                 <header className="container header-container">
                     
-                    <img src={logo} alt="logo"></img>
+                    <img id="logo" src={logo} alt="logo"></img>
                     <Link to="/register"><a className="link p2-regular">Registrar-se</a></Link>
                     <Link to="/"><button className="primary-button" style={{padding: ".5rem 2.5rem" }}>Entrar</button></Link>
                     
@@ -61,10 +61,10 @@ const logout = ()=>{
                 <>
                     <Background type = "2"></Background>
                     <header className="container header-container">
-                        <img src={logo} alt="logo"></img>
-                        <Link to="/regrasdobolão"><a className="link p2-regular">Regras do Bolão</a></Link>
+                        <img id="logo"  src={logo} alt="logo"></img>
+                        <Link to="/regrasdobolão"><a className="link p2-regular">Regulamento</a></Link>
                         <div className="username flex-collumn" >
-                            <button onClick={ActiveMenuUse} >Olá {userOn.username}</button>
+                            <button onClick={ActiveMenuUse} >{userOn.username}</button>
                             <ul className="menu-usuário">
                                 {/* <li><a className="menu-items ">Meu Perfil</a></li> */}
                                 {/* <li><a className="menu-items">Meus Bolões</a></li> */}
@@ -84,7 +84,7 @@ const logout = ()=>{
                 <Background type = "1"></Background>
                 <header className="container header-container">
                     
-                    <img src={logo} alt="logo"></img>
+                    <img id="logo" src={logo} alt="logo"></img>
                     <Link to="/regrasdobolão"><a className="link p2-regular">Regras do Bolão</a></Link>
                     <div className="flex" >
                     <Link to="/register"><a className="link p2-regular">Registrar-se</a></Link>
@@ -99,7 +99,7 @@ const logout = ()=>{
                 <>
                     <Background type = "2"></Background>
                     <header className="container header-container">
-                        <img src={logo} alt="logo"></img>
+                        <img id="logo" src={logo} alt="logo"></img>
                         <Link to="/regrasdobolão"><a className="link p2-regular">Regras do Bolão</a></Link>
                         <div className="username flex-collumn" >
                             <button onClick={ActiveMenuUse} >Olá {userOn.username}</button>
