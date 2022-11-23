@@ -23,7 +23,7 @@ const Modal = ({type})=>{
                     <div className="modal-containerText">
                     <p class="modal-content">Ao convidar alguém para participar do seu Bolão, é necessario as seguintes informaçoes:
                     <br></br>
-                    1 - Link do site : <br></br><b>https://bol-o-copa-do-mundo2022-fdfg.vercel.app/</b><br></br>
+                    1 - Link do site : <br></br><b>https://bolaocopa2022ww.vercel.app/</b><br></br>
                     2 - Nome do Bolão<br></br>
                     3 - Chave de entrada do Bolão<br></br>
                     *Caso não tenha a chave, registre-se e ao realizar o login, vá em "Criar Bolão".
