@@ -7,6 +7,10 @@ import TelaDeTransicao from "../../TelaDeTransicao"
 
 import Modal from "../../Modal";
 
+import iconeInstagram from "../../../svg/iconeInstagram.svg"
+import iconeLinkedIn from "../../../svg/iconeLinkedIn.svg";
+import iconeCompartilhar from "../../../svg/iconeCompartilhar.svg";
+
 
 
 
@@ -77,6 +81,12 @@ const FormLogin = ()=>{
                                 <button type = "button" className="secundary-button" onClick={modalActiveted}>Compartilhar com os amigos!</button>
                                 </div>
                             </form>
+                            <div className="redes flex-collumn">
+                              <a href = "https://web.whatsapp.com/" target="_blank" ><img className="" src={iconeCompartilhar} alt=""></img></a>
+                              <a href = "https://www.instagram.com/williamswallace_/" target="_blank" ><img className="" src={iconeInstagram} alt=""></img></a>
+                              <a href = "https://www.linkedin.com/in/williams-wallace" target="_blank" ><img className="" src={iconeLinkedIn} alt=""></img></a>
+                            </div>
+                            
                         
                         </section>
                         
@@ -98,7 +108,11 @@ const FormLogin = ()=>{
                             <button type = "button" className="secundary-button" onClick={modalActiveted}>Compartilhar com os amigos!</button>
                             </div>
                         </form>
-                    
+                        <div className="redes flex-collumn">
+                          <a href = "https://web.whatsapp.com/" target="_blank" ><img className="" src={iconeCompartilhar} alt=""></img></a>
+                          <a href = "https://www.instagram.com/williamswallace_/" target="_blank" ><img className="" src={iconeInstagram} alt=""></img></a>
+                          <a href = "https://www.linkedin.com/in/williams-wallace" target="_blank" ><img className="" src={iconeLinkedIn} alt=""></img></a>
+                        </div>
                     </section>
                     
                 </>

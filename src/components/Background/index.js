@@ -62,11 +62,7 @@ const Background = ({type})=>{
                     <img className="torcedor1" src={torcedor1} alt=""></img>
                     <img className="torcedor2" src={torcedor2} alt=""></img>
         
-                    <div className="redes flex-collumn">
-                        <a href = "https://web.whatsapp.com/" target="_blank" ><img className="" src={iconeCompartilhar} alt=""></img></a>
-                        <a href = "https://www.instagram.com/williamswallace_/" target="_blank" ><img className="" src={iconeInstagram} alt=""></img></a>
-                        <a href = "https://www.linkedin.com/in/williams-wallace" target="_blank" ><img className="" src={iconeLinkedIn} alt=""></img></a>
-                    </div>
+                    
                 
                 </>
             )
