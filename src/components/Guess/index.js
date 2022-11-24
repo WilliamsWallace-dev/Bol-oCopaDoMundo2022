@@ -137,7 +137,7 @@ const Guess = ()=>{
                 
                 
 
-                <h2>Realize os palpite dos jogos!</h2>
+                <h2>Realize os palpites dos jogos!</h2>
                 <p className="subtitle p4 " style={{marginRigth : "1rem"}}>O palpite poderá ser alterado até a hora do jogo.</p>
 
                 {/* <form>
