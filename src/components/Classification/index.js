@@ -179,7 +179,7 @@ const Classification = ()=>{
     
                     <h2>Classificação</h2>
                     <p className="subtitle p4 ">Confira sua classificação nos Bolões que participa!</p>
-                    <ul className="flex listaBoloes">
+                    <ul className="flex listaBoloes" style = {{flexWrap : "wrap"}}>
                         {
                             userOn.meusboloes.map((nomeBolao)=>{
                                 return(

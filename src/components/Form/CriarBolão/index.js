@@ -183,7 +183,7 @@ const FormCriarBolão = ()=>{
                         <label></label>
                         <input className="input" type="text" placeholder="Chave Pix" id="chavePix"></input> */}  
                         <div>
-                        <button type="button" className="primary-button" onClick = {CadastrarBolão}>Cria Bolão</button>
+                        <button type="button" className="primary-button" onClick = {CadastrarBolão}>Criar Bolão</button>
                         </div>
                     </form>
                    
