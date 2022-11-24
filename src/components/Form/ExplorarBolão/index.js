@@ -44,6 +44,11 @@ const FormExplorarBolão = ()=>{
           userOn.meusboloes.forEach((element)=>{
             bolaoSearch = bolaoSearch.filter((e)=> e.nome !== element);
           })
+ 
+        bolaoSearch = bolaoSearch.filter(function(element, i) {
+            return bolaoSearch.indexOf(element) === i;
+        });
+ 
 
           setSearch(bolaoSearch);
       }
