@@ -71,13 +71,19 @@ const FormExplorarBolão = ()=>{
                 }
                 ];
             }else{
-                    solicitacoes = [...userAdm.solicitacoes.filter((e)=>e.nome !== userOn.username && e.bolao !== bolao.nome),{
+                    solicitacoes = [...userAdm.solicitacoes,{
                         nome : `${userOn.username}`,
                         bolao: `${bolao.nome}`
                         }]
             }
-            
-            
+            // console.log(solicitacoes)
+            const setSolicitation = new Set();
+            solicitacoes = solicitacoes.filter((solicitacao) => {
+                const duplicatedSolicitation = setSolicitation.has(solicitacao.nome);
+                setSolicitation.add(solicitacao.nome);
+                return !duplicatedSolicitation;
+              });
+            // console.log(solicitacoes)
             updateDoc(doc(db, "users", `${userAdm.id}`), {
                 solicitacoes : [...solicitacoes]
               })

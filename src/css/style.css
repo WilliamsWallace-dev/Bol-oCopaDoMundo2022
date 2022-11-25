@@ -1880,6 +1880,11 @@ td {
 .resultadoPesquisa {
   width: 40%;
 }
+@media only screen and (max-width: 540px) {
+  .resultadoPesquisa {
+    width: 90%;
+  }
+}
 .resultadoPesquisa li {
   border-bottom: 5px solid #AD4766;
   border-top: 5px solid #AD4766;

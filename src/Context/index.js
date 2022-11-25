@@ -75,7 +75,7 @@ useEffect(()=>{
     response.forEach((doc)=>{
       boloesFb = [...boloesFb,doc.data()]
     })
-    console.log(boloesFb)
+    // console.log(boloesFb)
     setBoloes(boloesFb);
   })
   .catch((error)=>{console.log(error);})

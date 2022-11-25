@@ -28,6 +28,7 @@ const Classification = ()=>{
 
 
     const AtualizarClassificação = ()=>{
+ 
         let jogadores = users.filter((element)=>{
                             for(let i=0;i<classificacao.length-1;i++){
                                 if(element.username == classificacao[i].nome) {
@@ -36,22 +37,30 @@ const Classification = ()=>{
                             }
                             return(false)
                         })
+
+        // console.log(jogadores)
+        
         jogadores.forEach((jogador,index)=>{
-            CalcularPontuação(jogador.palpites,classificacao[index]);
+            CalcularPontuação(jogador.palpites,classificacao.filter((participante)=>participante.nome == jogador.username)[0]);
         })
 
-        let aux = classificacao.filter((element,index)=>index !== classificacao.length-1);
-        let id = classificacao.filter((element,index)=>index == classificacao.length-1)[0];
 
-        //Ordenar classificaçao pela pontuação 
+
+
+        // console.log(classificacao)
+        let aux = classificacao.filter((element,index)=>index < classificacao.length-1);
+        let id = classificacao.filter((element,index)=>index == classificacao.length-1)[0];
+        // console.log("aux : ")
+        // console.log(aux)
+        // Ordenar classificaçao pela pontuação 
 
         let ordenaAux;
         for(let i = 0;i<aux.length;i++)
             for(let j = i;j<aux.length;j++){
-                if(aux[i].pontuacao[7] - aux[j].pontuacao[7] > 0 ){
+                if(aux[i].pontuacao[7] - aux[j].pontuacao[7] < 0 ){
                     ordenaAux = {...aux[i]};
                     aux[i] = {...aux[j]};
-                    aux[j] = {...aux};
+                    aux[j] = {...ordenaAux};
                 }else{
                     if(aux[i].pontuacao[7] - aux[j].pontuacao[7] == 0 ){
                         for(let k = 0; k < 7 ; k++){
@@ -68,8 +77,7 @@ const Classification = ()=>{
                     }
                 }
             }
-
-
+            // console.log(aux)
 
         
 
@@ -100,11 +108,16 @@ const Classification = ()=>{
         for(let i = 0; i<jogador.pontuacao.length;i++){
             jogador.pontuacao[i] = 0
         }
+        // console.log(jogador)
+        // console.log("Palpite jogo do brasil")
+        // console.log(palpites[30])
+        // console.log(palpites[31])
+        // console.log("----------")
         for(let i = 0 ; i < jogos.length;i+=2){
+            if(palpites[i] !== "-" || palpites[i+1] !== "-"){
             // console.log("i = " + i)
             // console.log("Palpite" + palpites[i] +" x "+ palpites[i+1])
             // console.log("Jogos" + jogos[i] +" x "+ jogos[i+1])
-            if(palpites[i] !== "-" && palpites[i] !== "-"){
             // Placar Exato - PE
             if(palpites[i] == jogos[i] && palpites[i+1] == jogos[i+1]){
                 // console.log("pontuou PE")

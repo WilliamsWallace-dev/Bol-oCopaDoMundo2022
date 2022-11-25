@@ -1155,6 +1155,9 @@ button{
 
 .resultadoPesquisa{
   width: 40%;
+  @media only screen and (max-width : 540px) {
+    width: 90%;
+}
   li{
     border-bottom: 5px solid $primary-light;
     border-top: 5px solid $primary-light;
