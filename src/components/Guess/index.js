@@ -1819,7 +1819,7 @@ const Guess = ()=>{
 
 <div className="card-background"></div>
 
-<div className="jogo flex-between" mes = {12} dia = {4} hora = {13}>
+<div className="jogo flex-between" mes = {12} dia = {4} hora = {12}>
     <div className="times flex-collumn ">
         <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
