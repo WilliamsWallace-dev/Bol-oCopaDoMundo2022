@@ -2006,10 +2006,145 @@ const Guess = ()=>{
                         </div>  
                     </div>
 
-{/* ---------------------------------------------------------------------------------------- */}    
-<p className="mensagem"></p>
+                
+                </section>
+
+{/* //--------------QUARTAS DE FINAL-------// */}
+                <h3>Quartas de Final</h3>
+                
+                <section className="partidas flex-collumn faseDeGrupos">
+
+                {/* ---------------------------------------------------------------------------------------- */}    
+                <p className="mensagem mt-0"></p>
                 <button type = "button" className="primary-button" onClick={SalvarPalpites} >Salvar Palpites</button>
                 
+        {/* ---------------------------------------------------------------------------------------- */}
+<div className="card flex card-left">
+
+                        <div className="card-background"></div>
+
+                        <div className="jogo flex-between" mes = {12} dia = {9} hora = {12}>
+                            <div className="times flex-collumn ">
+                                <div className="flex-between">
+{/* ---------------------------------------------------------------------------------------- */}
+                                        <div className="flex">
+                                            <img src = {Croacia}></img>
+                                            <p className="p3 ml-1">Croácia</p>
+                                        </div>
+{/* ---------------------------------------------------------------------------------------- */}
+                                        <input type="number" id="gols" name="gols" min="0" max="20" placeholder={userOn.palpites[112]} ></input>
+                                </div>
+                                <div className="flex-between">
+                                    {/* ---------------------------------------------------------------------------------------- */}
+                                        <div className="flex">
+                                            <img src = {Brasil}></img>
+                                            <p className="p3 ml-1">Brasil</p>
+                                        </div>
+                                        {/* ---------------------------------------------------------------------------------------- */}
+                                        <input type="number" id="gols" name="gols" min="0" max="20" placeholder={userOn.palpites[113]} ></input>
+                                </div>
+                            </div>
+                            {/* ---------------------------------------------------------------------------------------- */}
+                            <div className="informações flex-collumn">
+                                <p className="p4">09/12</p>
+                                <p className="p4">12:00</p>
+                            </div>  
+                            {/* ---------------------------------------------------------------------------------------- */}         
+                        </div>
+
+                        <div className="jogo flex-between" mes = {12} dia = {9} hora = {16}>
+                            <div className="times flex-collumn ">
+                                <div className="flex-between">
+                                        {/* -------------------------------------------------------- */}
+                                        <div className="flex">
+                                            <img src = {Holanda}></img>
+                                            <p className="p3 ml-1">Holanda</p>
+                                        </div>
+                                        {/* ---------------------------------------------------------------------------------------- */}
+                                        <input type="number" id="gols" name="gols" min="0" max="20" placeholder={userOn.palpites[114]} ></input>
+                                </div>
+                                <div className="flex-between">
+                                    {/* ---------------------------------------------------------------------------------------- */}
+                                        <div className="flex">
+                                            <img src = {Argentina}></img>
+                                            <p className="p3 ml-1">Argentina</p>
+                                        </div>
+                                        {/* ---------------------------------------------------------------------------------------- */}
+                                        <input type="number" id="gols" name="gols" min="0" max="20" placeholder={userOn.palpites[115]} ></input>
+                                </div>
+                            </div>
+                            {/* ---------------------------------------------------------------------------------------- */}
+                            <div className="informações flex-collumn">
+                                <p className="p4">09/12</p>
+                                <p className="p4">16:00</p>
+                            </div>           
+                            {/* ---------------------------------------------------------------------------------------- */}
+                        </div>  
+</div>
+
+{/* //----------------------------------------------------------------------------------------// */}
+<div className="card flex card-right">
+
+<div className="card-background"></div>
+
+<div className="jogo flex-between" mes = {12} dia = {10} hora = {12}>
+    <div className="times flex-collumn ">
+        <div className="flex-between">
+{/* ---------------------------------------------------------------------------------------- */}
+                <div className="flex">
+                    <img src = {Marrocos}></img>
+                    <p className="p3 ml-1">Marrocos</p>
+                </div>
+{/* ---------------------------------------------------------------------------------------- */}
+                <input type="number" id="gols" name="gols" min="0" max="20" placeholder={userOn.palpites[116]} ></input>
+        </div>
+        <div className="flex-between">
+            {/* ---------------------------------------------------------------------------------------- */}
+                <div className="flex">
+                    <img src = {Portugal}></img>
+                    <p className="p3 ml-1">Portugal</p>
+                </div>
+                {/* ---------------------------------------------------------------------------------------- */}
+                <input type="number" id="gols" name="gols" min="0" max="20" placeholder={userOn.palpites[117]} ></input>
+        </div>
+    </div>
+    {/* ---------------------------------------------------------------------------------------- */}
+    <div className="informações flex-collumn">
+        <p className="p4">10/12</p>
+        <p className="p4">12:00</p>
+    </div>  
+    {/* ---------------------------------------------------------------------------------------- */}         
+</div>
+
+<div className="jogo flex-between" mes = {12} dia = {4} hora = {16}>
+    <div className="times flex-collumn ">
+        <div className="flex-between">
+                {/* -------------------------------------------------------- */}
+                <div className="flex">
+                    <img src = {Inglaterra}></img>
+                    <p className="p3 ml-1">Inglaterra</p>
+                </div>
+                {/* ---------------------------------------------------------------------------------------- */}
+                <input type="number" id="gols" name="gols" min="0" max="20" placeholder={userOn.palpites[118]} ></input>
+        </div>
+        <div className="flex-between">
+            {/* ---------------------------------------------------------------------------------------- */}
+                <div className="flex">
+                    <img src = {Franca}></img>
+                    <p className="p3 ml-1">França</p>
+                </div>
+                {/* ---------------------------------------------------------------------------------------- */}
+                <input type="number" id="gols" name="gols" min="0" max="20" placeholder={userOn.palpites[119]} ></input>
+        </div>
+    </div>
+    {/* ---------------------------------------------------------------------------------------- */}
+    <div className="informações flex-collumn">
+        <p className="p4">10/12</p>
+        <p className="p4">16:00</p>
+    </div>           
+    {/* ---------------------------------------------------------------------------------------- */}
+</div>  
+</div>
                 </section>
                 
 
