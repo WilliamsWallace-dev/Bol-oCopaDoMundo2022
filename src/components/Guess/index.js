@@ -2116,7 +2116,7 @@ const Guess = ()=>{
     {/* ---------------------------------------------------------------------------------------- */}         
 </div>
 
-<div className="jogo flex-between" mes = {12} dia = {4} hora = {16}>
+<div className="jogo flex-between" mes = {12} dia = {10} hora = {16}>
     <div className="times flex-collumn ">
         <div className="flex-between">
                 {/* -------------------------------------------------------- */}
