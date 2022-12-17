@@ -2258,8 +2258,8 @@ const Guess = ()=>{
                                 <div className="flex-between">
                                     {/* ---------------------------------------------------------------------------------------- */}
                                         <div className="flex">
-                                            <img src = {Croacia}></img>
-                                            <p className="p3 ml-1">Croácia</p>
+                                            <img src = {Marrocos}></img>
+                                            <p className="p3 ml-1">Marrocos</p>
                                         </div>
                                         {/* ---------------------------------------------------------------------------------------- */}
                                         <input type="number" id="gols" name="gols" min="0" max="20" placeholder={userOn.palpites[125]} ></input>
