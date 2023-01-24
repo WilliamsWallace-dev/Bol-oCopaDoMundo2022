@@ -56,6 +56,7 @@ const Guess = ()=>{
         let hora = now.getHours();
         let dia = now.getDate();
         let mes = now.getMonth() + 1;
+        let ano = now.getFullYear();
 
         // jogos.forEach((jogo)=>{
         //     let informacoes = [jogo.dia,jogo.hora];
@@ -65,7 +66,7 @@ const Guess = ()=>{
         // console.log(jogo.attributes.dia.value)
         // console.log(jogo.attributes.hora.value)
         jogos.forEach((jogo)=>{
-            if(mes > jogo.attributes.mes.value || (mes == jogo.attributes.mes.value && (dia > jogo.attributes.dia.value || (dia == jogo.attributes.dia.value && hora >= (jogo.attributes.hora.value))))){
+            if( ano !== 2022 || (mes > jogo.attributes.mes.value || (mes == jogo.attributes.mes.value && (dia > jogo.attributes.dia.value || (dia == jogo.attributes.dia.value && hora >= (jogo.attributes.hora.value)))))){
                 jogo.querySelectorAll("input").forEach((input)=>{
                     input.setAttribute("disabled", "");
                     input.style.borderWidth = 0 + "px";
@@ -193,7 +194,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {20} hora = {13}>
+                        <div className="jogo flex-between" mes = {11} dia = {20} hora = {13} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -222,7 +223,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {20} hora = {10}>
+                        <div className="jogo flex-between" mes = {11} dia = {20} hora = {10} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -257,7 +258,7 @@ const Guess = ()=>{
 
 <div className="card-background"></div>
 
-<div className="jogo flex-between" mes = {11} dia = {21} hora = {13}>
+<div className="jogo flex-between" mes = {11} dia = {21} hora = {13} ano = {2022}>
     <div className="times flex-collumn ">
         <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -286,7 +287,7 @@ const Guess = ()=>{
     {/* ---------------------------------------------------------------------------------------- */}         
 </div>
 
-<div className="jogo flex-between" mes = {11} dia = {21} hora = {16}>
+<div className="jogo flex-between" mes = {11} dia = {21} hora = {16} ano = {2022}>
     <div className="times flex-collumn ">
         <div className="flex-between">
                 {/* -------------------------------------------------------- */}
@@ -321,7 +322,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes={11} dia={22} hora={7}>
+                        <div className="jogo flex-between" mes={11} dia={22} hora={7} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -350,7 +351,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {22} hora = {10}>
+                        <div className="jogo flex-between" mes = {11} dia = {22} hora = {10} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -385,7 +386,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {22} hora = {13}>
+                        <div className="jogo flex-between" mes = {11} dia = {22} hora = {13} ano = {2022}> 
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -414,7 +415,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {22} hora = {16}>
+                        <div className="jogo flex-between" mes = {11} dia = {22} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -452,7 +453,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {23} hora = {7}>
+                        <div className="jogo flex-between" mes = {11} dia = {23} hora = {7} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -481,7 +482,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {23} hora = {10}>
+                        <div className="jogo flex-between" mes = {11} dia = {23} hora = {10} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -516,7 +517,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {23} hora = {13}>
+                        <div className="jogo flex-between" mes = {11} dia = {23} hora = {13} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -545,7 +546,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {23} hora = {16}>
+                        <div className="jogo flex-between" mes = {11} dia = {23} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -580,7 +581,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {24} hora = {7}>
+                        <div className="jogo flex-between" mes = {11} dia = {24} hora = {7} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -609,7 +610,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {24} hora = {10}>
+                        <div className="jogo flex-between" mes = {11} dia = {24} hora = {10} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -644,7 +645,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {24} hora = {13}>
+                        <div className="jogo flex-between" mes = {11} dia = {24} hora = {13} ano = {2022}> 
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -673,7 +674,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {24} hora = {16}>
+                        <div className="jogo flex-between" mes = {11} dia = {24} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -711,7 +712,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {25} hora = {7}>
+                        <div className="jogo flex-between" mes = {11} dia = {25} hora = {7} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -740,7 +741,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {25} hora = {10}>
+                        <div className="jogo flex-between" mes = {11} dia = {25} hora = {10} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -775,7 +776,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {25} hora = {13}>
+                        <div className="jogo flex-between" mes = {11} dia = {25} hora = {13} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -804,7 +805,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {25} hora = {16}>
+                        <div className="jogo flex-between" mes = {11} dia = {25} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -839,7 +840,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {26} hora = {7}>
+                        <div className="jogo flex-between" mes = {11} dia = {26} hora = {7} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -868,7 +869,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {26} hora = {10}>
+                        <div className="jogo flex-between" mes = {11} dia = {26} hora = {10} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -903,7 +904,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {26} hora = {13}>
+                        <div className="jogo flex-between" mes = {11} dia = {26} hora = {13} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -932,7 +933,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {26} hora = {16}>
+                        <div className="jogo flex-between" mes = {11} dia = {26} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -970,7 +971,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {27} hora = {7}>
+                        <div className="jogo flex-between" mes = {11} dia = {27} hora = {7} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -999,7 +1000,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {27} hora = {10}>
+                        <div className="jogo flex-between" mes = {11} dia = {27} hora = {10} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1034,7 +1035,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {27} hora = {13}>
+                        <div className="jogo flex-between" mes = {11} dia = {27} hora = {13} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1063,7 +1064,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {27} hora = {16}>
+                        <div className="jogo flex-between" mes = {11} dia = {27} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1098,7 +1099,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {28} hora = {7}>
+                        <div className="jogo flex-between" mes = {11} dia = {28} hora = {7} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1127,7 +1128,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {28} hora = {10}>
+                        <div className="jogo flex-between" mes = {11} dia = {28} hora = {10} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1162,7 +1163,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {28} hora = {13}>
+                        <div className="jogo flex-between" mes = {11} dia = {28} hora = {13} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1191,7 +1192,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {28} hora = {16}>
+                        <div className="jogo flex-between" mes = {11} dia = {28} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1229,7 +1230,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {29} hora = {12}>
+                        <div className="jogo flex-between" mes = {11} dia = {29} hora = {12} ano = {2022}> 
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1258,7 +1259,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {29} hora = {12}>
+                        <div className="jogo flex-between" mes = {11} dia = {29} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1293,7 +1294,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {29} hora = {16}>
+                        <div className="jogo flex-between" mes = {11} dia = {29} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1322,7 +1323,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {11} dia = {29} hora = {16}>
+                        <div className="jogo flex-between" mes = {11} dia = {29} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1357,7 +1358,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between"  mes = {11} dia = {30} hora = {12}>
+                        <div className="jogo flex-between"  mes = {11} dia = {30} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1386,7 +1387,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between"  mes = {11} dia = {30} hora = {12}>
+                        <div className="jogo flex-between"  mes = {11} dia = {30} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1421,7 +1422,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between"  mes = {11} dia = {30} hora = {16}>
+                        <div className="jogo flex-between"  mes = {11} dia = {30} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1450,7 +1451,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between"   mes = {11} dia = {30} hora = {16}>
+                        <div className="jogo flex-between"   mes = {11} dia = {30} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1488,7 +1489,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {1} hora = {12}>
+                        <div className="jogo flex-between" mes = {12} dia = {1} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1517,7 +1518,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {1} hora = {12}>
+                        <div className="jogo flex-between" mes = {12} dia = {1} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1552,7 +1553,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {1} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {1} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1581,7 +1582,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {1} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {1} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1616,7 +1617,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {2} hora = {12}>
+                        <div className="jogo flex-between" mes = {12} dia = {2} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1645,7 +1646,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {2} hora = {12}>
+                        <div className="jogo flex-between" mes = {12} dia = {2} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1680,7 +1681,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {2} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {2} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1709,7 +1710,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {2} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {2} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1755,7 +1756,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {3} hora = {12}>
+                        <div className="jogo flex-between" mes = {12} dia = {3} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1784,7 +1785,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {3} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {3} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1819,7 +1820,7 @@ const Guess = ()=>{
 
 <div className="card-background"></div>
 
-<div className="jogo flex-between" mes = {12} dia = {4} hora = {12}>
+<div className="jogo flex-between" mes = {12} dia = {4} hora = {12} ano = {2022}>
     <div className="times flex-collumn ">
         <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1848,7 +1849,7 @@ const Guess = ()=>{
     {/* ---------------------------------------------------------------------------------------- */}         
 </div>
 
-<div className="jogo flex-between" mes = {12} dia = {4} hora = {16}>
+<div className="jogo flex-between" mes = {12} dia = {4} hora = {16} ano = {2022}>
     <div className="times flex-collumn ">
         <div className="flex-between">
                 {/* -------------------------------------------------------- */}
@@ -1883,7 +1884,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes={12} dia={5} hora={12}>
+                        <div className="jogo flex-between" mes={12} dia={5} hora={12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1912,7 +1913,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {5} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {5} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -1947,7 +1948,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {6} hora = {12}>
+                        <div className="jogo flex-between" mes = {12} dia = {6} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -1976,7 +1977,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {6} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {6} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -2023,7 +2024,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {9} hora = {12}>
+                        <div className="jogo flex-between" mes = {12} dia = {9} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -2052,7 +2053,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {9} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {9} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -2087,7 +2088,7 @@ const Guess = ()=>{
 
 <div className="card-background"></div>
 
-<div className="jogo flex-between" mes = {12} dia = {10} hora = {12}>
+<div className="jogo flex-between" mes = {12} dia = {10} hora = {12} ano = {2022}>
     <div className="times flex-collumn ">
         <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -2116,7 +2117,7 @@ const Guess = ()=>{
     {/* ---------------------------------------------------------------------------------------- */}         
 </div>
 
-<div className="jogo flex-between" mes = {12} dia = {10} hora = {16}>
+<div className="jogo flex-between" mes = {12} dia = {10} hora = {16} ano = {2022}>
     <div className="times flex-collumn ">
         <div className="flex-between">
                 {/* -------------------------------------------------------- */}
@@ -2169,7 +2170,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {13} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {13} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -2198,7 +2199,7 @@ const Guess = ()=>{
                             {/* ---------------------------------------------------------------------------------------- */}         
                         </div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {14} hora = {16}>
+                        <div className="jogo flex-between" mes = {12} dia = {14} hora = {16} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
                                         {/* -------------------------------------------------------- */}
@@ -2244,7 +2245,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {17} hora = {12}>
+                        <div className="jogo flex-between" mes = {12} dia = {17} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
@@ -2289,7 +2290,7 @@ const Guess = ()=>{
 
                         <div className="card-background"></div>
 
-                        <div className="jogo flex-between" mes = {12} dia = {18} hora = {12}>
+                        <div className="jogo flex-between" mes = {12} dia = {18} hora = {12} ano = {2022}>
                             <div className="times flex-collumn ">
                                 <div className="flex-between">
 {/* ---------------------------------------------------------------------------------------- */}
