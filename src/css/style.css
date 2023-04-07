@@ -973,19 +973,12 @@ img {
   color: #FCF6F8;
   font-size: 1rem;
 }
-.guess .partidas .card .jogo .times input:-ms-input-placeholder {
-  color: #FCF6F8;
-  font-size: 1rem;
-}
 .guess .partidas .card .jogo .times input::placeholder {
   color: #FCF6F8;
   font-size: 1rem;
 }
 @media only screen and (max-width: 540px) {
   .guess .partidas .card .jogo .times input::-moz-placeholder {
-    font-size: 12px;
-  }
-  .guess .partidas .card .jogo .times input:-ms-input-placeholder {
     font-size: 12px;
   }
   .guess .partidas .card .jogo .times input::placeholder {
@@ -1120,19 +1113,7 @@ img {
   .circulo1 {
     right: 15%;
     top: 17%;
-    -webkit-animation: estrela1 10s ease 0s infinite alternate forwards;
-            animation: estrela1 10s ease 0s infinite alternate forwards;
-  }
-  @-webkit-keyframes estrela1 {
-    0% {
-      transform: translate3d(20px, 20px, 0);
-    }
-    50% {
-      transform: translate3d(23px, 5px, 0);
-    }
-    100% {
-      transform: translate3d(20px, 0px, 0);
-    }
+    animation: estrela1 10s ease 0s infinite alternate forwards;
   }
   @keyframes estrela1 {
     0% {
@@ -1170,19 +1151,7 @@ img {
   .circulo2 {
     left: 59%;
     top: 43%;
-    -webkit-animation: estrela1 10s ease 0s infinite alternate forwards;
-            animation: estrela1 10s ease 0s infinite alternate forwards;
-  }
-  @-webkit-keyframes estrela1 {
-    0% {
-      transform: translate3d(20px, 20px, 0);
-    }
-    50% {
-      transform: translate3d(23px, 5px, 0);
-    }
-    100% {
-      transform: translate3d(20px, 0px, 0);
-    }
+    animation: estrela1 10s ease 0s infinite alternate forwards;
   }
   @keyframes estrela1 {
     0% {
@@ -1202,23 +1171,11 @@ img {
   right: 25%;
   top: 13.5%;
   z-index: -1;
-  -webkit-animation: estrela1 10s ease 0s infinite alternate forwards;
-          animation: estrela1 10s ease 0s infinite alternate forwards;
+  animation: estrela1 10s ease 0s infinite alternate forwards;
 }
 @media only screen and (max-width: 540px) {
   .circulo3 {
     width: 12%;
-  }
-}
-@-webkit-keyframes estrela1 {
-  0% {
-    transform: translate3d(10px, 20px, 0);
-  }
-  50% {
-    transform: translate3d(23px, 5px, 0);
-  }
-  100% {
-    transform: translate3d(20px, 0px, 0);
   }
 }
 @keyframes estrela1 {
@@ -1259,28 +1216,7 @@ img {
     width: 15%;
     right: 8%;
     top: 9%;
-    -webkit-animation: estrela2 20s ease 0s infinite alternate forwards;
-            animation: estrela2 20s ease 0s infinite alternate forwards;
-  }
-  @-webkit-keyframes estrela2 {
-    0% {
-      transform: translate3d(10px, 0px, 0);
-    }
-    20% {
-      transform: translate3d(0px, 5px, 0);
-    }
-    40% {
-      transform: translate3d(-5px, 0px, 0);
-    }
-    60% {
-      transform: translate3d(0px, -5px, 0);
-    }
-    80% {
-      transform: translate3d(5px, -10px, 0);
-    }
-    100% {
-      transform: translate3d(10px, 0px, 0);
-    }
+    animation: estrela2 20s ease 0s infinite alternate forwards;
   }
   @keyframes estrela2 {
     0% {
@@ -1312,8 +1248,7 @@ img {
   transform: translate3d(20px, 20px, 0);
   transform: translate3d(23px, -5px, 0);
   transform: translate3d(20px, 0px, 0);
-  -webkit-animation: estrela1 15s ease 0s infinite alternate forwards;
-          animation: estrela1 15s ease 0s infinite alternate forwards;
+  animation: estrela1 15s ease 0s infinite alternate forwards;
 }
 @keyframes estrela1 {
   0% {
@@ -1332,28 +1267,7 @@ img {
   left: 42%;
   top: 46%;
   z-index: -1;
-  -webkit-animation: estrela2 20s ease 0s infinite alternate forwards;
-          animation: estrela2 20s ease 0s infinite alternate forwards;
-}
-@-webkit-keyframes estrela2 {
-  0% {
-    transform: translate3d(10px, 0px, 0);
-  }
-  20% {
-    transform: translate3d(0px, 5px, 0);
-  }
-  40% {
-    transform: translate3d(-5px, 0px, 0);
-  }
-  60% {
-    transform: translate3d(0px, -5px, 0);
-  }
-  80% {
-    transform: translate3d(5px, -10px, 0);
-  }
-  100% {
-    transform: translate3d(10px, 0px, 0);
-  }
+  animation: estrela2 20s ease 0s infinite alternate forwards;
 }
 @keyframes estrela2 {
   0% {
@@ -1381,8 +1295,7 @@ img {
   left: 18%;
   bottom: 12%;
   z-index: -1;
-  -webkit-animation: estrela2 20s ease 0s infinite alternate forwards;
-          animation: estrela2 20s ease 0s infinite alternate forwards;
+  animation: estrela2 20s ease 0s infinite alternate forwards;
 }
 @keyframes estrela2 {
   0% {
@@ -1417,8 +1330,7 @@ img {
   left: 10%;
   bottom: 7%;
   z-index: -1;
-  -webkit-animation: estrela1 15s ease 0s infinite alternate forwards;
-          animation: estrela1 15s ease 0s infinite alternate forwards;
+  animation: estrela1 15s ease 0s infinite alternate forwards;
 }
 @keyframes estrela1 {
   0% {
@@ -1443,8 +1355,7 @@ img {
   left: 13%;
   bottom: 14%;
   z-index: -1;
-  -webkit-animation: estrela2 20s ease 0s infinite alternate forwards;
-          animation: estrela2 20s ease 0s infinite alternate forwards;
+  animation: estrela2 20s ease 0s infinite alternate forwards;
 }
 @keyframes estrela2 {
   0% {
@@ -1479,8 +1390,7 @@ img {
   left: 1%;
   bottom: 40%;
   z-index: -1;
-  -webkit-animation: estrela1 15s ease 0s infinite alternate forwards;
-          animation: estrela1 15s ease 0s infinite alternate forwards;
+  animation: estrela1 15s ease 0s infinite alternate forwards;
 }
 @keyframes estrela1 {
   0% {
@@ -1507,28 +1417,7 @@ img {
   left: -1.16%;
   bottom: -3.35%;
   z-index: -1;
-  -webkit-animation: torcedor1 15s ease 0s infinite alternate forwards;
-          animation: torcedor1 15s ease 0s infinite alternate forwards;
-}
-@-webkit-keyframes torcedor1 {
-  0% {
-    transform: translate3d(-2px, 3px, 0) scale(1);
-  }
-  20% {
-    transform: translate3d(0px, 0px, 0) scale(1);
-  }
-  40% {
-    transform: translate3d(2px, -3px, 0) scale(1.1);
-  }
-  60% {
-    transform: translate3d(0px, 0px, 0) scale(1.1);
-  }
-  80% {
-    transform: translate3d(-2px, -3px, 0) scale(1);
-  }
-  100% {
-    transform: translate3d(0px, 0px, 0) scale(1);
-  }
+  animation: torcedor1 15s ease 0s infinite alternate forwards;
 }
 @keyframes torcedor1 {
   0% {
@@ -1563,28 +1452,7 @@ img {
   right: -1.1%;
   bottom: -2.5%;
   z-index: -1;
-  -webkit-animation: torcedor2 15s ease 0s infinite alternate forwards;
-          animation: torcedor2 15s ease 0s infinite alternate forwards;
-}
-@-webkit-keyframes torcedor2 {
-  0% {
-    transform: translate3d(0px, 0px, 0) scale(1);
-  }
-  20% {
-    transform: translate3d(1px, -2px, 0) scale(1);
-  }
-  40% {
-    transform: translate3d(0px, -5px, 0) scale(0.9);
-  }
-  60% {
-    transform: translate3d(0px, 2px, 0) scale(0.9);
-  }
-  80% {
-    transform: translate3d(1px, -5px, 0) scale(1);
-  }
-  100% {
-    transform: translate3d(0px, 0px, 0) scale(1);
-  }
+  animation: torcedor2 15s ease 0s infinite alternate forwards;
 }
 @keyframes torcedor2 {
   0% {
@@ -2047,33 +1915,8 @@ td {
   bottom: 0;
   transform-origin: center center;
   transform-box: fill-box;
-  -webkit-animation: bounce 4s ease infinite normal;
-          animation: bounce 4s ease infinite normal;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-@-webkit-keyframes bounce {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  5% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  25% {
-    transform: scale(0.9, 1.1) translateY(-208px);
-  }
-  50% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  60% {
-    transform: scale(0.9, 1.1) translateY(-40px);
-  }
-  70% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
-  }
+  animation: bounce 4s ease infinite normal;
+  animation-fill-mode: both;
 }
 @keyframes bounce {
   0% {
@@ -2183,6 +2026,7 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 100px;
 }
 .modal-container .button-wpp {
   margin: 1rem auto 0 auto;
@@ -2218,16 +2062,7 @@ td {
   position: fixed;
   background-color: #0f0f0f;
   opacity: 1;
-  -webkit-animation: animacaoBack 1.3s ease 6.3s forwards;
-          animation: animacaoBack 1.3s ease 6.3s forwards;
-}
-@-webkit-keyframes animacaoBack {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  animation: animacaoBack 1.3s ease 6.3s forwards;
 }
 @keyframes animacaoBack {
   0% {
@@ -2243,19 +2078,7 @@ td {
   width: 100%;
   height: 100vh;
   opacity: 0;
-  -webkit-animation: animacaoImagem 5s ease 6s forwards;
-          animation: animacaoImagem 5s ease 6s forwards;
-}
-@-webkit-keyframes animacaoImagem {
-  0% {
-    opacity: 0;
-  }
-  50%, 70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  animation: animacaoImagem 5s ease 6s forwards;
 }
 @keyframes animacaoImagem {
   0% {
@@ -2286,38 +2109,7 @@ td {
   position: fixed;
   transform: translateY(16%);
   pointer-events: none;
-  -webkit-animation: animacaoCopaInicial 7s ease 0s forwards;
-          animation: animacaoCopaInicial 7s ease 0s forwards;
-}
-@-webkit-keyframes animacaoCopaInicial {
-  0% {
-    fill-opacity: 0;
-    stroke-dasharray: 1 1000;
-    stroke-dashoffset: 0;
-    stroke-width: 0;
-    opacity: 1;
-  }
-  60% {
-    fill-opacity: 0;
-    stroke-dasharray: 150 0;
-    stroke-dashoffset: 0;
-    stroke-width: 1;
-    opacity: 1;
-  }
-  80%, 90% {
-    fill-opacity: 1;
-    stroke-dasharray: 150 0;
-    stroke-dashoffset: 0;
-    stroke-width: 0;
-    opacity: 1;
-  }
-  100% {
-    fill-opacity: 0;
-    stroke-dasharray: 150 0;
-    stroke-dashoffset: 0;
-    stroke-width: 0;
-    opacity: 0;
-  }
+  animation: animacaoCopaInicial 7s ease 0s forwards;
 }
 @keyframes animacaoCopaInicial {
   0% {
@@ -2416,4 +2208,8 @@ td {
 
 li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
